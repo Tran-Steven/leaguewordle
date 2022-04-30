@@ -1,3 +1,34 @@
+.container {
+animation: transitionIn 4s;
+
+}
+
+
+
+
+@keyframes transitionIn {
+  from {
+opacity: 0;
+transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+@keyframes transitionOut {
+  from {
+opacity: 1;
+transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: rotateX(0deg);
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
