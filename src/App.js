@@ -14,9 +14,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        
-        </p>
+
         <a
           className="App-link"
           href="www.google.com"
