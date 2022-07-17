@@ -1,44 +1,27 @@
-.container {
-animation: transitionIn 4s;
-
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
+#title {
+  width: 100vmin;
+  animation: fade-in-out 4000ms;
+  animation-fill-mode: forwards;
+}
 
-
-
-@keyframes transitionIn {
+@keyframes fade-in-out {
   from {
-opacity: 0;
-transform: rotateX(-10deg);
+    opacity: 0;
   }
 
-  to {
+  75% {
     opacity: 1;
-    transform: rotateX(0deg);
-  }
-}
-@keyframes transitionOut {
-  from {
-opacity: 1;
-transform: rotateX(-10deg);
   }
 
   to {
     opacity: 0;
-    transform: rotateX(0deg);
   }
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
