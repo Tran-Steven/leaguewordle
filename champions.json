@@ -104,6 +104,14 @@
    "RP": 880
  },
  {
+  "Champion": "Bel'Veth\nThe Empress of the Void",
+  "Classes": "Skirmisher",
+  "Release Date": "2022-06-09",
+  "Last Changed": "V12.7",
+  "Blue Essence": 6300,
+  "RP": 975
+},
+ {
    "Champion": "Blitzcrank\nthe Great Steam Golem",
    "Classes": "Catcher",
    "Release Date": "2009-09-02",
@@ -663,6 +671,14 @@
    "Blue Essence": 3150,
    "RP": 790
  },
+ {
+  "Champion": "Nilah\nThe Joy Unbound",
+  "Classes": "Skirmisher",
+  "Release Date": "2022-07-13",
+  "Last Changed": "V12.6",
+  "Blue Essence": 6300,
+  "RP": 975
+},
  {
    "Champion": "Nocturne\nthe Eternal Nightmare",
    "Classes": "Assassin",
