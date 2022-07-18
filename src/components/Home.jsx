@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div class="main">
-      <div class="imageßs">
+      <div class="images">
         <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="312" height="119.6" />
       </div>
-      <div class="game">ß
+      <div class="game">
         <h1>Welcome to League of Wordle!</h1>
         <form action="Home.jsx" method="GET">
           <input type="text" name="txtbox" id="txtbox" />
@@ -24,8 +24,12 @@ const Home = () => {
         <br />
         <br />
         <div class="sub-image">
+        <a href="https://github.com/Tran-Steven" target="_blank">  
           <img src={require('./assets/github.png')} alt="Github Icon" width="312" height="119.6" />
+          </a>
+          <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank">  
           <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="312" height="119.6" />
+          </a>
           <img src={require('./assets/mail.png')} alt="Mail Icon" width="312" height="119.6" />
           <img src={require('./assets/share.png')} alt="Share Icon" width="312" height="119.6" />
         </div>
