@@ -15,7 +15,6 @@ const Home = () => {
           {/* Endpoint to route to About component */}
           <Link to="/about">About</Link>
         </li>
-
       </ul>
     </div>
   );
