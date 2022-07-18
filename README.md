@@ -3,6 +3,9 @@
 A version of Wordle but with League Of Legends Champions.
 Uses all champions and gives hints if you are close to the target.
 
+You can play the game here:
+https://tran-steven.github.io/leaguewordle/
+
 ## Hints
 
 ### Blue Essence Amount
