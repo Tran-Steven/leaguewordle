@@ -17,7 +17,7 @@ body {}
   margin-right: auto;
   display: block;
   width: 60vmin;
-  animation: fade-in-out 5000ms;
+  animation: fade-in-out 4700ms;
   animation-fill-mode: forwards;
 }
 

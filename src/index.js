@@ -29,4 +29,4 @@ setTimeout(function () {
       <App App="Main Page" />
     </div>
   );
-}, 5000);
+}, 4700);
