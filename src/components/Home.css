@@ -1,12 +1,12 @@
-.main{
+.main {
     font-family: 'Roboto', sans-serif;
     color: #444444;
     font-size: 20pt;
     background-color: #FAFAFA;
-    
+
 }
 
-.images{
+.images {
     text-align: center;
 }
 
@@ -15,11 +15,11 @@
     text-align: center;
 }
 
-.game{
+.game {
     text-align: center;
 }
 
-.label div{
+.label div {
     min-height: 9000vh;
     width: 100%;
 }
@@ -29,9 +29,8 @@ input[type=text] {
     padding: 16px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-  }
+}
 
-  input[type=submit] {
+input[type=submit] {
     width: 15%;
-    
-  }
+}

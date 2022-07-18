@@ -1,6 +1,4 @@
-body {
-
-}
+body {}
 
 .image-container {
   height: 160px;
@@ -13,6 +11,7 @@ body {
   text-align: center;
   min-height: 80vh;
 }
+
 #title {
   margin-left: auto;
   margin-right: auto;
@@ -25,6 +24,7 @@ body {
 .main-load-in {
   animation: fade-in-main 2000ms;
 }
+
 @keyframes fade-in-out {
   from {
     opacity: 0;
@@ -43,6 +43,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
