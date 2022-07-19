@@ -3,6 +3,11 @@
     font-family: "Open Sans", sans-serif;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+  .lato {
+    font-family: 'Lato', sans-serif;
+  }
+
   /* Sets the website's font and size */
 .main {
     font-family: 'Roboto', sans-serif;
@@ -10,38 +15,22 @@
     font-size: 20pt;
     background-color: #FAFAFA;
     text-align: center; 
-
+    min-height: 100vh
 }
 
+footer {
+    text-align: center;
+}
+.main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 .images {
     text-align: center;
 }
 
-
-/* .sub-image div {
-    position: absolute;
-    bottom: 0px;
-    display: inline-block;
-    text-align: center;
-} */
-
-#footer {
-    position: absolute;
-    bottom: 0px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
 .game {
     text-align: center;
-}
-
-.label div {
-    min-height: 9000vh;
-    width: 100%;
 }
 
 /* Sets the parameters and font settings for the form */
@@ -58,7 +47,27 @@ input[type=submit] {
     font-family: 'Open Sans'; font-size: 12px;
 }
 
-/* Keeps the form in the same line */
-.form-format div{
-    display:inline;
+.how-to-h {
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+.how-to {
+    margin-top:1%;
+    text-align: left;
+    font-size: 14pt;
+    font-family: 'Lato';
+}
+
+.popup-i{
+margin-top:0;
+}
+.found-bug {
+    margin:0%;
+}
+
+.contact-p {
+    margin-top:1%;
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Lato';
 }
