@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.opensans {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  /* Sets the website's font and size */
 .main {
     font-family: 'Roboto', sans-serif;
     color: #444444;
     font-size: 20pt;
     background-color: #FAFAFA;
+    text-align: center; 
 
 }
 
@@ -11,9 +18,22 @@
 }
 
 
-.sub-image div {
+/* .sub-image div {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
     text-align: center;
-}
+} */
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 
 .game {
     text-align: center;
@@ -24,6 +44,7 @@
     width: 100%;
 }
 
+/* Sets the parameters and font settings for the form */
 input[type=text] {
     width: 35%;
     padding: 16px 20px;
@@ -33,4 +54,11 @@ input[type=text] {
 
 input[type=submit] {
     width: 15%;
+    padding: 16px 20px;
+    font-family: 'Open Sans'; font-size: 12px;
+}
+
+/* Keeps the form in the same line */
+.form-format div{
+    display:inline;
 }

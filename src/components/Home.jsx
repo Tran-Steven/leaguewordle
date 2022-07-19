@@ -22,7 +22,7 @@ const Home = () => {
           <input class="guess_input" type="submit" />
         </form>
 
-        <div class="sub-image" id="footer">
+        <div class="sub-image">
           <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
             <img src={require('./assets/github.png')} alt="Github Icon" width="312" height="119.6" />
           </a>
