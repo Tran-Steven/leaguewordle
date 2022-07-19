@@ -12,7 +12,9 @@ body {}
   min-height: 80vh;
 }
 
-
+p1 {
+  font-size: 12;
+}
 
 #title {
   margin-left: auto;
