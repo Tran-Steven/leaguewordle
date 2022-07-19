@@ -16,7 +16,7 @@ const Home = () => {
           <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="312" height="119.6" />
           <h4 className='how-to-h'>HOW TO PLAY</h4>
           <p className='how-to'>Guess the League of legends champion within 5 tries.
-            For every unsucessful try, a hint will be given showing if your
+            For every unsuccessful try, a hint will be given showing if your
             BE Amount, RP Amount, Release Date Year, or Champion Class is correct.
             <br />
             <br />
