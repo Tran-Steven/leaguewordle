@@ -6,13 +6,13 @@ Switch,
 Route,
 Redirect,
 } from "react-router-dom";
-
 // imports Home component and About component
 import Home from "./components/Home";
 
 
 function App() {
 return (
+    
 	<>
 	{/* This is the alias of BrowserRouter i.e. Router */}
 	<Router>

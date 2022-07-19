@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import titleImage from './assets/league-of-wordle.png'
 import App from './App';
+import useForm from "react-hook-form"
 import {
   BrowserRouter as Router,
   Switch,
