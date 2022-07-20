@@ -20,7 +20,7 @@ const Home = () => {
             BE Amount, RP Amount, Release Date Year, or Champion Class is correct.
             <br />
             <br />
-            Each guess has to be a valid champion. Press enter or click the button to submit.</p>
+            Each guess has to be a valid champion. Click the send button below to submit.</p>
           <h4 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h4>
           <Contact></Contact>
         </Popup>
