@@ -1,1290 +1,1451 @@
 [
-  {
-    "Champion": "Aatrox\nthe Darkin Blade",
-    "Classes": "Juggernaut",
-    "Release Date": "2013-06-13",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Ahri\nthe Nine-Tailed Fox",
-    "Classes": "Burst",
-    "Release Date": "2011-12-14",
-    "Last Changed": "V12.5",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Akali\nthe Rogue Assassin",
-    "Classes": "Assassin",
-    "Release Date": "2010-05-11",
-    "Last Changed": "V11.22",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Akshan\nthe Rogue Sentinel",
-    "Classes": "Marksman\n Assassin",
-    "Release Date": "2021-07-22",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Alistar\nthe Minotaur",
-    "Classes": "Vanguard",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.11",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Amumu\nthe Sad Mummy",
-    "Classes": "Vanguard",
-    "Release Date": "2009-06-26",
-    "Last Changed": "V12.4",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Anivia\nthe Cryophoenix",
-    "Classes": "Battlemage",
-    "Release Date": "2009-07-10",
-    "Last Changed": "V11.20",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Annie\nthe Dark Child",
-    "Classes": "Burst",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.7",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Aphelios\nthe Weapon of the Faithful",
-    "Classes": "Marksman",
-    "Release Date": "2019-12-11",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Ashe\nthe Frost Archer",
-    "Classes": "Marksman",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.5",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Aurelion Sol\nThe Star Forger",
-    "Classes": "Battlemage",
-    "Release Date": "2016-03-24",
-    "Last Changed": "V11.21",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Azir\nthe Emperor of the Sands",
-    "Classes": "Specialist",
-    "Release Date": "2014-09-16",
-    "Last Changed": "V12.6",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Bard\nthe Wandering Caretaker",
-    "Classes": "Catcher",
-    "Release Date": "2015-03-12",
-    "Last Changed": "V12.1",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Bel'Veth\nThe Empress of the Void",
-    "Classes": "Skirmisher",
-    "Release Date": "2022-06-09",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Blitzcrank\nthe Great Steam Golem",
-    "Classes": "Catcher",
-    "Release Date": "2009-09-02",
-    "Last Changed": "V12.4",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Brand\nthe Burning Vengeance",
-    "Classes": "Burst",
-    "Release Date": "2011-04-12",
-    "Last Changed": "V12.3",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Braum\nthe Heart of the Freljord",
-    "Classes": "Warden",
-    "Release Date": "2014-05-12",
-    "Last Changed": "V11.19",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Caitlyn\nthe Sheriff of Piltover",
-    "Classes": "Marksman",
-    "Release Date": "2011-01-04",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Camille\nthe Steel Shadow",
-    "Classes": "Diver",
-    "Release Date": "2016-12-07",
-    "Last Changed": "V11.24",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Cassiopeia\nthe Serpent's Embrace",
-    "Classes": "Battlemage",
-    "Release Date": "2010-12-14",
-    "Last Changed": "V11.15",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Cho'Gath\nthe Terror of the Void",
-    "Classes": "Specialist",
-    "Release Date": "2009-06-26",
-    "Last Changed": "V11.20",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Corki\nthe Daring Bombardier",
-    "Classes": "Marksman",
-    "Release Date": "2009-09-19",
-    "Last Changed": "V12.3",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Darius\nthe Hand of Noxus",
-    "Classes": "Juggernaut",
-    "Release Date": "2012-05-23",
-    "Last Changed": "V12.6",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Diana\nScorn of the Moon",
-    "Classes": "Assassin\n Diver",
-    "Release Date": "2012-08-07",
-    "Last Changed": "V12.1",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Dr. Mundo\nthe Madman of Zaun",
-    "Classes": "Juggernaut",
-    "Release Date": "2009-09-02",
-    "Last Changed": "V12.4",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Draven\nthe Glorious Executioner",
-    "Classes": "Marksman",
-    "Release Date": "2012-06-06",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Ekko\nthe Boy Who Shattered Time",
-    "Classes": "Assassin",
-    "Release Date": "2015-05-29",
-    "Last Changed": "V11.18",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Elise\nthe Spider Queen",
-    "Classes": "Diver",
-    "Release Date": "2012-10-26",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Evelynn\nAgony's Embrace",
-    "Classes": "Assassin",
-    "Release Date": "2009-05-01",
-    "Last Changed": "V11.17",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Ezreal\nthe Prodigal Explorer",
-    "Classes": "Marksman",
-    "Release Date": "2010-03-16",
-    "Last Changed": "V11.21",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Fiddlesticks\nthe Ancient Fear",
-    "Classes": "Specialist",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.23",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Fiora\nthe Grand Duelist",
-    "Classes": "Skirmisher",
-    "Release Date": "2012-02-29",
-    "Last Changed": "V11.19",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Fizz\nthe Tidal Trickster",
-    "Classes": "Assassin",
-    "Release Date": "2011-11-15",
-    "Last Changed": "V11.23",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Galio\nthe Colossus",
-    "Classes": "Warden",
-    "Release Date": "2010-08-10",
-    "Last Changed": "V11.24",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Gangplank\nthe Saltwater Scourge",
-    "Classes": "Specialist",
-    "Release Date": "2009-08-19",
-    "Last Changed": "V12.7",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Garen\nThe Might of Demacia",
-    "Classes": "Juggernaut",
-    "Release Date": "2010-04-27",
-    "Last Changed": "V11.21",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Gnar\nthe Missing Link",
-    "Classes": "Specialist",
-    "Release Date": "2014-08-14",
-    "Last Changed": "V11.13",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Gragas\nthe Rabble Rouser",
-    "Classes": "Vanguard",
-    "Release Date": "2010-02-02",
-    "Last Changed": "V11.19",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Graves\nthe Outlaw",
-    "Classes": "Specialist",
-    "Release Date": "2011-10-19",
-    "Last Changed": "V11.23",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Gwen\nThe Hallowed Seamstress",
-    "Classes": "Skirmisher",
-    "Release Date": "2021-04-15",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Hecarim\nthe Shadow of War",
-    "Classes": "Diver",
-    "Release Date": "2012-04-18",
-    "Last Changed": "V12.6",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Heimerdinger\nthe Revered Inventor",
-    "Classes": "Specialist",
-    "Release Date": "2009-10-10",
-    "Last Changed": "V12.1",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Illaoi\nthe Kraken Priestess",
-    "Classes": "Juggernaut",
-    "Release Date": "2015-11-24",
-    "Last Changed": "V12.6",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Irelia\nthe Blade Dancer",
-    "Classes": "Diver",
-    "Release Date": "2010-11-16",
-    "Last Changed": "V11.20",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Ivern\nthe Green Father",
-    "Classes": "Catcher",
-    "Release Date": "2016-10-05",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Janna\nthe Storm's Fury",
-    "Classes": "Enchanter",
-    "Release Date": "2009-09-02",
-    "Last Changed": "V12.6",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Jarvan IV\nthe Exemplar of Demacia",
-    "Classes": "Diver",
-    "Release Date": "2011-03-01",
-    "Last Changed": "V11.20",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Jax\nGrandmaster at Arms",
-    "Classes": "Skirmisher",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.6",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Jayce\nthe Defender of Tomorrow",
-    "Classes": "Artillery",
-    "Release Date": "2012-07-07",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Jhin\nthe Virtuoso",
-    "Classes": "Marksman\n Catcher",
-    "Release Date": "2016-02-01",
-    "Last Changed": "V11.16",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Jinx\nthe Loose Cannon",
-    "Classes": "Marksman",
-    "Release Date": "2013-10-10",
-    "Last Changed": "V12.6",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Kai'Sa\nDaughter of the Void",
-    "Classes": "Marksman",
-    "Release Date": "2018-03-07",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Kalista\nthe Spear of Vengeance",
-    "Classes": "Marksman",
-    "Release Date": "2014-11-20",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Karma\nthe Enlightened One",
-    "Classes": "Burst\n Enchanter",
-    "Release Date": "2011-02-01",
-    "Last Changed": "V11.18",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Karthus\nthe Deathsinger",
-    "Classes": "Battlemage",
-    "Release Date": "2009-06-12",
-    "Last Changed": "V12.7",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Kassadin\nthe Void Walker",
-    "Classes": "Assassin",
-    "Release Date": "2009-08-07",
-    "Last Changed": "V12.6",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Katarina\nthe Sinister Blade",
-    "Classes": "Assassin",
-    "Release Date": "2009-09-19",
-    "Last Changed": "V11.10",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Kayle\nthe Righteous",
-    "Classes": "Specialist",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.24",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Kayn\nthe Shadow Reaper",
-    "Classes": "Skirmisher",
-    "Release Date": "2017-07-12",
-    "Last Changed": "V11.23",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Kennen\nthe Heart of the Tempest",
-    "Classes": "Specialist",
-    "Release Date": "2010-04-08",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Kha'Zix\nthe Voidreaver",
-    "Classes": "Assassin",
-    "Release Date": "2012-09-27",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Kindred\nThe Eternal Hunters",
-    "Classes": "Marksman",
-    "Release Date": "2015-10-14",
-    "Last Changed": "V12.1",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Kled\nthe Cantankerous Cavalier",
-    "Classes": "Skirmisher",
-    "Release Date": "2016-08-10",
-    "Last Changed": "V12.3",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Kog'Maw\nthe Mouth of the Abyss",
-    "Classes": "Marksman",
-    "Release Date": "2010-06-24",
-    "Last Changed": "V12.2",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "LeBlanc\nthe Deceiver",
-    "Classes": "Burst",
-    "Release Date": "2010-11-02",
-    "Last Changed": "V12.3",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Lee Sin\nthe Blind Monk",
-    "Classes": "Diver",
-    "Release Date": "2011-04-01",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Leona\nthe Radiant Dawn",
-    "Classes": "Vanguard",
-    "Release Date": "2011-07-13",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Lillia\nthe Bashful Bloom",
-    "Classes": "Skirmisher",
-    "Release Date": "2020-07-22",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Lissandra\nthe Ice Witch",
-    "Classes": "Burst",
-    "Release Date": "2013-04-30",
-    "Last Changed": "V11.17",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Lucian\nthe Purifier",
-    "Classes": "Marksman",
-    "Release Date": "2013-08-22",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Lulu\nthe Fae Sorceress",
-    "Classes": "Enchanter",
-    "Release Date": "2012-03-20",
-    "Last Changed": "V12.2",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Lux\nthe Lady of Luminosity",
-    "Classes": "Burst\n Artillery",
-    "Release Date": "2010-10-19",
-    "Last Changed": "V12.6",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Malphite\nShard of the Monolith",
-    "Classes": "Vanguard",
-    "Release Date": "2009-09-02",
-    "Last Changed": "V11.12",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Malzahar\nthe Prophet of the Void",
-    "Classes": "Battlemage",
-    "Release Date": "2010-06-01",
-    "Last Changed": "V11.24",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Maokai\nthe Twisted Treant",
-    "Classes": "Vanguard",
-    "Release Date": "2011-02-16",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Master Yi\nthe Wuju Bladesman",
-    "Classes": "Skirmisher",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.5",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Miss Fortune\nthe Bounty Hunter",
-    "Classes": "Marksman",
-    "Release Date": "2010-09-08",
-    "Last Changed": "V12.5",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Mordekaiser\nthe Iron Revenant",
-    "Classes": "Juggernaut",
-    "Release Date": "2010-02-24",
-    "Last Changed": "V12.7",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Morgana\nthe Fallen",
-    "Classes": "Catcher",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.18",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Nami\nthe Tidecaller",
-    "Classes": "Enchanter",
-    "Release Date": "2012-12-07",
-    "Last Changed": "V12.4",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Nasus\nthe Curator of the Sands",
-    "Classes": "Juggernaut",
-    "Release Date": "2009-10-01",
-    "Last Changed": "V12.1",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Nautilus\nthe Titan of the Depths",
-    "Classes": "Vanguard",
-    "Release Date": "2012-02-14",
-    "Last Changed": "V11.15",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Neeko\nthe Curious Chameleon",
-    "Classes": "Burst\n Catcher",
-    "Release Date": "2018-12-05",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Nidalee\nthe Bestial Huntress",
-    "Classes": "Specialist",
-    "Release Date": "2009-12-17",
-    "Last Changed": "V12.6",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Nilah\nThe Joy Unbound",
-    "Classes": "Skirmisher",
-    "Release Date": "2022-07-13",
-    "Last Changed": "V12.6",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Nocturne\nthe Eternal Nightmare",
-    "Classes": "Assassin",
-    "Release Date": "2011-03-15",
-    "Last Changed": "V12.2",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Nunu & Willump\nthe Boy and His Yeti",
-    "Classes": "Vanguard",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.4",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Olaf\nthe Berserker",
-    "Classes": "Diver",
-    "Release Date": "2010-06-09",
-    "Last Changed": "V11.24",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Orianna\nthe Lady of Clockwork",
-    "Classes": "Burst",
-    "Release Date": "2011-06-01",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Ornn\nThe Fire Below the Mountain",
-    "Classes": "Vanguard",
-    "Release Date": "2017-08-23",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Pantheon\nthe Unbreakable Spear",
-    "Classes": "Diver",
-    "Release Date": "2010-02-02",
-    "Last Changed": "V12.7",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Poppy\nKeeper of the Hammer",
-    "Classes": "Warden",
-    "Release Date": "2010-01-13",
-    "Last Changed": "V11.19",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Pyke\nthe Bloodharbor Ripper",
-    "Classes": "Assassin\n Catcher",
-    "Release Date": "2018-05-31",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Qiyana\nEmpress of the Elements",
-    "Classes": "Assassin",
-    "Release Date": "2019-06-28",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Quinn\nDemacia's Wings",
-    "Classes": "Specialist",
-    "Release Date": "2013-03-01",
-    "Last Changed": "V12.3",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Rakan\nThe Charmer",
-    "Classes": "Catcher",
-    "Release Date": "2017-04-19",
-    "Last Changed": "V11.8",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Rammus\nthe Armordillo",
-    "Classes": "Vanguard",
-    "Release Date": "2009-07-10",
-    "Last Changed": "V11.13",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Rek'Sai\nthe Void Burrower",
-    "Classes": "Diver",
-    "Release Date": "2014-12-11",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Rell\nthe Iron Maiden",
-    "Classes": "Vanguard",
-    "Release Date": "2020-12-10",
-    "Last Changed": "V11.15",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Renata Glasc\nthe Chem-Baroness",
-    "Classes": "Enchanter",
-    "Release Date": "2022-02-17",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Renekton\nthe Butcher of the Sands",
-    "Classes": "Diver",
-    "Release Date": "2011-01-18",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Rengar\nthe Pridestalker",
-    "Classes": "Assassin\n Diver",
-    "Release Date": "2012-08-21",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Riven\nthe Exile",
-    "Classes": "Skirmisher",
-    "Release Date": "2011-09-14",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Rumble\nthe Mechanized Menace",
-    "Classes": "Battlemage",
-    "Release Date": "2011-04-26",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Ryze\nthe Rune Mage",
-    "Classes": "Battlemage",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.7",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Samira\nthe Desert Rose",
-    "Classes": "Marksman",
-    "Release Date": "2020-09-21",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Sejuani\nFury of the North",
-    "Classes": "Vanguard",
-    "Release Date": "2012-01-17",
-    "Last Changed": "V11.19",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Senna\nthe Redeemer",
-    "Classes": "Marksman\n Enchanter",
-    "Release Date": "2019-11-10",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Seraphine\nthe Starry-Eyed Songstress",
-    "Classes": "Burst\n Enchanter",
-    "Release Date": "2020-10-29",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Sett\nthe Boss",
-    "Classes": "Juggernaut",
-    "Release Date": "2020-01-14",
-    "Last Changed": "V12.6",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Shaco\nthe Demon Jester",
-    "Classes": "Assassin",
-    "Release Date": "2009-10-10",
-    "Last Changed": "V12.7",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Shen\nthe Eye of Twilight",
-    "Classes": "Warden",
-    "Release Date": "2010-03-24",
-    "Last Changed": "V12.2",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Shyvana\nthe Half-Dragon",
-    "Classes": "Juggernaut",
-    "Release Date": "2011-11-01",
-    "Last Changed": "V11.21",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Singed\nthe Mad Chemist",
-    "Classes": "Specialist",
-    "Release Date": "2009-04-18",
-    "Last Changed": "V11.21",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Sion\nThe Undead Juggernaut",
-    "Classes": "Vanguard",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.21",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Sivir\nthe Battle Mistress",
-    "Classes": "Marksman",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.16",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Skarner\nthe Crystal Vanguard",
-    "Classes": "Diver",
-    "Release Date": "2011-08-09",
-    "Last Changed": "V12.3",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Sona\nMaven of the Strings",
-    "Classes": "Enchanter",
-    "Release Date": "2010-09-21",
-    "Last Changed": "V12.5",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Soraka\nthe Starchild",
-    "Classes": "Enchanter",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.19",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Swain\nthe Noxian Grand General",
-    "Classes": "Battlemage",
-    "Release Date": "2010-10-05",
-    "Last Changed": "V11.24",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Sylas\nthe Unshackled",
-    "Classes": "Burst\n Skirmisher",
-    "Release Date": "2019-01-25",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Syndra\nthe Dark Sovereign",
-    "Classes": "Burst",
-    "Release Date": "2012-09-13",
-    "Last Changed": "V11.21",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Tahm Kench\nThe River King",
-    "Classes": "Warden",
-    "Release Date": "2015-07-09",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Taliyah\nthe Stoneweaver",
-    "Classes": "Battlemage",
-    "Release Date": "2016-05-18",
-    "Last Changed": "V11.24",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Talon\nthe Blade's Shadow",
-    "Classes": "Assassin",
-    "Release Date": "2011-08-24",
-    "Last Changed": "V12.3",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Taric\nthe Shield of Valoran",
-    "Classes": "Enchanter\n Warden",
-    "Release Date": "2009-08-19",
-    "Last Changed": "V11.14",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Teemo\nthe Swift Scout",
-    "Classes": "Specialist",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V11.21",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Thresh\nthe Chain Warden",
-    "Classes": "Catcher",
-    "Release Date": "2013-01-23",
-    "Last Changed": "V11.20",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Tristana\nthe Yordle Gunner",
-    "Classes": "Marksman",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.2",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Trundle\nthe Troll King",
-    "Classes": "Juggernaut",
-    "Release Date": "2010-12-01",
-    "Last Changed": "V11.21",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Tryndamere\nthe Barbarian King",
-    "Classes": "Skirmisher",
-    "Release Date": "2009-05-01",
-    "Last Changed": "V12.6",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Twisted Fate\nthe Card Master",
-    "Classes": "Burst",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.3",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Twitch\nthe Plague Rat",
-    "Classes": "Marksman",
-    "Release Date": "2009-05-01",
-    "Last Changed": "V11.24",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Udyr\nthe Spirit Walker",
-    "Classes": "Juggernaut",
-    "Release Date": "2009-12-02",
-    "Last Changed": "V11.20",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Urgot\nthe Dreadnought",
-    "Classes": "Juggernaut",
-    "Release Date": "2010-08-24",
-    "Last Changed": "V11.24",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Varus\nthe Arrow of Retribution",
-    "Classes": "Marksman\n Artillery",
-    "Release Date": "2012-05-08",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Vayne\nthe Night Hunter",
-    "Classes": "Marksman",
-    "Release Date": "2011-05-10",
-    "Last Changed": "V12.2",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Veigar\nthe Tiny Master of Evil",
-    "Classes": "Burst",
-    "Release Date": "2009-07-24",
-    "Last Changed": "V12.4",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Vel'Koz\nthe Eye of the Void",
-    "Classes": "Artillery",
-    "Release Date": "2014-02-27",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Vex\nthe Gloomist",
-    "Classes": "Burst",
-    "Release Date": "2021-09-23",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Vi\nthe Piltover Enforcer",
-    "Classes": "Diver",
-    "Release Date": "2012-12-19",
-    "Last Changed": "V12.1",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Viego\nThe Ruined King",
-    "Classes": "Skirmisher",
-    "Release Date": "2021-01-21",
-    "Last Changed": "V12.5",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Viktor\nthe Machine Herald",
-    "Classes": "Battlemage",
-    "Release Date": "2011-12-29",
-    "Last Changed": "V11.20",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Vladimir\nthe Crimson Reaper",
-    "Classes": "Battlemage",
-    "Release Date": "2010-07-27",
-    "Last Changed": "V11.22",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Volibear\nthe Relentless Storm",
-    "Classes": "Juggernaut",
-    "Release Date": "2011-11-29",
-    "Last Changed": "V12.2",
-    "Blue Essence": 3150,
-    "RP": 790
-  },
-  {
-    "Champion": "Warwick\nthe Uncaged Wrath of Zaun",
-    "Classes": "Diver",
-    "Release Date": "2009-02-21",
-    "Last Changed": "V12.7",
-    "Blue Essence": 450,
-    "RP": 260
-  },
-  {
-    "Champion": "Wukong\nthe Monkey King",
-    "Classes": "Diver",
-    "Release Date": "2011-07-26",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Xayah\nthe Rebel",
-    "Classes": "Marksman",
-    "Release Date": "2017-04-19",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Xerath\nthe Magus Ascendant",
-    "Classes": "Artillery",
-    "Release Date": "2011-10-05",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Xin Zhao\nthe Seneschal of Demacia",
-    "Classes": "Diver",
-    "Release Date": "2010-07-13",
-    "Last Changed": "V12.5",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Yasuo\nthe Unforgiven",
-    "Classes": "Skirmisher",
-    "Release Date": "2013-12-13",
-    "Last Changed": "V12.7",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Yone\nthe Unforgotten",
-    "Classes": "Assassin\n Skirmisher",
-    "Release Date": "2020-08-06",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Yorick\nShepherd of Souls",
-    "Classes": "Juggernaut",
-    "Release Date": "2011-06-22",
-    "Last Changed": "V12.5",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Yuumi\nthe Magical Cat",
-    "Classes": "Enchanter",
-    "Release Date": "2019-05-14",
-    "Last Changed": "V11.22",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Zac\nthe Secret Weapon",
-    "Classes": "Vanguard",
-    "Release Date": "2013-03-29",
-    "Last Changed": "V11.8",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Zed\nthe Master of Shadows",
-    "Classes": "Assassin",
-    "Release Date": "2012-11-13",
-    "Last Changed": "V12.4",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Zeri\nThe Spark of Zaun",
-    "Classes": "Marksman",
-    "Release Date": "2022-01-20",
-    "Last Changed": "V12.7",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Ziggs\nthe Hexplosives Expert",
-    "Classes": "Artillery",
-    "Release Date": "2012-02-01",
-    "Last Changed": "V11.16",
-    "Blue Essence": 4800,
-    "RP": 880
-  },
-  {
-    "Champion": "Zilean\nthe Chronokeeper",
-    "Classes": "Specialist",
-    "Release Date": "2009-04-18",
-    "Last Changed": "V11.14",
-    "Blue Essence": 1350,
-    "RP": 585
-  },
-  {
-    "Champion": "Zoe\nthe Aspect of Twilight",
-    "Classes": "Burst",
-    "Release Date": "2017-11-21",
-    "Last Changed": "V12.4",
-    "Blue Essence": 6300,
-    "RP": 975
-  },
-  {
-    "Champion": "Zyra\nRise of the Thorns",
-    "Classes": "Catcher",
-    "Release Date": "2012-07-24",
-    "Last Changed": "V11.22",
-    "Blue Essence": 4800,
-    "RP": 880
-  }
+   {
+      "Champion":"Aatrox",
+      "Description":"The Darkin Blade",
+      "Classes":"Juggernaut",
+      "Release Year":"2013",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Ahri",
+      "Description":"The Nine-Tailed Fox",
+      "Classes":"Burst",
+      "Release Year":"2011",
+      "Last Changed":"V12.5",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Akali",
+      "Description":"The Rogue Assassin",
+      "Classes":"Assassin",
+      "Release Year":"2010",
+      "Last Changed":"V11.22",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Akshan",
+      "Description":"The Rogue Sentinel",
+      "Classes":"Marksman and Assassin",
+      "Release Year":"2021",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Alistar",
+      "Description":"The Minotaur",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V11.11",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Amumu",
+      "Description":"The Sad Mummy",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V12.4",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Anivia",
+      "Description":"The Cryophoenix",
+      "Classes":"Battlemage",
+      "Release Year":"2009",
+      "Last Changed":"V11.20",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Annie",
+      "Description":"The Dark Child",
+      "Classes":"Burst",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Aphelios",
+      "Description":"The Weapon of the Faithful",
+      "Classes":"Marksman",
+      "Release Year":"2019",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Ashe",
+      "Description":"The Frost Archer",
+      "Classes":"Marksman",
+      "Release Year":"2009",
+      "Last Changed":"V12.5",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Aurelion Sol",
+      "Description":"The Star Forger",
+      "Classes":"Battlemage",
+      "Release Year":"2016",
+      "Last Changed":"V11.21",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Azir",
+      "Description":"The Emperor of the Sands",
+      "Classes":"Specialist",
+      "Release Year":"2014",
+      "Last Changed":"V12.6",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Bard",
+      "Description":"The Wandering Caretaker",
+      "Classes":"Catcher",
+      "Release Year":"2015",
+      "Last Changed":"V12.1",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Bel'Veth",
+      "Description":"The Empress of the Void",
+      "Classes":"Skirmisher",
+      "Release Year":"2022",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Blitzcrank",
+      "Description":"The Great Steam Golem",
+      "Classes":"Catcher",
+      "Release Year":"2009",
+      "Last Changed":"V12.4",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Brand",
+      "Description":"The Burning Vengeance",
+      "Classes":"Burst",
+      "Release Year":"2011",
+      "Last Changed":"V12.3",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Braum",
+      "Description":"The Heart of the Freljord",
+      "Classes":"Warden",
+      "Release Year":"2014",
+      "Last Changed":"V11.19",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Caitlyn",
+      "Description":"The Sheriff of Piltover",
+      "Classes":"Marksman",
+      "Release Year":"2011",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Camille",
+      "Description":"The Steel Shadow",
+      "Classes":"Diver",
+      "Release Year":"2016",
+      "Last Changed":"V11.24",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Cassiopeia",
+      "Description":"The Serpent's Embrace",
+      "Classes":"Battlemage",
+      "Release Year":"2010",
+      "Last Changed":"V11.15",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Cho'Gath",
+      "Description":"The Terror of the Void",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.20",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Corki",
+      "Description":"The Daring Bombardier",
+      "Classes":"Marksman",
+      "Release Year":"2009",
+      "Last Changed":"V12.3",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Darius",
+      "Description":"The Hand of Noxus",
+      "Classes":"Juggernaut",
+      "Release Year":"2012",
+      "Last Changed":"V12.6",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Diana",
+      "Description":"Tcorn of the Moon",
+      "Classes":"Assassin and Diver",
+      "Release Year":"2012",
+      "Last Changed":"V12.1",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Dr. Mundo",
+      "Description":"The Madman of Zaun",
+      "Classes":"Juggernaut",
+      "Release Year":"2009",
+      "Last Changed":"V12.4",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Draven",
+      "Description":"The Glorious Executioner",
+      "Classes":"Marksman",
+      "Release Year":"2012",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Ekko",
+      "Description":"The Boy Who Shattered Time",
+      "Classes":"Assassin",
+      "Release Year":"2015",
+      "Last Changed":"V11.18",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Elise",
+      "Description":"The Spider Queen",
+      "Classes":"Diver",
+      "Release Year":"2012",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Evelynn",
+      "Description":"Tgony's Embrace",
+      "Classes":"Assassin",
+      "Release Year":"2009",
+      "Last Changed":"V11.17",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Ezreal",
+      "Description":"The Prodigal Explorer",
+      "Classes":"Marksman",
+      "Release Year":"2010",
+      "Last Changed":"V11.21",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Fiddlesticks",
+      "Description":"The Ancient Fear",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.23",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Fiora",
+      "Description":"The Grand Duelist",
+      "Classes":"Skirmisher",
+      "Release Year":"2012",
+      "Last Changed":"V11.19",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Fizz",
+      "Description":"The Tidal Trickster",
+      "Classes":"Assassin",
+      "Release Year":"2011",
+      "Last Changed":"V11.23",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Galio",
+      "Description":"The Colossus",
+      "Classes":"Warden",
+      "Release Year":"2010",
+      "Last Changed":"V11.24",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Gangplank",
+      "Description":"The Saltwater Scourge",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Garen",
+      "Description":"The Might of Demacia",
+      "Classes":"Juggernaut",
+      "Release Year":"2010",
+      "Last Changed":"V11.21",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Gnar",
+      "Description":"The Missing Link",
+      "Classes":"Specialist",
+      "Release Year":"2014",
+      "Last Changed":"V11.13",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Gragas",
+      "Description":"The Rabble Rouser",
+      "Classes":"Vanguard",
+      "Release Year":"2010",
+      "Last Changed":"V11.19",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Graves",
+      "Description":"The Outlaw",
+      "Classes":"Specialist",
+      "Release Year":"2011",
+      "Last Changed":"V11.23",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Gwen",
+      "Description":"The Hallowed Seamstress",
+      "Classes":"Skirmisher",
+      "Release Year":"2021",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Hecarim",
+      "Description":"The Shadow of War",
+      "Classes":"Diver",
+      "Release Year":"2012",
+      "Last Changed":"V12.6",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Heimerdinger",
+      "Description":"The Revered Inventor",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V12.1",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Illaoi",
+      "Description":"The Kraken Priestess",
+      "Classes":"Juggernaut",
+      "Release Year":"2015",
+      "Last Changed":"V12.6",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Irelia",
+      "Description":"The Blade Dancer",
+      "Classes":"Diver",
+      "Release Year":"2010",
+      "Last Changed":"V11.20",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Ivern",
+      "Description":"The Green Father",
+      "Classes":"Catcher",
+      "Release Year":"2016",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Janna",
+      "Description":"The Storm's Fury",
+      "Classes":"Enchanter",
+      "Release Year":"2009",
+      "Last Changed":"V12.6",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Jarvan IV",
+      "Description":"The Exemplar of Demacia",
+      "Classes":"Diver",
+      "Release Year":"2011",
+      "Last Changed":"V11.20",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Jax",
+      "Description":"Trandmaster at Arms",
+      "Classes":"Skirmisher",
+      "Release Year":"2009",
+      "Last Changed":"V12.6",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Jayce",
+      "Description":"The Defender of Tomorrow",
+      "Classes":"Artillery",
+      "Release Year":"2012",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Jhin",
+      "Description":"The Virtuoso",
+      "Classes":"Marksman and Catcher",
+      "Release Year":"2016",
+      "Last Changed":"V11.16",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Jinx",
+      "Description":"The Loose Cannon",
+      "Classes":"Marksman",
+      "Release Year":"2013",
+      "Last Changed":"V12.6",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Kai'Sa",
+      "Description":"Taughter of the Void",
+      "Classes":"Marksman",
+      "Release Year":"2018",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Kalista",
+      "Description":"The Spear of Vengeance",
+      "Classes":"Marksman",
+      "Release Year":"2014",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Karma",
+      "Description":"The Enlightened One",
+      "Classes":"Burst and Enchanter",
+      "Release Year":"2011",
+      "Last Changed":"V11.18",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Karthus",
+      "Description":"The Deathsinger",
+      "Classes":"Battlemage",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Kassadin",
+      "Description":"The Void Walker",
+      "Classes":"Assassin",
+      "Release Year":"2009",
+      "Last Changed":"V12.6",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Katarina",
+      "Description":"The Sinister Blade",
+      "Classes":"Assassin",
+      "Release Year":"2009",
+      "Last Changed":"V11.10",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Kayle",
+      "Description":"The Righteous",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.24",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Kayn",
+      "Description":"The Shadow Reaper",
+      "Classes":"Skirmisher",
+      "Release Year":"2017",
+      "Last Changed":"V11.23",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Kennen",
+      "Description":"The Heart of the Tempest",
+      "Classes":"Specialist",
+      "Release Year":"2010",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Kha'Zix",
+      "Description":"The Voidreaver",
+      "Classes":"Assassin",
+      "Release Year":"2012",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Kindred",
+      "Description":"The Eternal Hunters",
+      "Classes":"Marksman",
+      "Release Year":"2015",
+      "Last Changed":"V12.1",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Kled",
+      "Description":"The Cantankerous Cavalier",
+      "Classes":"Skirmisher",
+      "Release Year":"2016",
+      "Last Changed":"V12.3",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Kog'Maw",
+      "Description":"The Mouth of the Abyss",
+      "Classes":"Marksman",
+      "Release Year":"2010",
+      "Last Changed":"V12.2",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"LeBlanc",
+      "Description":"The Deceiver",
+      "Classes":"Burst",
+      "Release Year":"2010",
+      "Last Changed":"V12.3",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Lee Sin",
+      "Description":"The Blind Monk",
+      "Classes":"Diver",
+      "Release Year":"2011",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Leona",
+      "Description":"The Radiant Dawn",
+      "Classes":"Vanguard",
+      "Release Year":"2011",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Lillia",
+      "Description":"The Bashful Bloom",
+      "Classes":"Skirmisher",
+      "Release Year":"2020",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Lissandra",
+      "Description":"The Ice Witch",
+      "Classes":"Burst",
+      "Release Year":"2013",
+      "Last Changed":"V11.17",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Lucian",
+      "Description":"The Purifier",
+      "Classes":"Marksman",
+      "Release Year":"2013",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Lulu",
+      "Description":"The Fae Sorceress",
+      "Classes":"Enchanter",
+      "Release Year":"2012",
+      "Last Changed":"V12.2",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Lux",
+      "Description":"The Lady of Luminosity",
+      "Classes":"Burst and Artillery",
+      "Release Year":"2010",
+      "Last Changed":"V12.6",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Malphite",
+      "Description":"Thard of the Monolith",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V11.12",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Malzahar",
+      "Description":"The Prophet of the Void",
+      "Classes":"Battlemage",
+      "Release Year":"2010",
+      "Last Changed":"V11.24",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Maokai",
+      "Description":"The Twisted Treant",
+      "Classes":"Vanguard",
+      "Release Year":"2011",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Master Yi",
+      "Description":"The Wuju Bladesman",
+      "Classes":"Skirmisher",
+      "Release Year":"2009",
+      "Last Changed":"V12.5",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Miss Fortune",
+      "Description":"The Bounty Hunter",
+      "Classes":"Marksman",
+      "Release Year":"2010",
+      "Last Changed":"V12.5",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Mordekaiser",
+      "Description":"The Iron Revenant",
+      "Classes":"Juggernaut",
+      "Release Year":"2010",
+      "Last Changed":"V12.7",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Morgana",
+      "Description":"The Fallen",
+      "Classes":"Catcher",
+      "Release Year":"2009",
+      "Last Changed":"V11.18",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Nami",
+      "Description":"The Tidecaller",
+      "Classes":"Enchanter",
+      "Release Year":"2012",
+      "Last Changed":"V12.4",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Nasus",
+      "Description":"The Curator of the Sands",
+      "Classes":"Juggernaut",
+      "Release Year":"2009",
+      "Last Changed":"V12.1",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Nautilus",
+      "Description":"The Titan of the Depths",
+      "Classes":"Vanguard",
+      "Release Year":"2012",
+      "Last Changed":"V11.15",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Neeko",
+      "Description":"The Curious Chameleon",
+      "Classes":"Burst and Catcher",
+      "Release Year":"2018",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Nidalee",
+      "Description":"The Bestial Huntress",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V12.6",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Nilah",
+      "Description":"The Joy Unbound",
+      "Classes":"Skirmisher",
+      "Release Year":"2022",
+      "Last Changed":"V12.6",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Nocturne",
+      "Description":"The Eternal Nightmare",
+      "Classes":"Assassin",
+      "Release Year":"2011",
+      "Last Changed":"V12.2",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Nunu & Willump",
+      "Description":"The Boy and His Yeti",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V12.4",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Olaf",
+      "Description":"The Berserker",
+      "Classes":"Diver",
+      "Release Year":"2010",
+      "Last Changed":"V11.24",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Orianna",
+      "Description":"The Lady of Clockwork",
+      "Classes":"Burst",
+      "Release Year":"2011",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Ornn",
+      "Description":"The Fire Below the Mountain",
+      "Classes":"Vanguard",
+      "Release Year":"2017",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Pantheon",
+      "Description":"The Unbreakable Spear",
+      "Classes":"Diver",
+      "Release Year":"2010",
+      "Last Changed":"V12.7",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Poppy",
+      "Description":"Teeper of the Hammer",
+      "Classes":"Warden",
+      "Release Year":"2010",
+      "Last Changed":"V11.19",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Pyke",
+      "Description":"The Bloodharbor Ripper",
+      "Classes":"Assassin and Catcher",
+      "Release Year":"2018",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Qiyana",
+      "Description":"Tmpress of the Elements",
+      "Classes":"Assassin",
+      "Release Year":"2019",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Quinn",
+      "Description":"Temacia's Wings",
+      "Classes":"Specialist",
+      "Release Year":"2013",
+      "Last Changed":"V12.3",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Rakan",
+      "Description":"The Charmer",
+      "Classes":"Catcher",
+      "Release Year":"2017",
+      "Last Changed":"V11.8",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Rammus",
+      "Description":"The Armordillo",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V11.13",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Rek'Sai",
+      "Description":"The Void Burrower",
+      "Classes":"Diver",
+      "Release Year":"2014",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Rell",
+      "Description":"The Iron Maiden",
+      "Classes":"Vanguard",
+      "Release Year":"2020",
+      "Last Changed":"V11.15",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Renata Glasc",
+      "Description":"The Chem-Baroness",
+      "Classes":"Enchanter",
+      "Release Year":"2022",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Renekton",
+      "Description":"The Butcher of the Sands",
+      "Classes":"Diver",
+      "Release Year":"2011",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Rengar",
+      "Description":"The Pridestalker",
+      "Classes":"Assassin and Diver",
+      "Release Year":"2012",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Riven",
+      "Description":"The Exile",
+      "Classes":"Skirmisher",
+      "Release Year":"2011",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Rumble",
+      "Description":"The Mechanized Menace",
+      "Classes":"Battlemage",
+      "Release Year":"2011",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Ryze",
+      "Description":"The Rune Mage",
+      "Classes":"Battlemage",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Samira",
+      "Description":"The Desert Rose",
+      "Classes":"Marksman",
+      "Release Year":"2020",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Sejuani",
+      "Description":"Tury of the North",
+      "Classes":"Vanguard",
+      "Release Year":"2012",
+      "Last Changed":"V11.19",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Senna",
+      "Description":"The Redeemer",
+      "Classes":"Marksman and Enchanter",
+      "Release Year":"2019",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Seraphine",
+      "Description":"The Starry-Eyed Songstress",
+      "Classes":"Burst and Enchanter",
+      "Release Year":"2020",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Sett",
+      "Description":"The Boss",
+      "Classes":"Juggernaut",
+      "Release Year":"2020",
+      "Last Changed":"V12.6",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Shaco",
+      "Description":"The Demon Jester",
+      "Classes":"Assassin",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Shen",
+      "Description":"The Eye of Twilight",
+      "Classes":"Warden",
+      "Release Year":"2010",
+      "Last Changed":"V12.2",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Shyvana",
+      "Description":"The Half-Dragon",
+      "Classes":"Juggernaut",
+      "Release Year":"2011",
+      "Last Changed":"V11.21",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Singed",
+      "Description":"The Mad Chemist",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.21",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Sion",
+      "Description":"The Undead Juggernaut",
+      "Classes":"Vanguard",
+      "Release Year":"2009",
+      "Last Changed":"V11.21",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Sivir",
+      "Description":"The Battle Mistress",
+      "Classes":"Marksman",
+      "Release Year":"2009",
+      "Last Changed":"V11.16",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Skarner",
+      "Description":"The Crystal Vanguard",
+      "Classes":"Diver",
+      "Release Year":"2011",
+      "Last Changed":"V12.3",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Sona",
+      "Description":"Taven of the Strings",
+      "Classes":"Enchanter",
+      "Release Year":"2010",
+      "Last Changed":"V12.5",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Soraka",
+      "Description":"The Starchild",
+      "Classes":"Enchanter",
+      "Release Year":"2009",
+      "Last Changed":"V11.19",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Swain",
+      "Description":"The Noxian Grand General",
+      "Classes":"Battlemage",
+      "Release Year":"2010",
+      "Last Changed":"V11.24",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Sylas",
+      "Description":"The Unshackled",
+      "Classes":"Burst and Skirmisher",
+      "Release Year":"2019",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Syndra",
+      "Description":"The Dark Sovereign",
+      "Classes":"Burst",
+      "Release Year":"2012",
+      "Last Changed":"V11.21",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Tahm Kench",
+      "Description":"The River King",
+      "Classes":"Warden",
+      "Release Year":"2015",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Taliyah",
+      "Description":"The Stoneweaver",
+      "Classes":"Battlemage",
+      "Release Year":"2016",
+      "Last Changed":"V11.24",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Talon",
+      "Description":"The Blade's Shadow",
+      "Classes":"Assassin",
+      "Release Year":"2011",
+      "Last Changed":"V12.3",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Taric",
+      "Description":"The Shield of Valoran",
+      "Classes":"Enchanter and Warden",
+      "Release Year":"2009",
+      "Last Changed":"V11.14",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Teemo",
+      "Description":"The Swift Scout",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.21",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Thresh",
+      "Description":"The Chain Warden",
+      "Classes":"Catcher",
+      "Release Year":"2013",
+      "Last Changed":"V11.20",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Tristana",
+      "Description":"The Yordle Gunner",
+      "Classes":"Marksman",
+      "Release Year":"2009",
+      "Last Changed":"V12.2",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Trundle",
+      "Description":"The Troll King",
+      "Classes":"Juggernaut",
+      "Release Year":"2010",
+      "Last Changed":"V11.21",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Tryndamere",
+      "Description":"The Barbarian King",
+      "Classes":"Skirmisher",
+      "Release Year":"2009",
+      "Last Changed":"V12.6",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Twisted Fate",
+      "Description":"The Card Master",
+      "Classes":"Burst",
+      "Release Year":"2009",
+      "Last Changed":"V12.3",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Twitch",
+      "Description":"The Plague Rat",
+      "Classes":"Marksman",
+      "Release Year":"2009",
+      "Last Changed":"V11.24",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Udyr",
+      "Description":"The Spirit Walker",
+      "Classes":"Juggernaut",
+      "Release Year":"2009",
+      "Last Changed":"V11.20",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Urgot",
+      "Description":"The Dreadnought",
+      "Classes":"Juggernaut",
+      "Release Year":"2010",
+      "Last Changed":"V11.24",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Varus",
+      "Description":"The Arrow of Retribution",
+      "Classes":"Marksman and Artillery",
+      "Release Year":"2012",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Vayne",
+      "Description":"The Night Hunter",
+      "Classes":"Marksman",
+      "Release Year":"2011",
+      "Last Changed":"V12.2",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Veigar",
+      "Description":"The Tiny Master of Evil",
+      "Classes":"Burst",
+      "Release Year":"2009",
+      "Last Changed":"V12.4",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Vel'Koz",
+      "Description":"The Eye of the Void",
+      "Classes":"Artillery",
+      "Release Year":"2014",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Vex",
+      "Description":"The Gloomist",
+      "Classes":"Burst",
+      "Release Year":"2021",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Vi",
+      "Description":"The Piltover Enforcer",
+      "Classes":"Diver",
+      "Release Year":"2012",
+      "Last Changed":"V12.1",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Viego",
+      "Description":"The Ruined King",
+      "Classes":"Skirmisher",
+      "Release Year":"2021",
+      "Last Changed":"V12.5",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Viktor",
+      "Description":"The Machine Herald",
+      "Classes":"Battlemage",
+      "Release Year":"2011",
+      "Last Changed":"V11.20",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Vladimir",
+      "Description":"The Crimson Reaper",
+      "Classes":"Battlemage",
+      "Release Year":"2010",
+      "Last Changed":"V11.22",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Volibear",
+      "Description":"The Relentless Storm",
+      "Classes":"Juggernaut",
+      "Release Year":"2011",
+      "Last Changed":"V12.2",
+      "Blue Essence":3150,
+      "RP":790
+   },
+   {
+      "Champion":"Warwick",
+      "Description":"The Uncaged Wrath of Zaun",
+      "Classes":"Diver",
+      "Release Year":"2009",
+      "Last Changed":"V12.7",
+      "Blue Essence":450,
+      "RP":260
+   },
+   {
+      "Champion":"Wukong",
+      "Description":"The Monkey King",
+      "Classes":"Diver",
+      "Release Year":"2011",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Xayah",
+      "Description":"The Rebel",
+      "Classes":"Marksman",
+      "Release Year":"2017",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Xerath",
+      "Description":"The Magus Ascendant",
+      "Classes":"Artillery",
+      "Release Year":"2011",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Xin Zhao",
+      "Description":"The Seneschal of Demacia",
+      "Classes":"Diver",
+      "Release Year":"2010",
+      "Last Changed":"V12.5",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Yasuo",
+      "Description":"The Unforgiven",
+      "Classes":"Skirmisher",
+      "Release Year":"2013",
+      "Last Changed":"V12.7",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Yone",
+      "Description":"The Unforgotten",
+      "Classes":"Assassin and Skirmisher",
+      "Release Year":"2020",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Yorick",
+      "Description":"Thepherd of Souls",
+      "Classes":"Juggernaut",
+      "Release Year":"2011",
+      "Last Changed":"V12.5",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Yuumi",
+      "Description":"The Magical Cat",
+      "Classes":"Enchanter",
+      "Release Year":"2019",
+      "Last Changed":"V11.22",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Zac",
+      "Description":"The Secret Weapon",
+      "Classes":"Vanguard",
+      "Release Year":"2013",
+      "Last Changed":"V11.8",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Zed",
+      "Description":"The Master of Shadows",
+      "Classes":"Assassin",
+      "Release Year":"2012",
+      "Last Changed":"V12.4",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Zeri",
+      "Description":"The Spark of Zaun",
+      "Classes":"Marksman",
+      "Release Year":"2022",
+      "Last Changed":"V12.7",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Ziggs",
+      "Description":"The Hexplosives Expert",
+      "Classes":"Artillery",
+      "Release Year":"2012",
+      "Last Changed":"V11.16",
+      "Blue Essence":4800,
+      "RP":880
+   },
+   {
+      "Champion":"Zilean",
+      "Description":"The Chronokeeper",
+      "Classes":"Specialist",
+      "Release Year":"2009",
+      "Last Changed":"V11.14",
+      "Blue Essence":1350,
+      "RP":585
+   },
+   {
+      "Champion":"Zoe",
+      "Description":"The Aspect of Twilight",
+      "Classes":"Burst",
+      "Release Year":"2017",
+      "Last Changed":"V12.4",
+      "Blue Essence":6300,
+      "RP":975
+   },
+   {
+      "Champion":"Zyra",
+      "Description":"Tise of the Thorns",
+      "Classes":"Catcher",
+      "Release Year":"2012",
+      "Last Changed":"V11.22",
+      "Blue Essence":4800,
+      "RP":880
+   }
 ]
