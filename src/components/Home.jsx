@@ -4,10 +4,21 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Popup from "./Popup";
 import Contact from "./Contact";
+import champions from "./champions.json";
+import randNumGen from "./randNum";
+
+
 const Home = () => {
 
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
+  const randNumGen = function () {
+    var maxLimit = 161;
+    let rand = Math.random() * maxLimit;
+    rand = Math.floor(rand);
+    return rand;
+}
+let correctChampion = champions[randNumGen()].Champion;
   return (
     <div class="main">
       <header class="mainImage">
@@ -28,12 +39,18 @@ const Home = () => {
 
 
       <main class="gameSection">
-
         <h1>Welcome to League of Wordle!</h1>
-
         <form
           onSubmit={handleSubmit((data) => {
             console.log(data);
+            let championGuess = {
+              Champion :  data
+            };
+            let userGuess = JSON.stringify(championGuess);
+            const championList = Object.keys(champions);
+            
+console.log(correctChampion);
+            
           })}
         >
           <input  {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
