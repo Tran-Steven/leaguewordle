@@ -5,8 +5,6 @@ import { useForm } from "react-hook-form";
 import Popup from "./Popup";
 import Contact from "./Contact";
 import champions from "./champions.json";
-import randNumGen from "./randNum";
-
 
 const Home = () => {
 
