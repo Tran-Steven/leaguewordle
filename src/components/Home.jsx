@@ -5,18 +5,27 @@ import { useForm } from "react-hook-form";
 import Popup from "./Popup";
 import Contact from "./Contact";
 import champions from "./champions.json";
+import { Wrong } from './Wrong.js';
+
+import wrong from './assets/wrong.png'
+import down from './assets/down.png'
+import higher from './assets/higher.png'
+import correct from './assets/checkmark.webp'
+import { render } from '@testing-library/react';
 
 const Home = () => {
-
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
+  const [show, setShow] = useState(false);
+
   const randNumGen = function () {
     var maxLimit = 161;
     let rand = Math.random() * maxLimit;
     rand = Math.floor(rand);
     return rand;
-}
-let correctChampion = champions[randNumGen()].Champion;
+  }
+
+  let correctChampion = champions[randNumGen()].Champion;
   return (
     <div class="main">
       <header class="mainImage">
@@ -36,22 +45,23 @@ let correctChampion = champions[randNumGen()].Champion;
       </header>
 
 
+
       <main class="gameSection">
         <h1>Welcome to League of Wordle!</h1>
         <form
           onSubmit={handleSubmit((data) => {
-            console.log(data);
-            let championGuess = {
-              Champion :  data
-            };
-            let userGuess = JSON.stringify(championGuess);
+            let userInput = data.guess;
             const championList = Object.keys(champions);
-            
-console.log(correctChampion);
-            
-          })}
+            if (userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toUpperCase()) {
+              <Wrong text="Class" alt="wrong img" img={wrong} />
+              
+            }
+          })
+
+          }
         >
-          <input  {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
+          <input 
+          {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
           <input class="guess_input" type="submit" />
         </form>
       </main>
