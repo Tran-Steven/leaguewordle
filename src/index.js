@@ -23,10 +23,8 @@ root.render(
 )
 const home = ReactDOM.createRoot(document.getElementById('root'))
 
-
 setTimeout(function () {
   home.render(
-
     <div class="main-load-in">
       <App App="Main Page" />
     </div>
