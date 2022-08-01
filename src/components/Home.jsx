@@ -25,6 +25,7 @@ const Home = () => {
     return rand;
   }
 
+
   let correctChampion = champions[randNumGen()].Champion;
   return (
     <div class="main">
@@ -50,11 +51,11 @@ const Home = () => {
         <h1>Welcome to League of Wordle!</h1>
         <form
           onSubmit={handleSubmit((data) => {
+
             let userInput = data.guess;
             const championList = Object.keys(champions);
             if (userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toUpperCase()) {
               <Wrong text="Class" alt="wrong img" img={wrong} />
-              
             }
           })
 
