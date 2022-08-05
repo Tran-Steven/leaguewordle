@@ -6,9 +6,10 @@ const Wrong = (props) => {
   
     return ( 
       
+      //base is 512
       <div> 
-        <h4>{props.text}</h4> 
-        <img src={props.img} width="512" height="512" alt ={props.alt}></img>
+        <h2>{props.text}</h2> 
+        <img src={props.img} width="10%" height="10%" alt ={props.alt}></img> 
       </div> 
     
     ); 

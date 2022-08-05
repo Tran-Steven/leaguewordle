@@ -3,7 +3,7 @@ import './Contact.css';
 
 function Contact(props) {
     return (
-        <form method="post" action="mailto:visualsteven@gmail.com" enctype="text/plain" onSubmit="">
+        <form target="_top" method="post" action="mailto:visualsteven@gmail.com" enctype="text/plain" onSubmit="">
                 <div className="contactInfo">
 
                     <textarea class ="input100" name="Bug/Issue"  ></textarea>
