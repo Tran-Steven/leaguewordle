@@ -17,7 +17,7 @@ const Home = () => {
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
-  const [error, setError] = useState(false);
+  const [isRight, setIsRight] = useState(false);
   const [isWrong, setIsWrong] = useState(false)
 
   const randNumGen = function () {
@@ -26,13 +26,12 @@ const Home = () => {
     rand = Math.floor(rand);
     return rand;
   }
-
-
+  const getCorrectChampion = () => champions[randNumGen()].Champion; 
   let correctChampion = champions[randNumGen()].Champion;
   return (
     <div class="main">
       <header class="mainImage">
-        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%"/>
+        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%" />
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="50%" />
           <h2 className='how-to-h'>HOW TO PLAY</h2>
@@ -50,42 +49,46 @@ const Home = () => {
 
 
       <main class="gameSection">
-        
+
         <h1 className="opener">Welcome to League of Wordle!</h1>
         <form
           onSubmit={handleSubmit((data) => {
-
             let userInput = data.guess;
-            console.log(userInput);
+            console.log("User's input: "+userInput);
             const championList = Object.keys(champions);
+            
+            console.log("correct champion: " + correctChampion);
 
-console.log(correctChampion);
-            setError(
-              userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toUpperCase()
-            );
-          })
-
-          }
+            if (userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toString().toUpperCase()) {
+              setIsWrong(true)
+              setIsRight(false)
+            }
+            else if(userInput.valueOf().toUpperCase() == correctChampion.valueOf().toString().toUpperCase()){
+              setIsWrong(false)
+              setIsRight(true)
+            }
+          })}
         >
-          <input 
-          {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
+          <input
+            {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
           <input type="submit" />
+          {isWrong && <Wrong text="Class" alt="wrong img" img={wrong} />}
+          {isRight && <Wrong text="Class" alt="correct img" img={correct} />}
         </form>
-        {error && <Wrong text="Class" alt="wrong img" img={wrong} />}
       </main>
 
 
-        <footer class="subImages">
-          <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
-            <img src={require('./assets/github.png')} alt="Github Icon" width="18%" height="auto" />
-          </a>
-          <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank" rel="noreferrer">
-            <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="18%" height="auto" />
-          </a>
-          <img src={require('./assets/mail.png')} alt="Mail Icon" width="18%" height="auto" />
-          <img src={require('./assets/help.png')} alt="Help Icon" width="18%" height="auto" onClick={() => setButtonPopup(true)} id="help" />
-          <img src={require('./assets/share.png')} alt="Share Icon" width="18%" height="auto" />
-        </footer>
+      <footer class="subImages">
+        <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
+          <img src={require('./assets/github.png')} alt="Github Icon" width="18%" height="auto" />
+        </a>
+        <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank" rel="noreferrer">
+          <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="18%" height="auto" />
+        </a>
+        <img src={require('./assets/mail.png')} alt="Mail Icon" width="18%" height="auto" />
+        <img src={require('./assets/help.png')} alt="Help Icon" width="18%" height="auto" onClick={() => setButtonPopup(true)} id="help" />
+        <img src={require('./assets/share.png')} alt="Share Icon" width="18%" height="auto" />
+      </footer>
 
 
     </div>
