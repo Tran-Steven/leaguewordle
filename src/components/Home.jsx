@@ -35,14 +35,14 @@ const Home = () => {
         <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%"/>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="50%" />
-          <h4 className='how-to-h'>HOW TO PLAY</h4>
+          <h2 className='how-to-h'>HOW TO PLAY</h2>
           <p className='how-to'>Guess the League of legends champion within 5 tries.
             For every unsuccessful try, a hint will be given showing if your
             BE Amount, RP Amount, Release Date Year, or Champion Class is correct.
             <br />
             <br />
             Each guess has to be a valid champion. Click the send button below to submit.</p>
-          <h4 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h4>
+          <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
           <Contact></Contact>
         </Popup>
       </header>
@@ -75,17 +75,17 @@ console.log(correctChampion);
       </main>
 
 
-      <footer class="subImages">
-        <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
-          <img src={require('./assets/github.png')} alt="Github Icon" width="18%" height="auto" />
-        </a>
-        <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank" rel="noreferrer">
-          <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="18%" height="auto" />
-        </a>
-        <img src={require('./assets/mail.png')} alt="Mail Icon" width="18%" height="auto" />
-        <img src={require('./assets/help.png')} alt="Help Icon" width="18%" height="auto" onClick={() => setButtonPopup(true)} id="help" />
-        <img src={require('./assets/share.png')} alt="Share Icon" width="18%" height="auto" />
-      </footer>
+        <footer class="subImages">
+          <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
+            <img src={require('./assets/github.png')} alt="Github Icon" width="18%" height="auto" />
+          </a>
+          <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank" rel="noreferrer">
+            <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="18%" height="auto" />
+          </a>
+          <img src={require('./assets/mail.png')} alt="Mail Icon" width="18%" height="auto" />
+          <img src={require('./assets/help.png')} alt="Help Icon" width="18%" height="auto" onClick={() => setButtonPopup(true)} id="help" />
+          <img src={require('./assets/share.png')} alt="Share Icon" width="18%" height="auto" />
+        </footer>
 
 
     </div>
