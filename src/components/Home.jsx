@@ -16,7 +16,9 @@ import { render } from '@testing-library/react';
 const Home = () => {
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
-  const [show, setShow] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
+  const [error, setError] = useState(false);
+  const [isWrong, setIsWrong] = useState(false)
 
   const randNumGen = function () {
     var maxLimit = 161;
@@ -30,9 +32,9 @@ const Home = () => {
   return (
     <div class="main">
       <header class="mainImage">
-        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="312" height="119.6" nameClass="popup-i" />
+        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%" nameClass="popup-i" />
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="312" height="119.6" />
+          <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="50%" />
           <h4 className='how-to-h'>HOW TO PLAY</h4>
           <p className='how-to'>Guess the League of legends champion within 5 tries.
             For every unsuccessful try, a hint will be given showing if your
@@ -48,36 +50,41 @@ const Home = () => {
 
 
       <main class="gameSection">
-        <h1>Welcome to League of Wordle!</h1>
+        
+        <h1 className="opener">Welcome to League of Wordle!</h1>
         <form
           onSubmit={handleSubmit((data) => {
 
             let userInput = data.guess;
+            console.log(userInput);
             const championList = Object.keys(champions);
-            if (userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toUpperCase()) {
-              <Wrong text="Class" alt="wrong img" img={wrong} />
-            }
+
+console.log(correctChampion);
+            setError(
+              userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toUpperCase()
+            );
           })
 
           }
         >
           <input 
           {...register("guess")} class="guess_input" placeholder="Enter Champion Name Here" type="text" />
-          <input class="guess_input" type="submit" />
+          <input type="submit" />
         </form>
+        {error && <Wrong text="Class" alt="wrong img" img={wrong} />}
       </main>
 
 
       <footer class="subImages">
         <a href="https://github.com/Tran-Steven" target="_blank" rel="noreferrer">
-          <img src={require('./assets/github.png')} alt="Github Icon" width="265" height="102" />
+          <img src={require('./assets/github.png')} alt="Github Icon" width="18%" height="auto" />
         </a>
         <a href="https://www.linkedin.com/in/steven-tran-26735b206/" target="_blank" rel="noreferrer">
-          <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="265" height="102" />
+          <img src={require('./assets/linkedin.png')} alt="Linkedin Icon" width="18%" height="auto" />
         </a>
-        <img src={require('./assets/mail.png')} alt="Mail Icon" width="265" height="102" />
-        <img src={require('./assets/help.png')} alt="Help Icon" width="265" height="102" onClick={() => setButtonPopup(true)} id="help" />
-        <img src={require('./assets/share.png')} alt="Share Icon" width="265" height="102" />
+        <img src={require('./assets/mail.png')} alt="Mail Icon" width="18%" height="auto" />
+        <img src={require('./assets/help.png')} alt="Help Icon" width="18%" height="auto" onClick={() => setButtonPopup(true)} id="help" />
+        <img src={require('./assets/share.png')} alt="Share Icon" width="18%" height="auto" />
       </footer>
 
 
