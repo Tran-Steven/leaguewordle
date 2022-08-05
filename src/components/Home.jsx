@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div class="main">
       <header class="mainImage">
-        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%" nameClass="popup-i" />
+        <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="22%"/>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <img src={require('./assets/league-of-wordle.png')} alt="LoLxWordle Icon" width="50%" />
           <h4 className='how-to-h'>HOW TO PLAY</h4>

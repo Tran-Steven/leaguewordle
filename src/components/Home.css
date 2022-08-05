@@ -14,9 +14,19 @@
     color: #444444;
     background-color: #FAFAFA;
     text-align: center; 
-    min-height: 100vh
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+
 }
 .opener {
+    margin-top: 2%;
     font-size: 3.75vw;
 }
 footer {
@@ -32,6 +42,10 @@ footer {
 
 .game {
     text-align: center;
+}
+
+.mainImage {
+    margin-top: 1%;
 }
 
 /* Sets the parameters and font settings for the form */
@@ -63,10 +77,6 @@ input[type=submit] {
     text-align: left;
     font-size: 1.2vw;
     font-family: 'Lato';
-}
-/* original width height w:312 height: 119.6  this is the game screen logo*/
-.popup-i{
-margin:0;
 }
 
 .found-bug {
