@@ -1,90 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 .opensans {
-    font-family: "Open Sans", sans-serif;
-  }
+  font-family: "Open Sans", sans-serif;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-  .lato {
-    font-family: 'Lato', sans-serif;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+.lato {
+  font-family: "Lato", sans-serif;
+}
 
-  /* Sets the website's font and size */
+/* Sets the website's font and size */
 .main {
-    font-family: 'Roboto', sans-serif;
-    color: #444444;
-    background-color: #FAFAFA;
-    text-align: center; 
-    position:fixed;
-    padding:0;
-    margin:0;
+  font-family: "Roboto", sans-serif;
+  color: #444444;
+  background-color: #fafafa;
+  text-align: center;
+  position: fixed;
+  padding: 0;
+  margin: 0;
 
-    top:0;
-    left:0;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 .opener {
-    margin-top: 2%;
-    font-size: 3.75vw;
+  margin-top: 2%;
+  font-size: 3.75vw;
 }
 footer {
-    text-align: center;
+  text-align: center;
 }
 .main {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .images {
-    text-align: center;
+  text-align: center;
 }
 
 .game {
-    text-align: center;
+  text-align: center;
 }
 
 .mainImage {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 /* Sets the parameters and font settings for the form */
-input[type=text] {
-    width: 46%;
-    height:7.8vh;
-    padding: 0;
-    margin: 0;
-    font-size: 1.2vw;
-    box-sizing: border-box;
+input[type="text"] {
+  width: 46%;
+  height: 7.8vh;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2vw;
+  box-sizing: border-box;
 }
 
-input[type=submit] {
-    width: 10%;
-    height: 7.8vh;
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans'; 
-    font-size: 1.2vw;
+input[type="submit"] {
+  width: 10%;
+  height: 7.8vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: 1.2vw;
 }
 
 .how-to-h {
-    font-size: 1.7vw;
-    margin-top: 1%;
-    margin-bottom: 0%;
+  font-size: 1.7vw;
+  margin-top: 1%;
+  margin-bottom: 0%;
 }
 .how-to {
-    margin-top:1%;
-    text-align: left;
-    font-size: 1.2vw;
-    font-family: 'Lato';
+  margin-top: 1%;
+  text-align: left;
+  font-size: 1.2vw;
+  font-family: "Lato";
 }
 
 .found-bug {
-    font-size: 1.7vw;
-    margin:0%;
+  font-size: 1.7vw;
+  margin: 0%;
 }
 
 .wrong {
-    font-family: 'Open Sans'; 
+  font-family: "Open Sans";
 }
-

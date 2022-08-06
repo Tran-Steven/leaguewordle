@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import titleImage from './assets/league-of-wordle.png'
-import App from './App';
-import useForm from "react-hook-form"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import titleImage from "./assets/league-of-wordle.png";
+import App from "./App";
+import useForm from "react-hook-form";
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,14 +14,13 @@ import {
 // import Home component
 import Home from "./components/Home";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div class="image-container">
     <img id="title" src={titleImage} alt="Title Screen" class="center"></img>
   </div>
-)
-const home = ReactDOM.createRoot(document.getElementById('root'))
+);
+const home = ReactDOM.createRoot(document.getElementById("root"));
 
 setTimeout(function () {
   home.render(
