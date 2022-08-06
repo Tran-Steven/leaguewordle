@@ -57,7 +57,7 @@ const Home = () => {
             console.log("User's input: "+userInput);
             const championList = Object.keys(champions);
             
-            console.log("correct champion: " + correctChampion);
+            console.log("Correct champion: " + correctChampion);
 
             if (userInput.valueOf().toUpperCase() !== correctChampion.valueOf().toString().toUpperCase()) {
               setIsWrong(true)
