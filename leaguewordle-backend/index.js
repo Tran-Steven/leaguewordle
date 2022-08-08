@@ -44,7 +44,6 @@ app.listen(
   (process.env.PORT || port,
   () => {
     console.log(`Server is listening on port Log ${process.env.PORT}`);
-    console.log(`${process.env.MAIL_HOST}`);
   })
 );
 
