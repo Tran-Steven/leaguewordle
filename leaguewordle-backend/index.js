@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import router from "./routes/router.js";
@@ -24,6 +24,5 @@ app.post("/email", (request, response) => {
 });
 
 app.listen(port, () => {
-  console.log(process.env.AWS_ACCESS_KEY_ID);
   console.log(`Port running on ${port}`);
 });
