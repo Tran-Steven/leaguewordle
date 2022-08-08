@@ -1,28 +1,53 @@
-import dotenv from "dotenv";
-dotenv.config();
-import express from "express";
-import router from "./routes/router.js";
-import cors from "cors";
-
+require("dotenv").config();
+const express = require("express");
 const app = express();
-const port = 2525;
+
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use(cors());
-app.use(express.json());
-app.use(router);
-app.use(
-  "/",
-  express.static(
-    "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public"
-  )
+
+app.post("/send_mail", cors(), async (req, res) => {
+  let { text } = req.body;
+  const transport = nodemailer.createTransport({
+    host: process.env.MAIL_HOST,
+    port: process.env.MAIL_PORT,
+    auth: {
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS,
+    },
+  });
+
+  app.use(
+    "/",
+    express.static(
+      "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public"
+    )
+  );
+
+  await transport.sendMail({
+    from: process.env.MAIL_FROM,
+    to: "visualsteven2@gmail.com",
+    subject: "LeagueWordle Bug/Issue",
+    html: `<div className="email>
+<p>${text}</p>
+    </div>
+    `,
+  });
+});
+
+app.listen(
+  (process.env.PORT || port,
+  () => {
+    console.log(`Server is listening on port Log ${process.env.PORT}`);
+    console.log(`${process.env.MAIL_HOST}`);
+  })
 );
 
-app.post("/email", (request, response) => {
-  console.log(request.body);
-  const { email } = request.body;
-  response.status(200).json({ email });
-});
-
-app.listen(port, () => {
-  console.log(`Port running on ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server is listening on port ${port}`);
+// });

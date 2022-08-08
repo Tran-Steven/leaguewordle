@@ -1,9 +1,9 @@
+import axios from "axios";
 import "./Home.css";
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Popup from "./Popup";
-import Contact from "./Contact";
 import champions from "./champions.json";
 import { Wrong } from "./Wrong.js";
 
@@ -16,6 +16,7 @@ import { render } from "@testing-library/react";
 const Home = () => {
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
+  const [buttonConPopup, setButtonConPopup] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
   const [isRight, setIsRight] = useState(false);
   const [isWrong, setIsWrong] = useState(false);
@@ -118,7 +119,7 @@ const Home = () => {
               setIsWrong(true);
               setIsRight(false);
             } else if (
-              userInput.valueOf().toUpperCase() ==
+              userInput.valueOf().toUpperCase() ===
               correctChampion.valueOf().toString().toUpperCase()
             ) {
               setIsWrong(false);
