@@ -25,13 +25,15 @@ const Home = () => {
 
   //deals with the data from the form and sends an email
   const [sent, setSent] = useState(false);
-  const [text, setText] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSend = async () => {
     setSent(true);
     try {
-      await axios.post("http://localhost:2525/send_mail", {
-        text,
+      await axios.post("http://localhost:2525/email", {
+        email,
+        message,
       });
     } catch (error) {
       console.log(error);
@@ -71,34 +73,38 @@ const Home = () => {
             Each guess has to be a valid champion. Click the send button below
             to submit.
           </p>
-          <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
+          <h2 className="found-bug">CONTACT</h2>
           <div className="formHolder">
             {!sent ? (
               <form
                 target="_top"
                 method="post"
-                action="mailto:visualsteven@gmail.com"
                 enctype="text/plain"
                 onSubmit={handleSend}
               >
                 <div className="contactInfo">
+                  <h3 className="contact-email">EMAIL</h3>
                   <input
-                    class="input100"
-                    name="Bug/Issue"
+                    class="Email"
+                    name="contactEmail"
                     type="text"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-
-                  {/* <textarea class="input100" name="Bug/Issue"></textarea> */}
+                  <h3 className="contact-email">MESSAGE</h3>
+                  <input
+                    class="message"
+                    name="contactMessage"
+                    type="text"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
                   <br />
                   <input type="submit" value="Send" />
                 </div>
               </form>
             ) : (
-              // <Confirm trig={buttonConPopup} setTrig={setButtonConPopup}>
               <h2 className="confirm">Email Sent Successfully!</h2>
-              // </Confirm>
             )}
           </div>
         </Popup>
@@ -180,7 +186,7 @@ const Home = () => {
           onClick={() => {
             setButtonPopup(true);
             setSent(false);
-            setText("");
+            setMessage("");
           }}
           id="help"
         />
