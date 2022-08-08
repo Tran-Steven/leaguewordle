@@ -1,3 +1,4 @@
+import axios from "axios";
 import "./Home.css";
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
@@ -6,6 +7,7 @@ import Popup from "./Popup";
 import Contact from "./Contact";
 import champions from "./champions.json";
 import { Wrong } from "./Wrong.js";
+import Confirm from "./Confirm.js";
 
 import wrong from "./assets/wrong.png";
 import down from "./assets/down.png";
@@ -16,9 +18,26 @@ import { render } from "@testing-library/react";
 const Home = () => {
   const { register, handleSubmit } = useForm();
   const [buttonPopup, setButtonPopup] = useState(true);
+  const [buttonConPopup, setButtonConPopup] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
   const [isRight, setIsRight] = useState(false);
   const [isWrong, setIsWrong] = useState(false);
+
+  //deals with the data from the form and sends an email
+  const [sent, setSent] = useState(false);
+  const [text, setText] = useState("");
+
+  const handleSend = async () => {
+    setSent(true);
+    try {
+      await axios.post("http://localhost:2525/send_mail", {
+        text,
+      });
+    } catch (error) {
+      console.log(error);
+      console.log("react error");
+    }
+  };
 
   const randNumGen = function () {
     var maxLimit = 161;
@@ -53,7 +72,35 @@ const Home = () => {
             to submit.
           </p>
           <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
-          <Contact></Contact>
+          <div className="formHolder">
+            {!sent ? (
+              <form
+                target="_top"
+                method="post"
+                action="mailto:visualsteven@gmail.com"
+                enctype="text/plain"
+                onSubmit={handleSend}
+              >
+                <div className="contactInfo">
+                  <input
+                    class="input100"
+                    name="Bug/Issue"
+                    type="text"
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                  />
+
+                  {/* <textarea class="input100" name="Bug/Issue"></textarea> */}
+                  <br />
+                  <input type="submit" value="Send" />
+                </div>
+              </form>
+            ) : (
+              // <Confirm trig={buttonConPopup} setTrig={setButtonConPopup}>
+              <h2 className="confirm">Email Sent Successfully!</h2>
+              // </Confirm>
+            )}
+          </div>
         </Popup>
       </header>
 
@@ -74,7 +121,7 @@ const Home = () => {
               setIsWrong(true);
               setIsRight(false);
             } else if (
-              userInput.valueOf().toUpperCase() ==
+              userInput.valueOf().toUpperCase() ===
               correctChampion.valueOf().toString().toUpperCase()
             ) {
               setIsWrong(false);
@@ -130,7 +177,11 @@ const Home = () => {
           alt="Help Icon"
           width="18%"
           height="auto"
-          onClick={() => setButtonPopup(true)}
+          onClick={() => {
+            setButtonPopup(true);
+            setSent(false);
+            setText("");
+          }}
           id="help"
         />
         <img
