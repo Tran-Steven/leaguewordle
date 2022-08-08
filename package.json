@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "scripts": {
+    "server": "node leaguewordle-backend/index.js --ignore client",
+    "client": "npm start --prefix leaguewordle-frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
