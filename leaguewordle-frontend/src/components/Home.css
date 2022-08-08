@@ -46,11 +46,7 @@ footer {
 .mainImage {
   margin-top: 1%;
 }
-.confirm {
-  text-align: center;
-  font-size: 3vh;
-  font-family: "Lato";
-}
+
 /* Sets the parameters and font settings for the form */
 input[type="text"] {
   width: 46%;
