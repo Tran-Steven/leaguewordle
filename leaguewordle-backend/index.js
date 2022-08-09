@@ -12,8 +12,11 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+//when user submits an email, it takes the text and sends it to backend
 app.post("/send_mail", cors(), async (req, res) => {
   let { text } = req.body;
+
+  //auth for nodemailer
   const transport = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: process.env.MAIL_PORT,
@@ -22,14 +25,7 @@ app.post("/send_mail", cors(), async (req, res) => {
       pass: process.env.MAIL_PASS,
     },
   });
-
-  // app.get(
-  //   "/",
-  //   express.static(
-  //     "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public"
-  //   )
-  // );
-
+  //loads the front end
   app.get(
     "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public",
     function (req, res) {
@@ -37,6 +33,7 @@ app.post("/send_mail", cors(), async (req, res) => {
     }
   );
 
+  //sends mail with the user submitted text
   await transport.sendMail({
     from: process.env.MAIL_FROM,
     to: "visualsteven@gmail.com",
@@ -47,13 +44,6 @@ app.post("/send_mail", cors(), async (req, res) => {
     `,
   });
 });
-
-// app.listen(
-//   (process.env.PORT,
-//   () => {
-//     console.log(`Server is listening on port Log ${process.env.PORT}`);
-//   })
-// );
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
