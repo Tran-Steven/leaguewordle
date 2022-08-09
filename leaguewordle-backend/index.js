@@ -41,9 +41,9 @@ app.post("/send_mail", cors(), async (req, res) => {
     from: process.env.MAIL_FROM,
     to: "visualsteven@gmail.com",
     subject: "LeagueWordle Bug/Issue",
-    html: `<div className="email>
-<p>${text}</p>
-    </div>
+    html: `
+<b>${text}</b>
+
     `,
   });
 });
