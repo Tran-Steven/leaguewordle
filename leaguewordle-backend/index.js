@@ -5,6 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const port = 2525;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -22,16 +23,23 @@ app.post("/send_mail", cors(), async (req, res) => {
     },
   });
 
-  app.use(
-    "/",
-    express.static(
-      "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public"
-    )
+  // app.get(
+  //   "/",
+  //   express.static(
+  //     "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public"
+  //   )
+  // );
+
+  app.get(
+    "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public",
+    function (req, res) {
+      res.render("index", {});
+    }
   );
 
   await transport.sendMail({
     from: process.env.MAIL_FROM,
-    to: "visualsteven2@gmail.com",
+    to: "visualsteven@gmail.com",
     subject: "LeagueWordle Bug/Issue",
     html: `<div className="email>
 <p>${text}</p>
@@ -40,13 +48,13 @@ app.post("/send_mail", cors(), async (req, res) => {
   });
 });
 
-app.listen(
-  (process.env.PORT || port,
-  () => {
-    console.log(`Server is listening on port Log ${process.env.PORT}`);
-  })
-);
+// app.listen(
+//   (process.env.PORT,
+//   () => {
+//     console.log(`Server is listening on port Log ${process.env.PORT}`);
+//   })
+// );
 
-// app.listen(port, () => {
-//   console.log(`Server is listening on port ${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
