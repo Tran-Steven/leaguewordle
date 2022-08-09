@@ -16,15 +16,19 @@ import Home from "./components/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div class="image-container">
-    <img id="title" src={titleImage} alt="Title Screen" class="center"></img>
+  <div className="image-container">
+    <img
+      id="title"
+      src={titleImage}
+      alt="Title Screen"
+      className="center"
+    ></img>
   </div>
 );
-const home = ReactDOM.createRoot(document.getElementById("root"));
 
 setTimeout(function () {
-  home.render(
-    <div class="main-load-in">
+  root.render(
+    <div className="main-load-in">
       <App App="Main Page" />
     </div>
   );

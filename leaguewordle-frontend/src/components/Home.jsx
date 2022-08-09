@@ -1,12 +1,14 @@
 import axios from "axios";
 import "./Home.css";
 import React, { Component, useState } from "react";
+import "antd/lib/card/style/css";
+import { Card } from "antd";
+
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Popup from "./Popup";
 import champions from "./champions.json";
 import { Wrong } from "./Wrong.js";
-
 import wrong from "./assets/wrong.png";
 import down from "./assets/down.png";
 import higher from "./assets/higher.png";
@@ -36,6 +38,35 @@ const Home = () => {
       console.log("react error");
     }
   };
+  let championList = [];
+  for (let i = 0; i < champions.length; i++) {
+    championList[i] = champions[i].Champion;
+  }
+
+  const [counter, setCounter] = useState(5);
+  const [champions1, setChampions1] = useState(champions);
+  const [championMatch, setChampionMatch] = useState([]);
+
+  const searchChampions = (text) => {
+    if (!text) {
+      setChampionMatch([]);
+    } else {
+      let matches = champions1.filter((champion2) => {
+        const regex = new RegExp(`${text}`, "gi");
+        return champion2.Champion.match(regex);
+      });
+      setChampionMatch(matches);
+    }
+  };
+
+  const isDisabled = () => {
+    let num = 1;
+    if (num == 0) {
+      return true;
+    } else if (num == 1) {
+      return false;
+    }
+  };
 
   const randNumGen = function () {
     var maxLimit = 161;
@@ -46,8 +77,8 @@ const Home = () => {
   const getCorrectChampion = () => champions[randNumGen()].Champion;
   let correctChampion = champions[randNumGen()].Champion;
   return (
-    <div class="main">
-      <header class="mainImage">
+    <div className="main">
+      <header className="mainImage">
         <img
           src={require("./assets/league-of-wordle.png")}
           alt="LoLxWordle Icon"
@@ -76,48 +107,65 @@ const Home = () => {
                 target="_top"
                 method="post"
                 action="mailto:visualsteven@gmail.com"
-                enctype="text/plain"
+                encType="text/plain"
                 onSubmit={handleSend}
               >
                 <div className="contactInfo">
                   <input
-                    class="input100"
+                    autoComplete="off"
+                    className="input100"
                     name="Bug/Issue"
                     type="text"
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                   />
 
-                  {/* <textarea class="input100" name="Bug/Issue"></textarea> */}
                   <br />
                   <input type="submit" value="Send" />
                 </div>
               </form>
             ) : (
-              // <Confirm trig={buttonConPopup} setTrig={setButtonConPopup}>
               <h2 className="confirm">Email Sent Successfully!</h2>
-              // </Confirm>
             )}
           </div>
         </Popup>
       </header>
 
-      <main class="gameSection">
+      <main className="gameSection">
         <h1 className="opener">Welcome to League of Wordle!</h1>
+        <p>Tries Available: {counter}</p>
         <form
           onSubmit={handleSubmit((data) => {
-            let userInput = data.guess;
-            console.log("User's input: " + userInput);
-            const championList = Object.keys(champions);
+            let userInput = data.guess.valueOf().toUpperCase();
+            correctChampion = correctChampion
+              .valueOf()
+              .toString()
+              .toUpperCase();
 
+            console.log("User's input: " + userInput);
             console.log("Correct champion: " + correctChampion);
 
-            if (
-              userInput.valueOf().toUpperCase() !==
-              correctChampion.valueOf().toString().toUpperCase()
-            ) {
-              setIsWrong(true);
-              setIsRight(false);
+            //   let matches = champions1.filter((champion2) => {
+            //     const regex = new RegExp(`${text}`, "gi");
+            //     return champion2.Champion.match(regex);
+            //   });
+            //   setChampionMatch(matches);
+            // }
+            let champ3 = "";
+            let temp = champions1.filter((item) => {
+              const regex2 = new RegExp(`${userInput}`, "gi");
+              champ3 = item.Champion.match(regex2);
+            });
+            console.log(champ3);
+            if (userInput !== correctChampion) {
+              // if(userInput.valueOf().toUpperCase())
+              // setIsWrong(true);
+              // setIsRight(false);
+              // if (counter == 0) {
+              //   num = 0;
+              // } else {
+              // setCounter(counter - 1);
+              // }
             } else if (
               userInput.valueOf().toUpperCase() ===
               correctChampion.valueOf().toString().toUpperCase()
@@ -129,17 +177,29 @@ const Home = () => {
         >
           <input
             {...register("guess")}
-            class="guess_input"
+            autoComplete="off"
+            className="guess_input"
             placeholder="Enter Champion Name Here"
             type="text"
+            onChange={(e) => {
+              searchChampions(e.target.value);
+              // isDisabled(e.target.value);
+              // console.log(isDisabled());
+            }}
           />
-          <input type="submit" />
+          <input type="submit" isDisabled={isDisabled()} />
+          {championMatch &&
+            championMatch.map((item, index) => (
+              <div key={index} style={{ marginLeft: "35%", marginTop: "5px" }}>
+                <Card style={{ width: "50%" }}>{item.Champion}</Card>
+              </div>
+            ))}
           {isWrong && <Wrong text="Class" alt="wrong img" img={wrong} />}
           {isRight && <Wrong text="Class" alt="correct img" img={correct} />}
         </form>
       </main>
 
-      <footer class="subImages">
+      <footer className="subImages">
         <a
           href="https://github.com/Tran-Steven"
           target="_blank"
