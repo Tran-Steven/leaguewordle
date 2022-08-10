@@ -10,6 +10,8 @@ import "antd/lib/card/style/css";
 
 //imported .js files
 import { Wrong } from "./components/Wrong.js";
+
+//imported components
 import Popup from "./components/Popup";
 import Random from "./utils/Random";
 
@@ -56,7 +58,9 @@ const Home = () => {
   //List of champions for auto complete
   const [champions1, setChampions1] = useState(champions);
   const [championMatch, setChampionMatch] = useState([]);
-  const [setCorrectChampion, CorrectChampion] = useState(1);
+  const [correctChampion, setcorrectChampion] = useState();
+
+  const [isDisabled, setDisabled] = useState(true);
 
   //when user sends a email, it takes the text, sends it to the backend and sends it through a smtp server
   const handleSend = async () => {
@@ -94,7 +98,7 @@ const Home = () => {
   };
 
   // not finished yet or not needed, will check later
-  const isDisabled = () => {
+  const isDisabled4 = () => {
     let num = 1;
     if (num === 0) {
       return true;
@@ -116,10 +120,10 @@ Picks a random object from the champions json and uses the randNumGen function t
 Which is then used as the index of the array, then takes the Champion key and gets the value of it.
 Takes the value and turns it into a string, then makes it all uppercase, and then gets rid of any spaces.
 */
-  const correctChampion = champions[randNumGen()].Champion.valueOf()
-    .toString()
-    .toUpperCase()
-    .replaceAll(" ", "");
+  // const correctChampion = champions[randNumGen()].Champion.valueOf()
+  //   .toString()
+  //   .toUpperCase()
+  //   .replaceAll(" ", "");
   return (
     <div className="main">
       <header className="mainImage">
@@ -179,33 +183,34 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
         <h1 className="opener">Welcome to League of Wordle!</h1>
         <p>Tries Available: {counter}</p>
         <form
-          onSubmit={handleSubmit((val) => {
-            let userInput = val.guess;
+          onSubmit={handleSubmit(() => {
+            let userInput = val;
             userInput = userInput.toUpperCase().replaceAll(" ", "");
             console.log("User's input: " + userInput);
             console.log("Correct champion: " + correctChampion);
-            let champ3 = "";
-            let temp = champions1.filter((item) => {
-              const regex2 = new RegExp(`${userInput}`, "gi");
-              champ3 = item.Champion.match(regex2);
-            });
-            // console.log(champ3);
-            if (userInput !== correctChampion) {
-              // if(userInput.valueOf().toUpperCase())
-              // setIsWrong(true);
-              // setIsRight(false);
-              // if (counter == 0) {
-              //   num = 0;
-              // } else {
-              // setCounter(counter - 1);
-              // }
-            } else if (
-              userInput.valueOf().toUpperCase() ===
-              correctChampion.valueOf().toString().toUpperCase()
-            ) {
+
+            if (userInput === correctChampion) {
+              setCounter(5);
+              setcorrectChampion(
+                champions[randNumGen()].Champion.valueOf()
+                  .toString()
+                  .toUpperCase()
+                  .replaceAll(" ", "")
+              );
               setIsWrong(false);
               setIsRight(true);
+            } else if (userInput !== correctChampion) {
+              if (counter === 0) {
+                setCounter(5);
+                console.log("Implement Lose");
+              } else {
+                setCounter(counter - 1);
+              }
+              setIsWrong(true);
+              setIsRight(false);
             }
+            setVal("");
+            searchChampions("Reset Search");
           })}
         >
           <input
@@ -218,18 +223,29 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
             onChange={(e) => {
               const { value } = e.target;
               if (isLetters(value)) {
-                console.log(correctChampion);
                 setVal(value);
                 searchChampions(value);
+                if (
+                  championList.some(
+                    (x) => x === value.toUpperCase().replaceAll(" ", "")
+                  ) === true
+                ) {
+                  setDisabled(false);
+                } else {
+                  setDisabled(true);
+                }
+              }
+              if (!correctChampion) {
+                setcorrectChampion(
+                  champions[randNumGen()].Champion.valueOf()
+                    .toString()
+                    .toUpperCase()
+                    .replaceAll(" ", "")
+                );
               }
             }}
           />
-          <input
-            type="submit"
-            isDisabled={championList.some(
-              (x) => x === val.toUpperCase().replaceAll(" ", "")
-            )}
-          />
+          <input type="submit" disabled={isDisabled} />
           {championMatch &&
             championMatch.map((item, index) => (
               <div key={index} style={{ marginLeft: "35%", marginTop: "5px" }}>
