@@ -58,6 +58,7 @@ const Home = () => {
   const [championMatch, setChampionMatch] = useState([]);
   const [setCorrectChampion, CorrectChampion] = useState(1);
 
+  //when user sends a email, it takes the text, sends it to the backend and sends it through a smtp server
   const handleSend = async () => {
     setSent(true);
     try {
@@ -69,13 +70,17 @@ const Home = () => {
       console.log("react error");
     }
   };
+
+  //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
   for (let i = 0; i < champions.length; i++) {
     championList[i] = champions[i].Champion.toUpperCase().replaceAll(" ", "");
   }
 
+  //only allows user input to be letters, spaces, or apostrophes
   const isLetters = (str) => /^[A-Za-z'&" "]*$/.test(str);
 
+  //checks if user input matches any champion within the arraylist
   const searchChampions = (text) => {
     if (!text) {
       setChampionMatch([]);
@@ -88,6 +93,7 @@ const Home = () => {
     }
   };
 
+  // not finished yet or not needed, will check later
   const isDisabled = () => {
     let num = 1;
     if (num === 0) {
@@ -97,6 +103,7 @@ const Home = () => {
     }
   };
 
+  //creates a random num, used to pick a random correctChampion
   const randNumGen = function () {
     var maxLimit = 161;
     let rand = Math.random() * maxLimit;
@@ -104,18 +111,11 @@ const Home = () => {
     return rand;
   };
 
-  // useEffect(() => {
-  //   const randNumGen = function () {
-  //     var maxLimit = 161;
-  //     let rand = Math.random() * maxLimit;
-  //     rand = Math.floor(rand);
-  //     return rand;
-  //     const correctChampion = champions[randNumGen()].Champion.valueOf()
-  //     .toString()
-  //     .toUpperCase()
-  //     .replaceAll(" ", "");
-  //   };
-  // }, []);
+  /*
+Picks a random object from the champions json and uses the randNumGen function to pick a random number.
+Which is then used as the index of the array, then takes the Champion key and gets the value of it.
+Takes the value and turns it into a string, then makes it all uppercase, and then gets rid of any spaces.
+*/
   const correctChampion = champions[randNumGen()].Champion.valueOf()
     .toString()
     .toUpperCase()
@@ -248,7 +248,7 @@ const Home = () => {
           rel="noreferrer"
         >
           <img
-            src={require("./assets/github.png")}
+            src={require("./assets/images/github.png")}
             alt="Github Icon"
             width="18%"
             height="auto"
@@ -260,20 +260,20 @@ const Home = () => {
           rel="noreferrer"
         >
           <img
-            src={require("./assets/linkedin.png")}
+            src={require("./assets/images/linkedin.png")}
             alt="Linkedin Icon"
             width="18%"
             height="auto"
           />
         </a>
         <img
-          src={require("./assets/mail.png")}
+          src={require("./assets/images/mail.png")}
           alt="Mail Icon"
           width="18%"
           height="auto"
         />
         <img
-          src={require("./assets/help.png")}
+          src={require("./assets/images/help.png")}
           alt="Help Icon"
           width="18%"
           height="auto"
@@ -285,7 +285,7 @@ const Home = () => {
           id="help"
         />
         <img
-          src={require("./assets/share.png")}
+          src={require("./assets/images/share.png")}
           alt="Share Icon"
           width="18%"
           height="auto"
