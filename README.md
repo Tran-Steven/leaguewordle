@@ -12,7 +12,7 @@
      
 
 <p align="center">
-The word bank contains all of the current League of Legends champions and gives hints if you are close to the target champion. </br>You have 5 tries to guess the correct champion. Every incorrect guess produces <a href="#hint-id">hints</a> showing which traits were correct or wrong.
+The word bank contains all of the current League of Legends champions and gives hints if you are close to the target champion. </br>You have 5 tries to guess the correct champion. Every incorrect guess produces hints showing which traits were correct or wrong.
   </br>
   </br>
 You can play the game here:
@@ -20,7 +20,7 @@ https://tran-steven.github.io/leaguewordle/
 <h2></h2>
           </p>
 
-### [Hints](#hint-id)
+### Hints
 
 #### Blue Essence Amount
 
