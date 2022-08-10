@@ -1,1 +1,1 @@
-web: npm start --prefix leaguewordle-frontend
+web: npm run dev
