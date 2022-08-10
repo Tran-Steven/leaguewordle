@@ -1,4 +1,4 @@
-<img src= "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/src/assets/league-logo.png"/>
+<img src= "https://github.com/Tran-Steven/leaguewordle/blob/master/leaguewordle-frontend/src/assets/images/league-of-wordle.png?raw=true"/>
 A version of Wordle but with League Of Legends Champions.
 Uses all champions and gives hints if you are close to the target Champion.
 
