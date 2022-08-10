@@ -5,12 +5,25 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const port = 2525;
+const port = process.env.PORT || 2525;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cors());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./leaguewordle/leaguewordle-frontend/public"));
+  app.get("*", (req, res) => {
+    req.sendFile(
+      path.resolve(
+        __dirname,
+        "./leaguewordle/leaguewordle-frontend/public",
+        "index.html"
+      )
+    );
+  });
+}
 
 //when user submits an email, it takes the text and sends it to backend
 app.post("/send_mail", cors(), async (req, res) => {
