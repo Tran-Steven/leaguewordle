@@ -1,11 +1,10 @@
-import { render } from "@testing-library/react";
 import React from "react";
-import "./assets/wrong.png";
-import "./Wrong.css";
+import "../assets/images/wrong.png";
+import "../assets/css/Wrong.css";
 
 const Wrong = (props) => {
   return (
-    //base is 512
+    //base is 512x512
     <div className="wrong">
       <h2 className="propHead">{props.text}</h2>
       <img
