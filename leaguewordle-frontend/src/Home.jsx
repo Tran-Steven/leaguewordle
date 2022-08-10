@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import champions from "./data/champions.json";
 
 //css
-import "assets/css/Home.css";
+import "./assets/css/Home.css";
 import "antd/lib/card/style/css";
 
 //imported .js files
@@ -124,13 +124,13 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
     <div className="main">
       <header className="mainImage">
         <img
-          src={require("./assets/league-of-wordle.png")}
+          src={require("./assets/images/league-of-wordle.png")}
           alt="LoLxWordle Icon"
           width="22%"
         />
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <img
-            src={require("./assets/league-of-wordle.png")}
+            src={require("./assets/images/league-of-wordle.png")}
             alt="LoLxWordle Icon"
             width="50%"
           />
