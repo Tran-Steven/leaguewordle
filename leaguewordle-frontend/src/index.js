@@ -6,7 +6,6 @@ import Home from "./Home";
 import "./assets/css/index.css";
 import titleImage from "./assets/images/league-of-wordle.png";
 
-import Home from "./Home";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div className="image-container">
