@@ -1,1 +1,1 @@
-web: node ../leaguewordle-backend/index.js start
+web: node index start
