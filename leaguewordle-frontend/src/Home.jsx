@@ -200,7 +200,7 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
               setIsWrong(false);
               setIsRight(true);
             } else if (userInput !== correctChampion) {
-              if (counter === 0) {
+              if (counter === 1) {
                 setCounter(5);
                 console.log("Implement Lose");
               } else {
