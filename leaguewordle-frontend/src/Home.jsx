@@ -145,8 +145,8 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
             Amount, Release Date Year, or Champion Class is correct.
             <br />
             <br />
-            Each guess has to be a valid champion. Click the send button below
-            to submit.
+            Each guess has to be a valid champion. Click the Submit button on
+            the left or click enter to submit your guess.
           </p>
           <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
           <div className="formHolder">
