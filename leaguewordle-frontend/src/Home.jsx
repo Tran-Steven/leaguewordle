@@ -66,7 +66,7 @@ const Home = () => {
   const handleSend = async () => {
     setSent(true);
     try {
-      await axios.post("http://localhost:2525/send_mail", {
+      await axios.post("http://https://leaguewordle.herokuapp.com/send_mail", {
         text,
       });
     } catch (error) {

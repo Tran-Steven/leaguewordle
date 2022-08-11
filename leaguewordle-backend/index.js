@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-
+var path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -12,13 +12,18 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "build")));
-  app.get("*", (req, res) => {
-    req.sendFile(path.resolve(__dirname, "build", "index.html"));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "build")));
+//   app.get("*", (req, res) => {
+//     req.sendFile(path.resolve(__dirname, "build", "index.html"));
+//   });
+// }
 
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 //when user submits an email, it takes the text and sends it to backend
 app.post("/send_mail", cors(), async (req, res) => {
   let { text } = req.body;
@@ -33,12 +38,6 @@ app.post("/send_mail", cors(), async (req, res) => {
     },
   });
   //loads the front end
-  app.get(
-    "/Users/steventran/leaguewordle/leaguewordle/leaguewordle-frontend/public",
-    function (req, res) {
-      res.render("index", {});
-    }
-  );
 
   //sends mail with the user submitted text
   await transport.sendMail({
