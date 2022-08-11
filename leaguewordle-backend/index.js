@@ -13,11 +13,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("./leaguewordle/leaguewordle-frontend/public"));
+  app.use(express.static(path.join(__dirname, "build")));
   app.get("*", (req, res) => {
-    req.sendFile(
-      path.resolve(__dirname, "../leaguewordle-frontend/public", "index.html")
-    );
+    req.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
 }
 

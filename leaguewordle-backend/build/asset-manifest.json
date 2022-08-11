@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/leaguewordle/static/css/main.148c76dc.css",
+    "main.js": "/leaguewordle/static/js/main.d869e4f5.js",
+    "static/media/league-of-wordle.png": "/leaguewordle/static/media/league-of-wordle.142fa861bb7231ae20d2.png",
+    "static/media/linkedin.png": "/leaguewordle/static/media/linkedin.1b8c52a7521547cb8ebd.png",
+    "static/media/mail.png": "/leaguewordle/static/media/mail.07cdb0e9fc01f3f23af5.png",
+    "static/media/higher.png": "/leaguewordle/static/media/higher.52cb0f2a1e0fe95ad955.png",
+    "static/media/down.png": "/leaguewordle/static/media/down.cf2c2a894ec2b938374b.png",
+    "static/media/wrong.png": "/leaguewordle/static/media/wrong.9c885d321472b764bc57.png",
+    "static/media/checkmark.webp": "/leaguewordle/static/media/checkmark.5140b588d8a24ddd20c3.webp",
+    "index.html": "/leaguewordle/index.html",
+    "main.148c76dc.css.map": "/leaguewordle/static/css/main.148c76dc.css.map",
+    "main.d869e4f5.js.map": "/leaguewordle/static/js/main.d869e4f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.148c76dc.css",
+    "static/js/main.d869e4f5.js"
+  ]
+}
