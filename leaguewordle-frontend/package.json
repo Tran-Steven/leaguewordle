@@ -2,7 +2,6 @@
   "name": "leaguewordle",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Tran-Steven.github.io/leaguewordle",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
