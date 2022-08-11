@@ -1,6 +1,10 @@
 {
   "name": "leaguewordle-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.50"
+  }
   "description": "",
   "main": "index.js",
   "scripts": {
