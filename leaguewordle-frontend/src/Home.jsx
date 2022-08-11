@@ -66,7 +66,7 @@ const Home = () => {
   const handleSend = async () => {
     setSent(true);
     try {
-      await axios.post("http://https://leaguewordle.herokuapp.com/send_mail", {
+      await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
         text,
       });
     } catch (error) {
@@ -211,6 +211,7 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
             }
             setVal("");
             searchChampions("Reset Search");
+            setDisabled(true);
           })}
         >
           <input

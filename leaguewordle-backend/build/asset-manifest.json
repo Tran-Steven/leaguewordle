@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.148c76dc.css",
-    "main.js": "/static/js/main.bf541e9d.js",
+    "main.js": "/static/js/main.89a7e941.js",
     "static/media/league-of-wordle.png": "/static/media/league-of-wordle.142fa861bb7231ae20d2.png",
     "static/media/linkedin.png": "/static/media/linkedin.1b8c52a7521547cb8ebd.png",
     "static/media/mail.png": "/static/media/mail.07cdb0e9fc01f3f23af5.png",
@@ -11,10 +11,10 @@
     "static/media/checkmark.webp": "/static/media/checkmark.5140b588d8a24ddd20c3.webp",
     "index.html": "/index.html",
     "main.148c76dc.css.map": "/static/css/main.148c76dc.css.map",
-    "main.bf541e9d.js.map": "/static/js/main.bf541e9d.js.map"
+    "main.89a7e941.js.map": "/static/js/main.89a7e941.js.map"
   },
   "entrypoints": [
     "static/css/main.148c76dc.css",
-    "static/js/main.bf541e9d.js"
+    "static/js/main.89a7e941.js"
   ]
 }
