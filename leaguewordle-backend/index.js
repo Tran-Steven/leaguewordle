@@ -16,11 +16,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./leaguewordle/leaguewordle-frontend/public"));
   app.get("*", (req, res) => {
     req.sendFile(
-      path.resolve(
-        __dirname,
-        "./leaguewordle/leaguewordle-frontend/public",
-        "index.html"
-      )
+      path.resolve(__dirname, "../leaguewordle-frontend/public", "index.html")
     );
   });
 }
