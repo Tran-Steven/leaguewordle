@@ -319,6 +319,8 @@ const Home = () => {
                 if (wrongNum < correctNum) {
                   setisBEHigher(true);
                   setisBELower(false);
+                  setIsBEWrong(false);
+                  setIsBERight(false);
                   wrongCC = wrongChamp.RP.valueOf().toString();
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
@@ -326,6 +328,8 @@ const Home = () => {
                 } else if (wrongNum > correctNum) {
                   setisBEHigher(false);
                   setisBELower(true);
+                  setIsBEWrong(false);
+                  setIsBERight(false);
                   wrongCC = wrongChamp.RP.valueOf().toString();
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
@@ -333,6 +337,8 @@ const Home = () => {
                 } else {
                   setIsBEWrong(false);
                   setIsBERight(true);
+                  setisBEHigher(false);
+                  setisBELower(false);
                   wrongCC = wrongChamp.RP.valueOf().toString();
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
@@ -342,12 +348,18 @@ const Home = () => {
                 if (wrongNum < correctNum) {
                   setisRPHigher(true);
                   setisRPLower(false);
+                  setIsRPWrong(false);
+                  setIsRPRight(false);
                 } else if (wrongNum > correctNum) {
                   setisRPHigher(false);
                   setisRPLower(true);
+                  setIsRPWrong(false);
+                  setIsRPRight(false);
                 } else {
                   setIsRPWrong(false);
                   setIsRPRight(true);
+                  setisRPHigher(false);
+                  setisRPLower(false);
                 }
                 setCounter(counter - 1);
               }
