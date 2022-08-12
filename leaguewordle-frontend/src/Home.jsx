@@ -111,10 +111,11 @@ const Home = () => {
   };
 
   //creates a random num, used to pick a random correctChampion
-  const randNumGen = function () {
-    var maxLimit = 161;
-    let rand = Math.random() * maxLimit;
-    rand = Math.floor(rand);
+  const randNumGen = function (min = 0, max = 160) {
+    let diff = max - min;
+    let rand = Math.random();
+    rand = Math.floor(rand * diff);
+    rand = rand + min;
     return rand;
   };
 
@@ -140,7 +141,7 @@ const Home = () => {
             <br />
             <br />
             Each guess has to be a valid champion. Click the Submit button on
-            the left or click enter to submit your guess.
+            the right or click enter to submit your guess.
           </p>
           <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
           <div className="formHolder">
