@@ -230,10 +230,9 @@ const Home = () => {
           onSubmit={handleSubmit(() => {
             let userInput = val;
             userInput = userInput.toUpperCase().replaceAll(" ", "");
-            console.log("User's input: " + userInput);
-            console.log("Correct champion: " + correctChampion);
+            // console.log("User's input: " + userInput);
+            // console.log("Correct champion: " + correctChampion);
 
-            console.log("Test below: ");
             setuserGuess(userInput);
             let correctChampObj = champions[jIndex];
             let wrongChamp = champions[iIndex];
@@ -275,7 +274,6 @@ const Home = () => {
                     .toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("Classes match");
                 } else {
                   setIsWrong(true);
                   setIsRight(false);
@@ -285,7 +283,6 @@ const Home = () => {
                     .toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("Classes don't match");
                 }
 
                 //checks if release year match
@@ -298,7 +295,6 @@ const Home = () => {
                     .toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("Release year is less than");
                 } else if (wrongNum > correctNum) {
                   setisHigher(false);
                   setisLower(true);
@@ -308,7 +304,6 @@ const Home = () => {
                     .toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("Release year are greater");
                 } else {
                   setIsRYWrong(false);
                   setIsRYRight(true);
@@ -318,7 +313,6 @@ const Home = () => {
                     .toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("Release years are equal");
                 }
 
                 //compare BE
@@ -329,7 +323,6 @@ const Home = () => {
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("You have to guess higher");
                 } else if (wrongNum > correctNum) {
                   setisBEHigher(false);
                   setisBELower(true);
@@ -337,7 +330,6 @@ const Home = () => {
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("You have to guess lower");
                 } else {
                   setIsBEWrong(false);
                   setIsBERight(true);
@@ -345,21 +337,17 @@ const Home = () => {
                   correctCC = correctChampObj.RP.valueOf().toString();
                   wrongNum = parseInt(wrongCC);
                   correctNum = parseInt(correctCC);
-                  console.log("BE are equal");
                 }
 
                 if (wrongNum < correctNum) {
                   setisRPHigher(true);
                   setisRPLower(false);
-                  console.log("RP is less than");
                 } else if (wrongNum > correctNum) {
                   setisRPHigher(false);
                   setisRPLower(true);
-                  console.log("RP are greater");
                 } else {
                   setIsRPWrong(false);
                   setIsRPRight(true);
-                  console.log("RP are equal");
                 }
                 setCounter(counter - 1);
               }
