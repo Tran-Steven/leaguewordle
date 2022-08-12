@@ -7,7 +7,17 @@
 .lato {
   font-family: "Lato", sans-serif;
 }
-
+.comp {
+}
+.userChampGuess {
+  font-weight: bold;
+  font-size: 1em;
+}
+.counter {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.5em;
+}
 /* Sets the website's font and size */
 .main {
   font-family: "Roboto", sans-serif;
@@ -27,6 +37,7 @@
 .opener {
   margin-top: 2%;
   font-size: 3.75vw;
+  font-weight: bold;
 }
 footer {
   text-align: center;
@@ -67,19 +78,27 @@ input[type="submit"] {
 }
 
 .how-to-h {
-  font-size: 1.7vw;
+  font-weight: bold;
+  font-size: 1.7em;
   margin-top: 1%;
   margin-bottom: 0%;
 }
 .how-to {
   margin-top: 1%;
   text-align: left;
-  font-size: 1.2vw;
+  font-size: 1.1em;
+  font-family: "Lato";
+}
+.how-to2 {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 1.2em;
   font-family: "Lato";
 }
 
 .found-bug {
-  font-size: 1.7vw;
+  font-weight: bold;
+  font-size: 1.5em;
   margin: 0%;
 }
 

@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { Card } from "antd";
+import { Card, Popconfirm } from "antd";
 import { useForm } from "react-hook-form";
 import champions from "./data/champions.json";
-
 //css
 import "./assets/css/Home.css";
 import "antd/lib/card/style/css";
 
-//imported .js files
-import { Wrong } from "./components/Wrong.js";
-
 //imported components
 import Popup from "./components/Popup";
-import Random from "./utils/Random";
+import PopupWon from "./components/PopupWon";
+import { Wrong } from "./components/Wrong.js";
 
 //imported images
 import wrong from "./assets/images/wrong.png";
@@ -22,47 +19,63 @@ import higher from "./assets/images/higher.png";
 import correct from "./assets/images/checkmark.webp";
 
 const Home = () => {
-  // const initialState = {
-  //   buttonPopup: true,
-  //   isRight: true,
-  //   isWrong: true,
-  //   val: "",
-  //   sent: false,
-  //   text: "",
-  //   counter: 5,
-  //   champions1: champions,
-  //   championMatch: [],
-  // };
-  // const [state, dispatch] = useReducer(reducer, initialState);
-
   //handles input submit
   const { register, handleSubmit } = useForm();
 
-  const [buttonConPopup, setButtonConPopup] = useState(true);
-  const [isToggled, setIsToggled] = useState(false);
-
+  //sets the user input with restrictions, must be a-z or A-Z or quotation mark or spaces or ampersand
   const [val, setVal] = useState("");
+
   //State the contact popup is at
   const [buttonPopup, setButtonPopup] = useState(true);
 
-  //If user is correct or wrong on their guess
+  //Class useStates for conditionals
   const [isRight, setIsRight] = useState(false);
   const [isWrong, setIsWrong] = useState(false);
+
+  //Release Year useStates for conditionals
+  const [isLower, setisLower] = useState(false);
+  const [isHigher, setisHigher] = useState(false);
+  const [isRYRight, setIsRYRight] = useState(false);
+  const [isRYWrong, setIsRYWrong] = useState(false);
+
+  //BE useStates for conditionals
+  const [isBELower, setisBELower] = useState(false);
+  const [isBEHigher, setisBEHigher] = useState(false);
+  const [isBERight, setIsBERight] = useState(false);
+  const [isBEWrong, setIsBEWrong] = useState(false);
+
+  //RP useStates for conditionals
+  const [isRPLower, setisRPLower] = useState(false);
+  const [isRPHigher, setisRPHigher] = useState(false);
+  const [isRPRight, setIsRPRight] = useState(false);
+  const [isRPWrong, setIsRPWrong] = useState(false);
 
   // deals with the data from the form and sends an email
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
   //Sets the amount of guesses
   const [counter, setCounter] = useState(5);
-
   //List of champions for auto complete
-  const [champions1, setChampions1] = useState(champions);
+  const champions1 = champions;
   const [championMatch, setChampionMatch] = useState([]);
   const [correctChampion, setcorrectChampion] = useState();
-
+  const [userGuess, setuserGuess] = useState("");
+  // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
   const [isDisabled, setDisabled] = useState(true);
+  const [isWon, setWon] = useState(false);
+  const [isLost, setLost] = useState(false);
+  //sets the index of the champions
+  const [iIndex, setiIndex] = useState(0);
+  const [jIndex, setjIndex] = useState(0);
+  const [number, setNumber] = useState(0);
 
-  //when user sends a email, it takes the text, sends it to the backend and sends it through a smtp server
+  const link = "https://leaguewordle.herokuapp.com/";
+
+  const copy = function () {
+    navigator.clipboard.writeText(link);
+  };
+
+  //when user sends a email, the textgets sent to the backend and sends it through a smtp server
   const handleSend = async () => {
     setSent(true);
     try {
@@ -81,8 +94,8 @@ const Home = () => {
     championList[i] = champions[i].Champion.toUpperCase().replaceAll(" ", "");
   }
 
-  //only allows user input to be letters, spaces, or apostrophes
-  const isLetters = (str) => /^[A-Za-z'&" "]*$/.test(str);
+  //only allows user input to be letters, spaces, or apostrophes or periods
+  const isLetters = (str) => /^[A-Za-z'&." "]*$/.test(str);
 
   //checks if user input matches any champion within the arraylist
   const searchChampions = (text) => {
@@ -97,16 +110,6 @@ const Home = () => {
     }
   };
 
-  // not finished yet or not needed, will check later
-  const isDisabled4 = () => {
-    let num = 1;
-    if (num === 0) {
-      return true;
-    } else if (num === 1) {
-      return false;
-    }
-  };
-
   //creates a random num, used to pick a random correctChampion
   const randNumGen = function () {
     var maxLimit = 161;
@@ -115,15 +118,6 @@ const Home = () => {
     return rand;
   };
 
-  /*
-Picks a random object from the champions json and uses the randNumGen function to pick a random number.
-Which is then used as the index of the array, then takes the Champion key and gets the value of it.
-Takes the value and turns it into a string, then makes it all uppercase, and then gets rid of any spaces.
-*/
-  // const correctChampion = champions[randNumGen()].Champion.valueOf()
-  //   .toString()
-  //   .toUpperCase()
-  //   .replaceAll(" ", "");
   return (
     <div className="main">
       <header className="mainImage">
@@ -142,7 +136,7 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
           <p className="how-to">
             Guess the League of legends champion within 5 tries. For every
             unsuccessful try, a hint will be given showing if your BE Amount, RP
-            Amount, Release Date Year, or Champion Class is correct.
+            Amount, Release Year, or Champion Class is correct.
             <br />
             <br />
             Each guess has to be a valid champion. Click the Submit button on
@@ -180,8 +174,58 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
       </header>
 
       <main className="gameSection">
+        <PopupWon trigger={isWon} setTrigger={setWon}>
+          <img
+            src={require("./assets/images/league-of-wordle.png")}
+            alt="LoLxWordle Icon"
+            width="50%"
+          />
+          <h1 className="how-to-h">GAME WON</h1>
+          <p className="how-to2">
+            Hey! Thanks for playing, this was made for fun over the summer to
+            learn and pickup a new language. It was built using HTML,
+            JavaScript, Reactjs, and Express!
+          </p>
+          <h2 className="how-to-h">PLAY AGAIN</h2>
+          <p className="how-to2">
+            If you want to start another game then just click out of this popup.
+            The game picks a random champion everytime, no need to wait for
+            tomorrow!
+          </p>
+        </PopupWon>
+        <PopupWon trigger={isLost} setTrigger={setLost}>
+          <img
+            src={require("./assets/images/league-of-wordle.png")}
+            alt="LoLxWordle Icon"
+            width="50%"
+          />
+          <h1 className="how-to-h"> GAME LOST</h1>
+
+          <p className="how-to2">
+            If you want to start another game, just click out of this popup. The
+            game picks a random champion everytime, no need to wait for
+            tomorrow!
+          </p>
+          <h2 className="how-to-h">MORE INSTRUCTIONS</h2>
+          <p className="how-to2">
+            Click on the Github Icon below for more detailed instructions and
+            explainations on to play the game and how it works.
+          </p>
+          <a
+            href="https://github.com/Tran-Steven/leaguewordle"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              width="30%"
+              height="auto"
+              src={require("./assets/images/github.png")}
+              alt="Github Icon"
+            />
+          </a>
+        </PopupWon>
         <h1 className="opener">Welcome to League of Wordle!</h1>
-        <p>Tries Available: {counter}</p>
+        <p className="counter">Tries Available: {counter}</p>
         <form
           onSubmit={handleSubmit(() => {
             let userInput = val;
@@ -189,7 +233,20 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
             console.log("User's input: " + userInput);
             console.log("Correct champion: " + correctChampion);
 
+            console.log("Test below: ");
+            setuserGuess(userInput);
+            let correctChampObj = champions[jIndex];
+            let wrongChamp = champions[iIndex];
+
+            //declaring variables to hold the champion objects
+            let correctCC;
+            let wrongCC;
+            //declaring variables to hold ints
+            let correctNum;
+            let wrongNum;
+            setNumber(number + 1);
             if (userInput === correctChampion) {
+              setWon(true);
               setCounter(5);
               setcorrectChampion(
                 champions[randNumGen()].Champion.valueOf()
@@ -199,15 +256,113 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
               );
               setIsWrong(false);
               setIsRight(true);
-            } else if (userInput !== correctChampion) {
+            } else {
+              //initalizing variables to contain the Classes value
+              wrongCC = wrongChamp.Classes.valueOf().toString();
+              correctCC = correctChampObj.Classes.valueOf().toString();
+
+              //checks if classes match
               if (counter === 1) {
+                setLost(true);
                 setCounter(5);
-                console.log("Implement Lose");
               } else {
+                if (wrongCC === correctCC) {
+                  setIsWrong(false);
+                  setIsRight(true);
+                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
+                  correctCC = correctChampObj["Release Year"]
+                    .valueOf()
+                    .toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("Classes match");
+                } else {
+                  setIsWrong(true);
+                  setIsRight(false);
+                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
+                  correctCC = correctChampObj["Release Year"]
+                    .valueOf()
+                    .toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("Classes don't match");
+                }
+
+                //checks if release year match
+                if (wrongNum < correctNum) {
+                  setisHigher(true);
+                  setisLower(false);
+                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
+                  correctCC = correctChampObj["Blue Essence"]
+                    .valueOf()
+                    .toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("Release year is less than");
+                } else if (wrongNum > correctNum) {
+                  setisHigher(false);
+                  setisLower(true);
+                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
+                  correctCC = correctChampObj["Blue Essence"]
+                    .valueOf()
+                    .toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("Release year are greater");
+                } else {
+                  setIsRYWrong(false);
+                  setIsRYRight(true);
+                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
+                  correctCC = correctChampObj["Blue Essence"]
+                    .valueOf()
+                    .toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("Release years are equal");
+                }
+
+                //compare BE
+                if (wrongNum < correctNum) {
+                  setisBEHigher(true);
+                  setisBELower(false);
+                  wrongCC = wrongChamp.RP.valueOf().toString();
+                  correctCC = correctChampObj.RP.valueOf().toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("You have to guess higher");
+                } else if (wrongNum > correctNum) {
+                  setisBEHigher(false);
+                  setisBELower(true);
+                  wrongCC = wrongChamp.RP.valueOf().toString();
+                  correctCC = correctChampObj.RP.valueOf().toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("You have to guess lower");
+                } else {
+                  setIsBEWrong(false);
+                  setIsBERight(true);
+                  wrongCC = wrongChamp.RP.valueOf().toString();
+                  correctCC = correctChampObj.RP.valueOf().toString();
+                  wrongNum = parseInt(wrongCC);
+                  correctNum = parseInt(correctCC);
+                  console.log("BE are equal");
+                }
+
+                if (wrongNum < correctNum) {
+                  setisRPHigher(true);
+                  setisRPLower(false);
+                  console.log("RP is less than");
+                } else if (wrongNum > correctNum) {
+                  setisRPHigher(false);
+                  setisRPLower(true);
+                  console.log("RP are greater");
+                } else {
+                  setIsRPWrong(false);
+                  setIsRPRight(true);
+                  console.log("RP are equal");
+                }
                 setCounter(counter - 1);
               }
-              setIsWrong(true);
-              setIsRight(false);
             }
             setVal("");
             searchChampions("Reset Search");
@@ -224,6 +379,20 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
             onChange={(e) => {
               const { value } = e.target;
               if (isLetters(value)) {
+                // finding the index of where correctChampion & userInput is in the champions array object
+                const j = champions.findIndex(
+                  (champion) =>
+                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
+                    correctChampion
+                );
+
+                const i = champions.findIndex(
+                  (champion) =>
+                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
+                    value.valueOf().toUpperCase().replaceAll(" ", "")
+                );
+                setiIndex(i);
+                setjIndex(j);
                 setVal(value);
                 searchChampions(value);
                 if (
@@ -253,8 +422,51 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
                 <Card style={{ width: "50%" }}>{item.Champion}</Card>
               </div>
             ))}
-          {isWrong && <Wrong text="Class" alt="wrong img" img={wrong} />}
-          {isRight && <Wrong text="Class" alt="correct img" img={correct} />}
+          <div className="comp">
+            {isWrong && <Wrong text="Class" alt="wrong image" img={wrong} />}
+            {isRight && (
+              <Wrong text="Class" alt="correct image" img={correct} />
+            )}
+
+            {isRYWrong && (
+              <Wrong text="Release Year" alt="wrong image" img={wrong} />
+            )}
+            {isRYRight && (
+              <Wrong text="Release Year" alt="correct image" img={correct} />
+            )}
+            {isLower && (
+              <Wrong text="Release Year" alt="Down Arrow image" img={down} />
+            )}
+            {isHigher && (
+              <Wrong text="Release Year" alt="Up Arrow image" img={higher} />
+            )}
+
+            {isBEWrong && (
+              <Wrong text="Blue Essence" alt="wrong img" img={wrong} />
+            )}
+            {isBERight && (
+              <Wrong text="Blue Essence" alt="correct img" img={correct} />
+            )}
+            {isBELower && (
+              <Wrong text="Blue Essence" alt="Down Arrow image" img={down} />
+            )}
+            {isBEHigher && (
+              <Wrong text="Blue Essence" alt="Up Arrow image" img={higher} />
+            )}
+
+            {isRPWrong && (
+              <Wrong text="Riot Points" alt="wrong img" img={wrong} />
+            )}
+            {isRPRight && (
+              <Wrong text="Riot Points" alt="correct img" img={correct} />
+            )}
+            {isRPLower && (
+              <Wrong text="Riot Points" alt="Down Arrow image" img={down} />
+            )}
+            {isRPHigher && (
+              <Wrong text="Riot Points" alt="Up Arrow image" img={higher} />
+            )}
+          </div>
         </form>
       </main>
 
@@ -265,10 +477,9 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
           rel="noreferrer"
         >
           <img
+            className="footerImages"
             src={require("./assets/images/github.png")}
             alt="Github Icon"
-            width="18%"
-            height="auto"
           />
         </a>
         <a
@@ -277,23 +488,20 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
           rel="noreferrer"
         >
           <img
+            className="footerImages"
             src={require("./assets/images/linkedin.png")}
             alt="Linkedin Icon"
-            width="18%"
-            height="auto"
           />
         </a>
         <img
+          className="footerImages"
           src={require("./assets/images/mail.png")}
           alt="Mail Icon"
-          width="18%"
-          height="auto"
         />
         <img
+          className="footerImages"
           src={require("./assets/images/help.png")}
           alt="Help Icon"
-          width="18%"
-          height="auto"
           onClick={() => {
             setButtonPopup(true);
             setSent(false);
@@ -301,11 +509,16 @@ Takes the value and turns it into a string, then makes it all uppercase, and the
           }}
           id="help"
         />
+
         <img
+          onClick={() => {
+            copy();
+          }}
+          a
+          href="#"
+          className="footerImages"
           src={require("./assets/images/share.png")}
           alt="Share Icon"
-          width="18%"
-          height="auto"
         />
       </footer>
     </div>

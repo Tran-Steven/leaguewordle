@@ -1,9 +1,12 @@
 .wrong {
   float: left;
-  width: 50%;
-  font-size: 1.7vw;
+  width: 25%;
+  font-size: 1em;
 }
 
+.wrongImg {
+  width: 20%;
+}
 .propHead {
   margin-bottom: 0%;
 }

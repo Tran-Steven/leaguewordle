@@ -13,6 +13,7 @@ const Wrong = (props) => {
         height="10%"
         alt={props.alt}
         margin-top="1%"
+        className="wrongImg"
       ></img>
     </div>
   );
