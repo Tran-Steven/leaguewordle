@@ -148,7 +148,6 @@ const Home = () => {
               <form
                 target="_top"
                 method="post"
-                action="mailto:visualsteven@gmail.com"
                 encType="text/plain"
                 onSubmit={handleSend}
               >
