@@ -68,11 +68,16 @@ const Home = () => {
   const [iIndex, setiIndex] = useState(0);
   const [jIndex, setjIndex] = useState(0);
   const [number, setNumber] = useState(0);
-
   const link = "https://leaguewordle.herokuapp.com/";
 
   const copy = function () {
     navigator.clipboard.writeText(link);
+  };
+
+  const [width, setWindowWidth] = useState(0);
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
   };
 
   //when user sends a email, the textgets sent to the backend and sends it through a smtp server
@@ -91,7 +96,7 @@ const Home = () => {
   //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
   for (let i = 0; i < champions.length; i++) {
-    championList[i] = champions[i].Champion.toUpperCase().replaceAll(" ", "");
+    championList[i] = champions[i].Champion.toUpperCase().replace(/" "/g, "");
   }
 
   //only allows user input to be letters, spaces, or apostrophes or periods
@@ -153,11 +158,10 @@ const Home = () => {
                 onSubmit={handleSend}
               >
                 <div className="contactInfo">
-                  <input
+                  <textarea
+                    className="contacttxt"
                     autoComplete="off"
-                    className="input100"
                     name="Bug/Issue"
-                    type="text"
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                   />
@@ -224,12 +228,12 @@ const Home = () => {
             />
           </a>
         </PopupWon>
-        <h1 className="opener">Welcome to League of Wordle!</h1>
+
         <p className="counter">Tries Available: {counter}</p>
         <form
           onSubmit={handleSubmit(() => {
             let userInput = val;
-            userInput = userInput.toUpperCase().replaceAll(" ", "");
+            userInput = userInput.toUpperCase().replace(/" "/g, "");
             // console.log("User's input: " + userInput);
             // console.log("Correct champion: " + correctChampion);
 
@@ -470,7 +474,7 @@ const Home = () => {
         </form>
       </main>
 
-      <footer className="subImages">
+      <footer id="footer">
         <a
           href="https://github.com/Tran-Steven"
           target="_blank"
