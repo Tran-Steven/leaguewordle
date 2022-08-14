@@ -34,7 +34,7 @@ body {
   }
 }
 
-.gpt3__footer {
+.bot__footer {
   width: 100%;
   text-align: center;
   position: absolute;
@@ -43,7 +43,7 @@ body {
   align-items: center;
 }
 
-.gpt3__footer-container {
+.bot__footer-container {
   flex: 1;
   display: inline;
   justify-content: flex-start;
@@ -51,10 +51,10 @@ body {
   flex-direction: row;
 }
 
-.gpt3__footer-container__image {
+.bot__footer-container__image {
   justify-items: center;
 }
-.gpt3__footer-container__image img {
+.bot__footer-container__image img {
   align-items: center;
   width: 300px;
   height: 114.5px;
@@ -64,14 +64,14 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .gpt3__footer {
+  .bot__footer {
   }
 }
 
 @media screen and (max-width: 550px) {
-  .gpt3__footer {
+  .bot__footer {
   }
-  .gpt3__footer-container__image img {
+  .bot__footer-container__image img {
     width: 156px;
     height: 59.28px;
   }

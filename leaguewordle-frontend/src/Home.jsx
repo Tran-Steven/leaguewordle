@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Card } from "antd";
 import { useForm } from "react-hook-form";
-import champions from "./data/champions.json";
-//css
 
-import Header from "./components/Header/Header.jsx";
-// import "./assets/css/Home.css";
+//json file containing all league of legends champions
+import champions from "./data/champions.json";
+
 import "antd/lib/card/style/css";
 import "./assets/css/test.css";
-//imported components
+//components
+import Header from "./components/Header/Header.jsx";
 import Popup from "./components/Popup/Popup.jsx";
-import PopupWon from "./components/PopupWon";
+import PopupGameStatus from "./components/PopupGameStatus";
 import { Wrong } from "./components/Wrong.js";
 
 //imported images
@@ -20,6 +19,7 @@ import down from "./assets/images/down.png";
 import higher from "./assets/images/higher.png";
 import correct from "./assets/images/checkmark.webp";
 import logo from "./assets/images/league-of-wordle.png";
+import logo2 from "./assets/images/image2vector.svg";
 const Home = () => {
   //handles input submit
   const { register, handleSubmit } = useForm();
@@ -124,53 +124,9 @@ const Home = () => {
   return (
     <div className="main">
       <Header />
-
-      {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <img
-          src={require("./assets/images/league-of-wordle.png")}
-          alt="LoLxWordle Icon"
-        />
-        <h2 className="how-to-h">HOW TO PLAY</h2>
-        <p className="how-to">
-          Guess the League of legends champion within 5 tries. For every
-          unsuccessful try, a hint will be given showing if your BE Amount, RP
-          Amount, Release Year, or Champion Class is correct.
-          <br />
-          <br />
-          Each guess has to be a valid champion. Click the Submit button on the
-          right or click enter to submit your guess.
-        </p>
-        <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
-        <div className="formHolder">
-          {!sent ? (
-            <form
-              target="_top"
-              method="post"
-              encType="text/plain"
-              onSubmit={handleSend}
-            >
-              <div className="contactInfo">
-                <input
-                  autoComplete="off"
-                  className="input100"
-                  name="Bug/Issue"
-                  type="text"
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                />
-
-                <br />
-                <input type="submit" value="Send" />
-              </div>
-            </form>
-          ) : (
-            <h2 className="confirm">Email Sent Successfully!</h2>
-          )}
-        </div>
-      </Popup> */}
-
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup} />
       <main className="gameSection">
-        <PopupWon trigger={isWon} setTrigger={setWon}>
+        {/* <PopupGameStatus trigger={isWon} setTrigger={setWon}>
           <img
             src={require("./assets/images/league-of-wordle.png")}
             alt="LoLxWordle Icon"
@@ -188,8 +144,8 @@ const Home = () => {
             The game picks a random champion everytime, no need to wait for
             tomorrow!
           </p>
-        </PopupWon>
-        <PopupWon trigger={isLost} setTrigger={setLost}>
+        </PopupGameStatus>
+        <PopupGameStatus trigger={isLost} setTrigger={setLost}>
           <img
             src={require("./assets/images/league-of-wordle.png")}
             alt="LoLxWordle Icon"
@@ -219,7 +175,7 @@ const Home = () => {
               alt="Github Icon"
             />
           </a>
-        </PopupWon>
+        </PopupGameStatus> */}
         <h1 className="opener">Welcome to League of Wordle!</h1>
         <p className="counter">Tries Available: {counter}</p>
         <form
@@ -465,16 +421,16 @@ const Home = () => {
           </div>
         </form>
       </main>
-      <div className="gpt3__footer">
-        <div className="gpt3__footer-container">
-          <div className="gpt3__footer-container__image">
+      <div className="bot__footer">
+        <div className="bot__footer-container">
+          <div className="bot__footer-container__image">
             <a
               href="https://github.com/Tran-Steven"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                className="gpt3_footer_container_image"
+                className="bot_footer_container_image"
                 src={require("./assets/images/github.png")}
                 alt="Github Icon"
               />
@@ -485,18 +441,18 @@ const Home = () => {
               rel="noreferrer"
             >
               <img
-                className="gpt3_footer_container_image"
+                className="bot_footer_container_image"
                 src={require("./assets/images/linkedin.png")}
                 alt="Linkedin Icon"
               />
             </a>
             <img
-              className="gpt3_footer_container_image"
+              className="bot_footer_container_image"
               src={require("./assets/images/mail.png")}
               alt="Mail Icon"
             />
             <img
-              className="gpt3_footer_container_image"
+              className="bot_footer_container_image"
               src={require("./assets/images/help.png")}
               alt="Help Icon"
               onClick={() => {

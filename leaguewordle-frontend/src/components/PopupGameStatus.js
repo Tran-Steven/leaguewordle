@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/Popup.css";
-function PopupWon(props) {
+function PopupGameStatus(props) {
   return props.trigger ? (
     <div className="popup">
       <div className="popup-inner">
@@ -19,4 +19,4 @@ function PopupWon(props) {
   );
 }
 
-export default PopupWon;
+export default PopupGameStatus;
