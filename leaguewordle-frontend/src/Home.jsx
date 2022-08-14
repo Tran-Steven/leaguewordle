@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Popconfirm } from "antd";
+import { Card } from "antd";
 import { useForm } from "react-hook-form";
 import champions from "./data/champions.json";
 //css
-import "./assets/css/Home.css";
-import "antd/lib/card/style/css";
 
+import Header from "./components/Header/Header.jsx";
+// import "./assets/css/Home.css";
+import "antd/lib/card/style/css";
+import "./assets/css/test.css";
 //imported components
-import Popup from "./components/Popup";
+import Popup from "./components/Popup/Popup.jsx";
 import PopupWon from "./components/PopupWon";
 import { Wrong } from "./components/Wrong.js";
 
@@ -17,7 +19,7 @@ import wrong from "./assets/images/wrong.png";
 import down from "./assets/images/down.png";
 import higher from "./assets/images/higher.png";
 import correct from "./assets/images/checkmark.webp";
-
+import logo from "./assets/images/league-of-wordle.png";
 const Home = () => {
   //handles input submit
   const { register, handleSubmit } = useForm();
@@ -76,22 +78,22 @@ const Home = () => {
   };
 
   //when user sends a email, the textgets sent to the backend and sends it through a smtp server
-  const handleSend = async () => {
-    setSent(true);
-    try {
-      await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
-        text,
-      });
-    } catch (error) {
-      console.log(error);
-      console.log("react error");
-    }
-  };
+  // const handleSend = async () => {
+  //   setSent(true);
+  //   try {
+  //     await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
+  //       text,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //     console.log("react error");
+  //   }
+  // };
 
   //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
   for (let i = 0; i < champions.length; i++) {
-    championList[i] = champions[i].Champion.toUpperCase().replaceAll(" ", "");
+    championList[i] = champions[i].Champion.toUpperCase().replace(/" "/g, "");
   }
 
   //only allows user input to be letters, spaces, or apostrophes or periods
@@ -121,57 +123,51 @@ const Home = () => {
 
   return (
     <div className="main">
-      <header className="mainImage">
+      <Header />
+
+      {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <img
           src={require("./assets/images/league-of-wordle.png")}
           alt="LoLxWordle Icon"
-          width="22%"
         />
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <img
-            src={require("./assets/images/league-of-wordle.png")}
-            alt="LoLxWordle Icon"
-            width="50%"
-          />
-          <h2 className="how-to-h">HOW TO PLAY</h2>
-          <p className="how-to">
-            Guess the League of legends champion within 5 tries. For every
-            unsuccessful try, a hint will be given showing if your BE Amount, RP
-            Amount, Release Year, or Champion Class is correct.
-            <br />
-            <br />
-            Each guess has to be a valid champion. Click the Submit button on
-            the right or click enter to submit your guess.
-          </p>
-          <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
-          <div className="formHolder">
-            {!sent ? (
-              <form
-                target="_top"
-                method="post"
-                encType="text/plain"
-                onSubmit={handleSend}
-              >
-                <div className="contactInfo">
-                  <input
-                    autoComplete="off"
-                    className="input100"
-                    name="Bug/Issue"
-                    type="text"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                  />
+        <h2 className="how-to-h">HOW TO PLAY</h2>
+        <p className="how-to">
+          Guess the League of legends champion within 5 tries. For every
+          unsuccessful try, a hint will be given showing if your BE Amount, RP
+          Amount, Release Year, or Champion Class is correct.
+          <br />
+          <br />
+          Each guess has to be a valid champion. Click the Submit button on the
+          right or click enter to submit your guess.
+        </p>
+        <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
+        <div className="formHolder">
+          {!sent ? (
+            <form
+              target="_top"
+              method="post"
+              encType="text/plain"
+              onSubmit={handleSend}
+            >
+              <div className="contactInfo">
+                <input
+                  autoComplete="off"
+                  className="input100"
+                  name="Bug/Issue"
+                  type="text"
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                />
 
-                  <br />
-                  <input type="submit" value="Send" />
-                </div>
-              </form>
-            ) : (
-              <h2 className="confirm">Email Sent Successfully!</h2>
-            )}
-          </div>
-        </Popup>
-      </header>
+                <br />
+                <input type="submit" value="Send" />
+              </div>
+            </form>
+          ) : (
+            <h2 className="confirm">Email Sent Successfully!</h2>
+          )}
+        </div>
+      </Popup> */}
 
       <main className="gameSection">
         <PopupWon trigger={isWon} setTrigger={setWon}>
@@ -229,7 +225,7 @@ const Home = () => {
         <form
           onSubmit={handleSubmit(() => {
             let userInput = val;
-            userInput = userInput.toUpperCase().replaceAll(" ", "");
+            userInput = userInput.toUpperCase().replace(/" "/g, "");
             // console.log("User's input: " + userInput);
             // console.log("Correct champion: " + correctChampion);
 
@@ -251,7 +247,7 @@ const Home = () => {
                 champions[randNumGen()].Champion.valueOf()
                   .toString()
                   .toUpperCase()
-                  .replaceAll(" ", "")
+                  .replace(/" "/g, "")
               );
               setIsWrong(false);
               setIsRight(true);
@@ -382,14 +378,14 @@ const Home = () => {
                 // finding the index of where correctChampion & userInput is in the champions array object
                 const j = champions.findIndex(
                   (champion) =>
-                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
+                    champion.Champion.toUpperCase().replace(/" "/g, "") ===
                     correctChampion
                 );
 
                 const i = champions.findIndex(
                   (champion) =>
-                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
-                    value.valueOf().toUpperCase().replaceAll(" ", "")
+                    champion.Champion.toUpperCase().replace(/" "/g, "") ===
+                    value.valueOf().toUpperCase().replace(/" "/g, "")
                 );
                 setiIndex(i);
                 setjIndex(j);
@@ -397,7 +393,7 @@ const Home = () => {
                 searchChampions(value);
                 if (
                   championList.some(
-                    (x) => x === value.toUpperCase().replaceAll(" ", "")
+                    (x) => x === value.toUpperCase().replace(/" "/g, "")
                   ) === true
                 ) {
                   setDisabled(false);
@@ -410,7 +406,7 @@ const Home = () => {
                   champions[randNumGen()].Champion.valueOf()
                     .toString()
                     .toUpperCase()
-                    .replaceAll(" ", "")
+                    .replace(/" "/g, "")
                 );
               }
             }}
@@ -469,58 +465,50 @@ const Home = () => {
           </div>
         </form>
       </main>
-
-      <footer className="subImages">
-        <a
-          href="https://github.com/Tran-Steven"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            className="footerImages"
-            src={require("./assets/images/github.png")}
-            alt="Github Icon"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/steven-tran-26735b206/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            className="footerImages"
-            src={require("./assets/images/linkedin.png")}
-            alt="Linkedin Icon"
-          />
-        </a>
-        <img
-          className="footerImages"
-          src={require("./assets/images/mail.png")}
-          alt="Mail Icon"
-        />
-        <img
-          className="footerImages"
-          src={require("./assets/images/help.png")}
-          alt="Help Icon"
-          onClick={() => {
-            setButtonPopup(true);
-            setSent(false);
-            setText("");
-          }}
-          id="help"
-        />
-
-        <img
-          onClick={() => {
-            copy();
-          }}
-          a
-          href="#"
-          className="footerImages"
-          src={require("./assets/images/share.png")}
-          alt="Share Icon"
-        />
-      </footer>
+      <div className="gpt3__footer">
+        <div className="gpt3__footer-container">
+          <div className="gpt3__footer-container__image">
+            <a
+              href="https://github.com/Tran-Steven"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="gpt3_footer_container_image"
+                src={require("./assets/images/github.png")}
+                alt="Github Icon"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/steven-tran-26735b206/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="gpt3_footer_container_image"
+                src={require("./assets/images/linkedin.png")}
+                alt="Linkedin Icon"
+              />
+            </a>
+            <img
+              className="gpt3_footer_container_image"
+              src={require("./assets/images/mail.png")}
+              alt="Mail Icon"
+            />
+            <img
+              className="gpt3_footer_container_image"
+              src={require("./assets/images/help.png")}
+              alt="Help Icon"
+              onClick={() => {
+                setButtonPopup(true);
+                setSent(false);
+                setText("");
+              }}
+              id="help"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
