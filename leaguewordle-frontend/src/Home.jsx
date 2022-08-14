@@ -21,13 +21,13 @@ import correct from "./assets/images/checkmark.webp";
 import logo from "./assets/images/league-of-wordle.png";
 import logo2 from "./assets/images/image2vector.svg";
 const Home = () => {
-  //handles input submit
+  //handles input and submit from the wordle textbox
   const { register, handleSubmit } = useForm();
 
   //sets the user input with restrictions, must be a-z or A-Z or quotation mark or spaces or ampersand
   const [val, setVal] = useState("");
 
-  //State the contact popup is at
+  //The trigger for the contact & help popup
   const [buttonPopup, setButtonPopup] = useState(true);
 
   //Class useStates for conditionals
@@ -55,20 +55,27 @@ const Home = () => {
   // deals with the data from the form and sends an email
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
+
   //Sets the amount of guesses
   const [counter, setCounter] = useState(5);
+
   //List of champions for auto complete
   const champions1 = champions;
   const [championMatch, setChampionMatch] = useState([]);
   const [correctChampion, setcorrectChampion] = useState();
   const [userGuess, setuserGuess] = useState("");
+
   // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
   const [isDisabled, setDisabled] = useState(true);
+
+  //Hooks that state if user won or lost the game
   const [isWon, setWon] = useState(false);
   const [isLost, setLost] = useState(false);
-  //sets the index of the champions
+
+  //sets the index of the correct champion and userinput and sets it to a num
   const [iIndex, setiIndex] = useState(0);
   const [jIndex, setjIndex] = useState(0);
+
   const [number, setNumber] = useState(0);
 
   const link = "https://leaguewordle.herokuapp.com/";
@@ -176,7 +183,6 @@ const Home = () => {
             />
           </a>
         </PopupGameStatus> */}
-        <h1 className="opener">Welcome to League of Wordle!</h1>
         <p className="counter">Tries Available: {counter}</p>
         <form
           onSubmit={handleSubmit(() => {

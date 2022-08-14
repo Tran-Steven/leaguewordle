@@ -99,7 +99,7 @@ function Popup(props) {
         <button className="close-btn" onClick={() => props.setTrigger(false)}>
           x
         </button>
-        <img src={{ logo }} alt="LoLxWordle Icon" />
+        <img src={logo} alt="LoLxWordle Icon" />
         <h2 className="">HOW TO PLAY</h2>
         <p className="">
           Guess the League of legends champion within 5 tries. For every
