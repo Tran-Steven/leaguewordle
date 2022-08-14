@@ -99,9 +99,11 @@ function Popup(props) {
         <button className="close-btn" onClick={() => props.setTrigger(false)}>
           x
         </button>
-        <img src={logo} alt="LoLxWordle Icon" />
-        <h2 className="">HOW TO PLAY</h2>
-        <p className="">
+        <div className="container">
+          <img src={logo} alt="LoLxWordle Icon" className="lol-logo" />
+        </div>
+        <h2>HOW TO PLAY</h2>
+        <p>
           Guess the League of legends champion within 5 tries. For every
           unsuccessful try, a hint will be given showing if your BE Amount, RP
           Amount, Release Year, or Champion Class is correct.
@@ -110,10 +112,11 @@ function Popup(props) {
           Each guess has to be a valid champion. Click the Submit button on the
           right or click enter to submit your guess.
         </p>
-        <h2 className="">FOUND A BUG OR HAVE AN ISSUE?</h2>
-        <div className="">
+        <h2 className="">FOUND AN ISSUE?</h2>
+        <div className="form-container">
           {!sent ? (
             <form
+              className="form"
               target="_top"
               method="post"
               encType="text/plain"
@@ -145,7 +148,7 @@ function Popup(props) {
         <button className="close-btn" onClick={() => props.setTrigger(false)}>
           x
         </button>
-        <img src={logo} alt="LoLxWordle Icon" />
+        <img src={logo} alt="LoLxWordle Icon" className="lol-logo" />
         <h1 className="how-to-h">GAME WON</h1>
         <p className="how-to2">
           Hey! Thanks for playing, this was made for fun over the summer to
@@ -166,7 +169,7 @@ function Popup(props) {
         <button className="close-btn" onClick={() => props.setTrigger(false)}>
           x
         </button>
-        <img src={logo} alt="LoLxWordle Icon" />
+        <img src={logo} alt="LoLxWordle Icon" className="lol-logo" />
         <h1 className="how-to-h"> GAME LOST</h1>
 
         <p className="how-to2">
