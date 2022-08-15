@@ -33,6 +33,7 @@ https://leaguewordle.herokuapp.com/
 ### Champion List and Attributes
 The Champion & their respective attributes are taken from the [League of Legends Fandom Wiki Page](https://leagueoflegends.fandom.com/wiki/List_of_champions) as an HTML table and then converted to a JSON file.
 
+--------
 
 ### Hints
 
