@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "antd";
 import { useForm } from "react-hook-form";
-
+// import { useSelector, useDispatch } from "react-redux";
 //json file containing all league of legends champions
 import champions from "./data/champions.json";
 
@@ -12,18 +12,24 @@ import Header from "./components/Header/Header.jsx";
 import Popup from "./components/Popup/Popup.jsx";
 import PopupGameStatus from "./components/PopupGameStatus";
 import { Wrong } from "./components/Wrong.js";
+// import { help } from "./actions";
 
 //imported images
-import wrong from "./assets/images/wrong.png";
-import down from "./assets/images/down.png";
-import higher from "./assets/images/higher.png";
-import correct from "./assets/images/checkmark.webp";
-import logo from "./assets/images/league-of-wordle.png";
-import logo2 from "./assets/images/image2vector.svg";
+import wrong from "./assets/images/svg/wrong.svg";
+import down from "./assets/images/svg/down.svg";
+import higher from "./assets/images/svg/higher.svg";
+import correct from "./assets/images/checkmark.svg";
+import lollogo from "./assets/images/image2vector.svg";
+
+import github from "./assets/images/svg/github.svg";
+import linkedin from "./assets/images/svg/linkedin.svg";
+import help from "./assets/images/svg/help.svg";
+import mail from "./assets/images/svg/mail.svg";
+
 const Home = () => {
   //handles input and submit from the wordle textbox
   const { register, handleSubmit } = useForm();
-
+  // const disPatch = useDispatch();
   //sets the user input with restrictions, must be a-z or A-Z or quotation mark or spaces or ampersand
   const [val, setVal] = useState("");
 
@@ -130,15 +136,13 @@ const Home = () => {
 
   return (
     <div className="main">
-      <Header />
+      <header>
+        <Header />
+      </header>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup} />
       <main className="gameSection">
-        {/* <PopupGameStatus trigger={isWon} setTrigger={setWon}>
-          <img
-            src={require("./assets/images/league-of-wordle.png")}
-            alt="LoLxWordle Icon"
-            width="50%"
-          />
+        <PopupGameStatus trigger={isWon} setTrigger={setWon}>
+          <img src={lollogo} alt="LoLxWordle Icon" width="50%" />
           <h1 className="how-to-h">GAME WON</h1>
           <p className="how-to2">
             Hey! Thanks for playing, this was made for fun over the summer to
@@ -153,11 +157,7 @@ const Home = () => {
           </p>
         </PopupGameStatus>
         <PopupGameStatus trigger={isLost} setTrigger={setLost}>
-          <img
-            src={require("./assets/images/league-of-wordle.png")}
-            alt="LoLxWordle Icon"
-            width="50%"
-          />
+          <img src={lollogo} alt="LoLxWordle Icon" />
           <h1 className="how-to-h"> GAME LOST</h1>
 
           <p className="how-to2">
@@ -175,302 +175,383 @@ const Home = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              width="30%"
-              height="auto"
-              src={require("./assets/images/github.png")}
-              alt="Github Icon"
-            />
+            <img width="100%" height="auto" src={github} alt="Github Icon" />
           </a>
-        </PopupGameStatus> */}
-        <p className="counter">Tries Available: {counter}</p>
-        <form
-          onSubmit={handleSubmit(() => {
-            let userInput = val;
-            userInput = userInput.toUpperCase().replace(/" "/g, "");
-            // console.log("User's input: " + userInput);
-            // console.log("Correct champion: " + correctChampion);
+        </PopupGameStatus>
+        <div className="lol__game">
+          <div className="lol__game-container">
+            <p className="counter">Tries Available: {counter}</p>
+            <div className="form-containerChampion">
+              <div className="formcontentmove">
+                <form
+                  className="formparam"
+                  onSubmit={handleSubmit(() => {
+                    let userInput = val;
+                    userInput = userInput.toUpperCase().replace(/" "/g, "");
+                    // console.log("User's input: " + userInput);
+                    // console.log("Correct champion: " + correctChampion);
 
-            setuserGuess(userInput);
-            let correctChampObj = champions[jIndex];
-            let wrongChamp = champions[iIndex];
+                    setuserGuess(userInput);
+                    let correctChampObj = champions[jIndex];
+                    let wrongChamp = champions[iIndex];
 
-            //declaring variables to hold the champion objects
-            let correctCC;
-            let wrongCC;
-            //declaring variables to hold ints
-            let correctNum;
-            let wrongNum;
-            setNumber(number + 1);
-            if (userInput === correctChampion) {
-              setWon(true);
-              setCounter(5);
-              setcorrectChampion(
-                champions[randNumGen()].Champion.valueOf()
-                  .toString()
-                  .toUpperCase()
-                  .replace(/" "/g, "")
-              );
-              setIsWrong(false);
-              setIsRight(true);
-            } else {
-              //initalizing variables to contain the Classes value
-              wrongCC = wrongChamp.Classes.valueOf().toString();
-              correctCC = correctChampObj.Classes.valueOf().toString();
+                    //declaring variables to hold the champion objects
+                    let correctCC;
+                    let wrongCC;
+                    //declaring variables to hold ints
+                    let correctNum;
+                    let wrongNum;
+                    setNumber(number + 1);
+                    if (userInput === correctChampion) {
+                      setWon(true);
+                      setCounter(5);
+                      setcorrectChampion(
+                        champions[randNumGen()].Champion.valueOf()
+                          .toString()
+                          .toUpperCase()
+                          .replace(/" "/g, "")
+                      );
+                      setIsWrong(false);
+                      setIsRight(true);
+                    } else {
+                      //initalizing variables to contain the Classes value
+                      wrongCC = wrongChamp.Classes.valueOf().toString();
+                      correctCC = correctChampObj.Classes.valueOf().toString();
 
-              //checks if classes match
-              if (counter === 1) {
-                setLost(true);
-                setCounter(5);
-              } else {
-                if (wrongCC === correctCC) {
-                  setIsWrong(false);
-                  setIsRight(true);
-                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
-                  correctCC = correctChampObj["Release Year"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsWrong(true);
-                  setIsRight(false);
-                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
-                  correctCC = correctChampObj["Release Year"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
+                      //checks if classes match
+                      if (counter === 1) {
+                        setLost(true);
+                        setCounter(5);
+                      } else {
+                        if (wrongCC === correctCC) {
+                          setIsWrong(false);
+                          setIsRight(true);
+                          wrongCC = wrongChamp["Release Year"]
+                            .valueOf()
+                            .toString();
+                          correctCC = correctChampObj["Release Year"]
+                            .valueOf()
+                            .toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        } else {
+                          setIsWrong(true);
+                          setIsRight(false);
+                          wrongCC = wrongChamp["Release Year"]
+                            .valueOf()
+                            .toString();
+                          correctCC = correctChampObj["Release Year"]
+                            .valueOf()
+                            .toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        }
 
-                //checks if release year match
-                if (wrongNum < correctNum) {
-                  setisHigher(true);
-                  setisLower(false);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else if (wrongNum > correctNum) {
-                  setisHigher(false);
-                  setisLower(true);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsRYWrong(false);
-                  setIsRYRight(true);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
+                        //checks if release year match
+                        if (wrongNum < correctNum) {
+                          setisHigher(true);
+                          setisLower(false);
+                          setIsRYWrong(false);
+                          setIsRYRight(false);
+                          wrongCC = wrongChamp["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          correctCC = correctChampObj["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        } else if (wrongNum > correctNum) {
+                          setisHigher(false);
+                          setisLower(true);
+                          setIsRYWrong(false);
+                          setIsRYRight(false);
+                          wrongCC = wrongChamp["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          correctCC = correctChampObj["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        } else {
+                          setIsRYWrong(false);
+                          setIsRYRight(true);
+                          setisHigher(false);
+                          setisLower(false);
+                          wrongCC = wrongChamp["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          correctCC = correctChampObj["Blue Essence"]
+                            .valueOf()
+                            .toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        }
 
-                //compare BE
-                if (wrongNum < correctNum) {
-                  setisBEHigher(true);
-                  setisBELower(false);
-                  setIsBEWrong(false);
-                  setIsBERight(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else if (wrongNum > correctNum) {
-                  setisBEHigher(false);
-                  setisBELower(true);
-                  setIsBEWrong(false);
-                  setIsBERight(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsBEWrong(false);
-                  setIsBERight(true);
-                  setisBEHigher(false);
-                  setisBELower(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
+                        //compare BE
+                        if (wrongNum < correctNum) {
+                          setisBEHigher(true);
+                          setisBELower(false);
+                          setIsBEWrong(false);
+                          setIsBERight(false);
+                          wrongCC = wrongChamp.RP.valueOf().toString();
+                          correctCC = correctChampObj.RP.valueOf().toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        } else if (wrongNum > correctNum) {
+                          setisBEHigher(false);
+                          setisBELower(true);
+                          setIsBEWrong(false);
+                          setIsBERight(false);
+                          wrongCC = wrongChamp.RP.valueOf().toString();
+                          correctCC = correctChampObj.RP.valueOf().toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        } else {
+                          setIsBEWrong(false);
+                          setIsBERight(true);
+                          setisBEHigher(false);
+                          setisBELower(false);
+                          wrongCC = wrongChamp.RP.valueOf().toString();
+                          correctCC = correctChampObj.RP.valueOf().toString();
+                          wrongNum = parseInt(wrongCC);
+                          correctNum = parseInt(correctCC);
+                        }
 
-                if (wrongNum < correctNum) {
-                  setisRPHigher(true);
-                  setisRPLower(false);
-                  setIsRPWrong(false);
-                  setIsRPRight(false);
-                } else if (wrongNum > correctNum) {
-                  setisRPHigher(false);
-                  setisRPLower(true);
-                  setIsRPWrong(false);
-                  setIsRPRight(false);
-                } else {
-                  setIsRPWrong(false);
-                  setIsRPRight(true);
-                  setisRPHigher(false);
-                  setisRPLower(false);
-                }
-                setCounter(counter - 1);
-              }
-            }
-            setVal("");
-            searchChampions("Reset Search");
-            setDisabled(true);
-          })}
-        >
-          <input
-            {...register("guess")}
-            autoComplete="off"
-            className="guess_input"
-            placeholder="Enter Champion Name Here"
-            type="text"
-            value={val}
-            onChange={(e) => {
-              const { value } = e.target;
-              if (isLetters(value)) {
-                // finding the index of where correctChampion & userInput is in the champions array object
-                const j = champions.findIndex(
-                  (champion) =>
-                    champion.Champion.toUpperCase().replace(/" "/g, "") ===
-                    correctChampion
-                );
+                        if (wrongNum < correctNum) {
+                          setisRPHigher(true);
+                          setisRPLower(false);
+                          setIsRPWrong(false);
+                          setIsRPRight(false);
+                        } else if (wrongNum > correctNum) {
+                          setisRPHigher(false);
+                          setisRPLower(true);
+                          setIsRPWrong(false);
+                          setIsRPRight(false);
+                        } else {
+                          setIsRPWrong(false);
+                          setIsRPRight(true);
+                          setisRPHigher(false);
+                          setisRPLower(false);
+                        }
+                        setCounter(counter - 1);
+                      }
+                    }
+                    setVal("");
+                    searchChampions("Reset Search");
+                    setDisabled(true);
+                  })}
+                >
+                  <div className="lol__game-container-div">
+                    <div className="lol_game-container-div_inlinetogether">
+                      <input
+                        {...register("guess")}
+                        autoComplete="off"
+                        placeholder="Enter Champion"
+                        type="text"
+                        value={val}
+                        onChange={(e) => {
+                          const { value } = e.target;
+                          if (isLetters(value)) {
+                            // finding the index of where correctChampion & userInput is in the champions array object
+                            const j = champions.findIndex(
+                              (champion) =>
+                                champion.Champion.toUpperCase().replace(
+                                  /" "/g,
+                                  ""
+                                ) === correctChampion
+                            );
 
-                const i = champions.findIndex(
-                  (champion) =>
-                    champion.Champion.toUpperCase().replace(/" "/g, "") ===
-                    value.valueOf().toUpperCase().replace(/" "/g, "")
-                );
-                setiIndex(i);
-                setjIndex(j);
-                setVal(value);
-                searchChampions(value);
-                if (
-                  championList.some(
-                    (x) => x === value.toUpperCase().replace(/" "/g, "")
-                  ) === true
-                ) {
-                  setDisabled(false);
-                } else {
-                  setDisabled(true);
-                }
-              }
-              if (!correctChampion) {
-                setcorrectChampion(
-                  champions[randNumGen()].Champion.valueOf()
-                    .toString()
-                    .toUpperCase()
-                    .replace(/" "/g, "")
-                );
-              }
-            }}
-          />
-          <input type="submit" disabled={isDisabled} />
-          {championMatch &&
-            championMatch.map((item, index) => (
-              <div key={index} style={{ marginLeft: "35%", marginTop: "5px" }}>
-                <Card style={{ width: "50%" }}>{item.Champion}</Card>
+                            const i = champions.findIndex(
+                              (champion) =>
+                                champion.Champion.toUpperCase().replace(
+                                  /" "/g,
+                                  ""
+                                ) ===
+                                value
+                                  .valueOf()
+                                  .toUpperCase()
+                                  .replace(/" "/g, "")
+                            );
+                            setiIndex(i);
+                            setjIndex(j);
+                            setVal(value);
+                            searchChampions(value);
+                            if (
+                              championList.some(
+                                (x) =>
+                                  x === value.toUpperCase().replace(/" "/g, "")
+                              ) === true
+                            ) {
+                              setDisabled(false);
+                            } else {
+                              setDisabled(true);
+                            }
+                          }
+                          if (!correctChampion) {
+                            setcorrectChampion(
+                              champions[randNumGen()].Champion.valueOf()
+                                .toString()
+                                .toUpperCase()
+                                .replace(/" "/g, "")
+                            );
+                          }
+                        }}
+                      />
+                      <input type="submit" disabled={isDisabled} />
+                    </div>
+                  </div>
+                  {championMatch &&
+                    championMatch.map((item, index) => (
+                      <div
+                        className="no-overflow"
+                        key={index}
+                        style={{ marginTop: "5px" }}
+                      >
+                        <Card style={{ width: "50%" }}>{item.Champion}</Card>
+                      </div>
+                    ))}
+
+                  <div className="comp">
+                    {isWrong && (
+                      <Wrong text="Class" alt="wrong image" img={wrong} />
+                    )}
+                    {isRight && (
+                      <Wrong text="Class" alt="correct image" img={correct} />
+                    )}
+
+                    {isRYWrong && (
+                      <Wrong
+                        text="Release Year"
+                        alt="wrong image"
+                        img={wrong}
+                      />
+                    )}
+                    {isRYRight && (
+                      <Wrong
+                        text="Release Year"
+                        alt="correct image"
+                        img={correct}
+                      />
+                    )}
+                    {isLower && (
+                      <Wrong
+                        text="Release Year"
+                        alt="Down Arrow image"
+                        img={down}
+                      />
+                    )}
+                    {isHigher && (
+                      <Wrong
+                        text="Release Year"
+                        alt="Up Arrow image"
+                        img={higher}
+                      />
+                    )}
+
+                    {isBEWrong && (
+                      <Wrong text="Blue Essence" alt="wrong img" img={wrong} />
+                    )}
+                    {isBERight && (
+                      <Wrong
+                        text="Blue Essence"
+                        alt="correct img"
+                        img={correct}
+                      />
+                    )}
+                    {isBELower && (
+                      <Wrong
+                        text="Blue Essence"
+                        alt="Down Arrow image"
+                        img={down}
+                      />
+                    )}
+                    {isBEHigher && (
+                      <Wrong
+                        text="Blue Essence"
+                        alt="Up Arrow image"
+                        img={higher}
+                      />
+                    )}
+
+                    {isRPWrong && (
+                      <Wrong text="Riot Points" alt="wrong img" img={wrong} />
+                    )}
+                    {isRPRight && (
+                      <Wrong
+                        text="Riot Points"
+                        alt="correct img"
+                        img={correct}
+                      />
+                    )}
+                    {isRPLower && (
+                      <Wrong
+                        text="Riot Points"
+                        alt="Down Arrow image"
+                        img={down}
+                      />
+                    )}
+                    {isRPHigher && (
+                      <Wrong
+                        text="Riot Points"
+                        alt="Up Arrow image"
+                        img={higher}
+                      />
+                    )}
+                  </div>
+                </form>
               </div>
-            ))}
-          <div className="comp">
-            {isWrong && <Wrong text="Class" alt="wrong image" img={wrong} />}
-            {isRight && (
-              <Wrong text="Class" alt="correct image" img={correct} />
-            )}
-
-            {isRYWrong && (
-              <Wrong text="Release Year" alt="wrong image" img={wrong} />
-            )}
-            {isRYRight && (
-              <Wrong text="Release Year" alt="correct image" img={correct} />
-            )}
-            {isLower && (
-              <Wrong text="Release Year" alt="Down Arrow image" img={down} />
-            )}
-            {isHigher && (
-              <Wrong text="Release Year" alt="Up Arrow image" img={higher} />
-            )}
-
-            {isBEWrong && (
-              <Wrong text="Blue Essence" alt="wrong img" img={wrong} />
-            )}
-            {isBERight && (
-              <Wrong text="Blue Essence" alt="correct img" img={correct} />
-            )}
-            {isBELower && (
-              <Wrong text="Blue Essence" alt="Down Arrow image" img={down} />
-            )}
-            {isBEHigher && (
-              <Wrong text="Blue Essence" alt="Up Arrow image" img={higher} />
-            )}
-
-            {isRPWrong && (
-              <Wrong text="Riot Points" alt="wrong img" img={wrong} />
-            )}
-            {isRPRight && (
-              <Wrong text="Riot Points" alt="correct img" img={correct} />
-            )}
-            {isRPLower && (
-              <Wrong text="Riot Points" alt="Down Arrow image" img={down} />
-            )}
-            {isRPHigher && (
-              <Wrong text="Riot Points" alt="Up Arrow image" img={higher} />
-            )}
-          </div>
-        </form>
-      </main>
-      <div className="bot__footer">
-        <div className="bot__footer-container">
-          <div className="bot__footer-container__image">
-            <a
-              href="https://github.com/Tran-Steven"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="bot_footer_container_image"
-                src={require("./assets/images/github.png")}
-                alt="Github Icon"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/steven-tran-26735b206/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="bot_footer_container_image"
-                src={require("./assets/images/linkedin.png")}
-                alt="Linkedin Icon"
-              />
-            </a>
-            <img
-              className="bot_footer_container_image"
-              src={require("./assets/images/mail.png")}
-              alt="Mail Icon"
-            />
-            <img
-              className="bot_footer_container_image"
-              src={require("./assets/images/help.png")}
-              alt="Help Icon"
-              onClick={() => {
-                setButtonPopup(true);
-                setSent(false);
-                setText("");
-              }}
-              id="help"
-            />
+            </div>
           </div>
         </div>
-      </div>
+      </main>
+      <footer>
+        <div className="bot__footer">
+          <div className="bot__footer-container">
+            <div className="bot__footer-container__image">
+              <a
+                href="https://github.com/Tran-Steven"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="bot_footer_container_image"
+                  src={github}
+                  alt="Github Icon"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/steven-tran-26735b206/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="bot_footer_container_image"
+                  src={linkedin}
+                  alt="Linkedin Icon"
+                />
+              </a>
+              <img
+                className="bot_footer_container_image"
+                src={mail}
+                alt="Mail Icon"
+              />
+              <img
+                className="bot_footer_container_image"
+                src={help}
+                alt="Help Icon"
+                onClick={() => {
+                  setButtonPopup(true);
+                  setSent(false);
+                  setText("");
+                }}
+                id="help"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
