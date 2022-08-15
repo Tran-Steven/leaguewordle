@@ -37,6 +37,27 @@
 * {
   box-sizing: border-box;
 }
+
+@media (prefers-color-scheme: dark) {
+  .popup-inner {
+    background-color: #3a3a38 !important;
+  }
+  h2 {
+    color: #b1b1ae;
+  }
+  p {
+    color: #d8d8d7;
+  }
+  button {
+    color: #040404;
+    background-color: #8a8a86;
+  }
+  textarea {
+    color: #d8d8d7;
+    background-color: #3a3a38;
+  }
+}
+
 .popup {
   z-index: 2;
   min-height: 100vh;

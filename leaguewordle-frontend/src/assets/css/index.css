@@ -28,6 +28,12 @@
   animation-fill-mode: forwards;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #3d3c3a;
+  }
+}
+
 @keyframes fade-in-out {
   from {
     opacity: 0;
