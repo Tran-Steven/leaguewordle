@@ -55,4 +55,4 @@ https://leaguewordle.herokuapp.com/
 
 ##
 
-**_Built with: HTML, JavaScript, ReactJs, Nodejs, Express_**
+**_Built with: ReactJS, NodeJS, Express_**
