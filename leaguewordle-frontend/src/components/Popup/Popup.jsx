@@ -58,7 +58,9 @@ function Popup(props) {
 
                 <br />
                 <div className="input-container">
-                  <button type="button" value="Send" />
+                  <button className="contactbtn" type="button" value="Send">
+                    Send
+                  </button>
                 </div>
               </div>
             </form>

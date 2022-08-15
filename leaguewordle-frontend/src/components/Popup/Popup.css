@@ -79,6 +79,22 @@ p {
   padding-top: 1rem;
   background-size: cover;
 }
+
+.input100 {
+  max-width: 1200px;
+  height: 30%;
+  width: 100%;
+  padding-top: 1rem;
+  background-size: cover;
+  resize: none;
+}
+.contactbtn {
+  max-width: 800px;
+  min-height: 1em;
+  height: 100%;
+  width: 100%;
+}
+
 .input-container {
   text-align: center;
   width: 50%;
