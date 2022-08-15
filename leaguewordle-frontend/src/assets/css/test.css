@@ -3,6 +3,31 @@
   font-family: "Lato", sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+  wrong {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+
+  body {
+    color: white;
+  }
+  .bot__footer-container__image {
+    background-color: #80807d;
+  }
+  input[type="submit"] {
+    color: #040404;
+    background-color: #8a8a86;
+  }
+  input[type="text"] {
+    color: #dededc;
+    background-color: #80807d;
+  }
+  .card1 {
+    background-color: #80807d;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -128,7 +153,7 @@ body {
   height: auto%;
 }
 
-.bot__footer {
+.bot__ {
   display: flex;
   flex-direction: column;
   justify-content: center;

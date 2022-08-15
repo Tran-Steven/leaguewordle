@@ -198,9 +198,11 @@ const Home = () => {
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup} />
       <main className="gameSection">
         <PopupGameStatus trigger={isWon} setTrigger={setWon}>
-          <img src={lollogo} alt="LoLxWordle Icon" width="50%" />
-          <h1 className="how-to-h">GAME WON</h1>
-          <p className="how-to2">
+          <div className="container">
+            <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
+          </div>
+          <h2 className="">GAME WON</h2>
+          <p className="">
             Hey! Thanks for playing, this was made for fun over the summer to
             learn and pickup a new language. It was built using HTML,
             JavaScript, Reactjs, and Express!
@@ -213,8 +215,10 @@ const Home = () => {
           </p>
         </PopupGameStatus>
         <PopupGameStatus trigger={isLost} setTrigger={setLost}>
-          <img src={lollogo} alt="LoLxWordle Icon" />
-          <h1 className="how-to-h"> GAME LOST</h1>
+          <div className="container">
+            <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
+          </div>
+          <h2 className=""> GAME LOST</h2>
 
           <p className="how-to2">
             If you want to start another game, just click out of this popup. The
@@ -466,7 +470,9 @@ const Home = () => {
                         key={index}
                         style={{ marginTop: "5px" }}
                       >
-                        <Card style={{ width: "50%" }}>{item.Champion}</Card>
+                        <Card className="card1" style={{ width: "50%" }}>
+                          {item.Champion}
+                        </Card>
                       </div>
                     ))}
 
