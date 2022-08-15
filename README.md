@@ -19,6 +19,9 @@ You can play the game here:
 https://leaguewordle.herokuapp.com/
 <h2></h2>
           </p>
+          <div style=" flex-direction="row">
+          <img src="https://user-images.githubusercontent.com/64705534/184618377-9c79f5cd-6df5-4c6b-a70a-737bb235e576.png" height="100%" width="100%"/>
+          </div>
 
 ### Hints
 
