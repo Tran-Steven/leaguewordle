@@ -14,8 +14,8 @@
 
 <p align="center">
 The word bank contains all of the current League of Legends champions and gives hints if you are close to the target champion. </br>You have 5 tries to guess the correct champion. Every incorrect guess produces hints showing which traits were correct or wrong.
-  </br>
-  </br>
+  <br>
+  <br>
 You can play the game here:
 https://leaguewordle.herokuapp.com/
 <h2></h2>
@@ -29,12 +29,11 @@ https://leaguewordle.herokuapp.com/
      </div><h2></h2>
      
      
-     
-     
-     
-     
-     
-     
+
+### Champion List and Attributes
+The Champion & their respective attributes are taken from the [League of Legends Fandom Wiki Page](https://leagueoflegends.fandom.com/wiki/List_of_champions) as an HTML table and then converted to a JSON file.
+
+
 ### Hints
 
 #### Blue Essence Amount
