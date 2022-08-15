@@ -83,16 +83,11 @@ const Home = () => {
   const [jIndex, setjIndex] = useState(0);
 
   const [number, setNumber] = useState(0);
+
   const link = "https://leaguewordle.herokuapp.com/";
 
   const copy = function () {
     navigator.clipboard.writeText(link);
-  };
-
-  const [width, setWindowWidth] = useState(0);
-  const updateDimensions = () => {
-    const width = window.innerWidth;
-    setWindowWidth(width);
   };
 
   //when user sends a email, the textgets sent to the backend and sends it through a smtp server
@@ -141,59 +136,8 @@ const Home = () => {
 
   return (
     <div className="main">
-
       <header>
         <Header />
-      <header className="mainImage">
-        <img
-          src={require("./assets/images/league-of-wordle.png")}
-          alt="LoLxWordle Icon"
-          width="22%"
-        />
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <img
-            src={require("./assets/images/league-of-wordle.png")}
-            alt="LoLxWordle Icon"
-            width="50%"
-          />
-          <h2 className="how-to-h">HOW TO PLAY</h2>
-          <p className="how-to">
-            Guess the League of legends champion within 5 tries. For every
-            unsuccessful try, a hint will be given showing if your BE Amount, RP
-            Amount, Release Year, or Champion Class is correct.
-            <br />
-            <br />
-            Each guess has to be a valid champion. Click the Submit button on
-            the right or click enter to submit your guess.
-          </p>
-          <h2 className="found-bug">FOUND A BUG OR HAVE AN ISSUE?</h2>
-          <div className="formHolder">
-            {!sent ? (
-              <form
-                target="_top"
-                method="post"
-                encType="text/plain"
-                onSubmit={handleSend}
-              >
-                <div className="contactInfo">
-                  <textarea
-                    className="contacttxt"
-                    autoComplete="off"
-                    name="Bug/Issue"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                  />
-
-                  <br />
-                  <input type="submit" value="Send" />
-                </div>
-              </form>
-            ) : (
-              <h2 className="confirm">Email Sent Successfully!</h2>
-            )}
-          </div>
-        </Popup>
-
       </header>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup} />
       <main className="gameSection">
@@ -237,7 +181,6 @@ const Home = () => {
           >
             <img width="100%" height="auto" src={github} alt="Github Icon" />
           </a>
-
         </PopupGameStatus>
         <div className="lol__game">
           <div className="lol__game-container">
@@ -564,211 +507,11 @@ const Home = () => {
                     )}
                   </div>
                 </form>
-
-        </PopupWon>
-
-        <p className="counter">Tries Available: {counter}</p>
-        <form
-          onSubmit={handleSubmit(() => {
-            let userInput = val;
-            userInput = userInput.toUpperCase().replace(/" "/g, "");
-            // console.log("User's input: " + userInput);
-            // console.log("Correct champion: " + correctChampion);
-
-            setuserGuess(userInput);
-            let correctChampObj = champions[jIndex];
-            let wrongChamp = champions[iIndex];
-
-            //declaring variables to hold the champion objects
-            let correctCC;
-            let wrongCC;
-            //declaring variables to hold ints
-            let correctNum;
-            let wrongNum;
-            setNumber(number + 1);
-            if (userInput === correctChampion) {
-              setWon(true);
-              setCounter(5);
-              setcorrectChampion(
-                champions[randNumGen()].Champion.valueOf()
-                  .toString()
-                  .toUpperCase()
-                  .replaceAll(" ", "")
-              );
-              setIsWrong(false);
-              setIsRight(true);
-            } else {
-              //initalizing variables to contain the Classes value
-              wrongCC = wrongChamp.Classes.valueOf().toString();
-              correctCC = correctChampObj.Classes.valueOf().toString();
-
-              //checks if classes match
-              if (counter === 1) {
-                setLost(true);
-                setCounter(5);
-              } else {
-                if (wrongCC === correctCC) {
-                  setIsWrong(false);
-                  setIsRight(true);
-                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
-                  correctCC = correctChampObj["Release Year"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsWrong(true);
-                  setIsRight(false);
-                  wrongCC = wrongChamp["Release Year"].valueOf().toString();
-                  correctCC = correctChampObj["Release Year"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
-
-                //checks if release year match
-                if (wrongNum < correctNum) {
-                  setisHigher(true);
-                  setisLower(false);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else if (wrongNum > correctNum) {
-                  setisHigher(false);
-                  setisLower(true);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsRYWrong(false);
-                  setIsRYRight(true);
-                  wrongCC = wrongChamp["Blue Essence"].valueOf().toString();
-                  correctCC = correctChampObj["Blue Essence"]
-                    .valueOf()
-                    .toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
-
-                //compare BE
-                if (wrongNum < correctNum) {
-                  setisBEHigher(true);
-                  setisBELower(false);
-                  setIsBEWrong(false);
-                  setIsBERight(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else if (wrongNum > correctNum) {
-                  setisBEHigher(false);
-                  setisBELower(true);
-                  setIsBEWrong(false);
-                  setIsBERight(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                } else {
-                  setIsBEWrong(false);
-                  setIsBERight(true);
-                  setisBEHigher(false);
-                  setisBELower(false);
-                  wrongCC = wrongChamp.RP.valueOf().toString();
-                  correctCC = correctChampObj.RP.valueOf().toString();
-                  wrongNum = parseInt(wrongCC);
-                  correctNum = parseInt(correctCC);
-                }
-
-                if (wrongNum < correctNum) {
-                  setisRPHigher(true);
-                  setisRPLower(false);
-                  setIsRPWrong(false);
-                  setIsRPRight(false);
-                } else if (wrongNum > correctNum) {
-                  setisRPHigher(false);
-                  setisRPLower(true);
-                  setIsRPWrong(false);
-                  setIsRPRight(false);
-                } else {
-                  setIsRPWrong(false);
-                  setIsRPRight(true);
-                  setisRPHigher(false);
-                  setisRPLower(false);
-                }
-                setCounter(counter - 1);
-              }
-            }
-            setVal("");
-            searchChampions("Reset Search");
-            setDisabled(true);
-          })}
-        >
-          <input
-            {...register("guess")}
-            autoComplete="off"
-            className="guess_input"
-            placeholder="Enter Champion Name Here"
-            type="text"
-            value={val}
-            onChange={(e) => {
-              const { value } = e.target;
-              if (isLetters(value)) {
-                // finding the index of where correctChampion & userInput is in the champions array object
-                const j = champions.findIndex(
-                  (champion) =>
-                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
-                    correctChampion
-                );
-
-                const i = champions.findIndex(
-                  (champion) =>
-                    champion.Champion.toUpperCase().replaceAll(" ", "") ===
-                    value.valueOf().toUpperCase().replaceAll(" ", "")
-                );
-                setiIndex(i);
-                setjIndex(j);
-                setVal(value);
-                searchChampions(value);
-                if (
-                  championList.some(
-                    (x) => x === value.toUpperCase().replaceAll(" ", "")
-                  ) === true
-                ) {
-                  setDisabled(false);
-                } else {
-                  setDisabled(true);
-                }
-              }
-              if (!correctChampion) {
-                setcorrectChampion(
-                  champions[randNumGen()].Champion.valueOf()
-                    .toString()
-                    .toUpperCase()
-                    .replaceAll(" ", "")
-                );
-              }
-            }}
-          />
-          <input type="submit" disabled={isDisabled} />
-          {championMatch &&
-            championMatch.map((item, index) => (
-              <div key={index} style={{ marginLeft: "35%", marginTop: "5px" }}>
-                <Card style={{ width: "50%" }}>{item.Champion}</Card>
-
               </div>
             </div>
           </div>
         </div>
       </main>
-
       <footer>
         <div className="bot__footer">
           <div className="bot__footer-container">
@@ -814,59 +557,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-
-      <footer id="footer">
-        <a
-          href="https://github.com/Tran-Steven"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            className="footerImages"
-            src={require("./assets/images/github.png")}
-            alt="Github Icon"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/steven-tran-26735b206/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            className="footerImages"
-            src={require("./assets/images/linkedin.png")}
-            alt="Linkedin Icon"
-          />
-        </a>
-        <img
-          className="footerImages"
-          src={require("./assets/images/mail.png")}
-          alt="Mail Icon"
-        />
-        <img
-          className="footerImages"
-          src={require("./assets/images/help.png")}
-          alt="Help Icon"
-          onClick={() => {
-            setButtonPopup(true);
-            setSent(false);
-            setText("");
-          }}
-          id="help"
-        />
-
-        <img
-          onClick={() => {
-            copy();
-          }}
-          a
-          href="#"
-          className="footerImages"
-          src={require("./assets/images/share.png")}
-          alt="Share Icon"
-        />
-
       </footer>
     </div>
   );
