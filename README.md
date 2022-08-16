@@ -7,7 +7,7 @@
   </br>
   </br>
   <h2 align ="center">
-  A version of Wordle but with League of Legends champions.
+  A version of Wordle but with League of Legends Champions
   </h2>
   </p>
 
@@ -19,7 +19,13 @@ The word bank contains all of the current League of Legends champions and gives 
 You can play the game here:
 https://leaguewordle.herokuapp.com/
 <h2></h2>
-          </p>
+</p>
+
+
+**_Built with: ReactJS, NodeJS, Express_**
+
+
+<h2></h2>
           <div>
           <p align="center">
           <img src="https://user-images.githubusercontent.com/64705534/184717268-d5abdaa5-5b40-41d5-9950-0541583049e0.png" height="50%" width="50%"/>
@@ -30,29 +36,80 @@ https://leaguewordle.herokuapp.com/
      
      
 
-### Champion List and Attributes
+## Champion List and Attributes
 The Champion & their respective attributes are taken from the [League of Legends Fandom Wiki Page](https://leagueoflegends.fandom.com/wiki/List_of_champions) as an HTML table and then converted to a JSON file.
 
---------
+<br>
 
-### Hints
+#### The original JSON file format
+
+
+| **Champion** 	| **Classes** 	| **Release Date** 	| **Last Changed** 	| Blue Essence  	| **RP** 	|
+|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
+| **Aatrox**<br>The Darkin Blade 	| Juggernaut 	| 2013-06-13 	| V12.14 	| 4800 	| 880 	|
+
+
+#### The restructured JSON file format
+
+
+| **Champion** 	| **Description** 	| **Classes** 	| **Release Year** 	| **Last Changed** 	| **Blue Essence** 	| **RP** 	|
+|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|---	|
+| Aatrox 	| The Darkin Blade 	| Juggernaut 	| 2013 	| V12.14 	| 4800 	| 880 	|
+
+<br>
+
+The restructured file is made to be easily broken into strings to compare and produce hints. 
+The JSON file used to form the Word Bank and hints is available to read and download in the repository under the file name [champions.json](https://github.com/Tran-Steven/leaguewordle/blob/master/leaguewordle-frontend/src/data/champions.json)
+<br><br><br><br>
+
+
+Restructure changes done by [@Darren-Tham](https://github.com/Darren-Tham) [^1]
+
+
+<h2></h2>
+
+## Hints
+
+Hints are displayed under the input bar only if the player's guess is wrong. It compares the guessed champion's attributes to the correct champion and produces a visual showing which attribute is correct, incorrect, or if the guessed attribute is lower or higher compared to the correct champion.
+
+
+### Correct:       <img src="https://raw.githubusercontent.com/Tran-Steven/leaguewordle/1407a9383b55907b2c6eeb92f33a36526bddc1f9/leaguewordle-frontend/src/assets/images/svg/checkmark.svg" height="4%" width="4%" alt="a checkmark icon">
+
+
+### Incorrect:         <img src="https://raw.githubusercontent.com/Tran-Steven/leaguewordle/1407a9383b55907b2c6eeb92f33a36526bddc1f9/leaguewordle-frontend/src/assets/images/svg/wrong.svg" height="4%" width="4%" alt="An incorrect/wrong symbol (an X with a circle around it)">
+
+
+### Higher:        <img src="https://raw.githubusercontent.com/Tran-Steven/leaguewordle/1407a9383b55907b2c6eeb92f33a36526bddc1f9/leaguewordle-frontend/src/assets/images/svg/higher.svg" height="4%" width="4%" alt="An Up Arrow icon">
+
+### Lower:       <img src="https://raw.githubusercontent.com/Tran-Steven/leaguewordle/1407a9383b55907b2c6eeb92f33a36526bddc1f9/leaguewordle-frontend/src/assets/images/svg/down-svg.svg" height="4%" width="4%" alt="A Down Arrow icon">
+<h2></h2>
+
+## The Four Attributes Used
+
 
 #### Blue Essence Amount
 
-> If the guessed Champion's Blue Essence amount is equal to the target Champion's Blue Essence amount, it will be shown as correct. If the guess is wrong, a hint will be shown to the user if the Blue Essence value is lower or higher.
+> If the guessed Champion's Blue Essence amount is equal to the target Champion's Blue Essence amount, it will be shown as correct. If the guess is wrong, a hint will be shown to the player if the Blue Essence value is lower or higher.
 
 #### Riot Point Amount
 
-> If the guessed Champion's RP amount is equal to the target Champion's RP amount, it will be shown as correct. If it is wrong, it will give a hint to the user if the RP value is lower or higher.
+> If the guessed Champion's RP amount is equal to the correct Champion's RP amount, it will be shown as correct. If it is wrong, it will give a hint to the player if the RP value is lower or higher.
 
-#### Release Date
+#### Release Year
 
-> If the guessed Champion's release date is equal to the target Champion's release date, it will be shown as correct. If it is wrong, it will give a hint to the user if the release date is lower or higher.
+> If the guessed Champion's release year is equal to the correct Champion's release year, it will be shown as correct. If it is wrong, it will give a hint to the player if the release year is lower or higher.
 
 #### Classes
 
-> If the guessed Champion's class is equal to the target Champion's Class, it will be shown as correct.
+> If the guessed Champion's class is equal to the correct Champion's class, it will be shown as correct. If not, an incorrect icon will appear.
 
-##
+<h2></h2>
 
-**_Built with: ReactJS, NodeJS, Express_**
+
+### Acknowledgements
+
+[^1]:
+
+     [@Darren-Tham](https://github.com/Darren-Tham) Thanks to Darren for restructuring the JSON file and helping me out at the start of this project!
+     
+     
