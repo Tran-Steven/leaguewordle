@@ -406,19 +406,20 @@ const Home = () => {
                       <input type="submit" disabled={isDisabled} />
                     </div>
                   </div>
-                  {championMatch &&
-                    championMatch.map((item, index) => (
-                      <div
-                        className="no-overflow"
-                        key={index}
-                        style={{ marginTop: "5px" }}
-                      >
-                        <Card className="card1" style={{ width: "50%" }}>
-                          {item.Champion}
-                        </Card>
-                      </div>
-                    ))}
-
+                  <div className="game-target">
+                    {championMatch &&
+                      championMatch.map((item, index) => (
+                        <div
+                          className="no-overflow"
+                          key={index}
+                          style={{ marginTop: "5px" }}
+                        >
+                          <Card className="card1" style={{ width: "50%" }}>
+                            {item.Champion}
+                          </Card>
+                        </div>
+                      ))}
+                  </div>
                   <div className="comp">
                     {isWrong && (
                       <Wrong text="Class" alt="wrong image" img={wrong} />

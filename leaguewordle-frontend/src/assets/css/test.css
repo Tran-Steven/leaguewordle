@@ -9,18 +9,24 @@
     filter: invert(100%);
   }
 
+  html,
   body {
+    background-color: #3d3c3a;
     color: white;
   }
+
+  .bot__footer {
+    background-color: #3d3c3a;
+  }
   .bot__footer-container__image {
-    background-color: #80807d;
+    filter: invert(1);
   }
   input[type="submit"] {
     color: #040404;
     background-color: #8a8a86;
   }
   input[type="text"] {
-    color: #black;
+    color: white;
     background-color: #80807d;
   }
   .card1 {
@@ -109,9 +115,14 @@ body {
   align-items: center;
   display: flex;
 }
+.game-target {
+  position: relative;
+  height: 10rem;
+  overflow-y: auto;
+}
 .no-overflow {
-  position: flex;
   overflow: hidden;
+  position: flex;
 }
 .comp {
   width: 100%;
