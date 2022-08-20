@@ -18,6 +18,10 @@
   .bot__footer {
     background-color: #3d3c3a;
   }
+
+  .imageWrong {
+    filter: invert(1);
+  }
   .bot__footer-container__image {
     filter: invert(1);
   }
@@ -27,7 +31,7 @@
   }
   input[type="text"] {
     color: white;
-    background-color: #80807d;
+    background-color: #222222;
   }
   .card1 {
     background-color: #80807d;
@@ -117,7 +121,7 @@ body {
 }
 .game-target {
   position: relative;
-  height: 10rem;
+  height: 3rem;
   overflow-y: auto;
 }
 .no-overflow {

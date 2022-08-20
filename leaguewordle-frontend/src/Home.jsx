@@ -59,7 +59,6 @@ const Home = () => {
   const [isRPWrong, setIsRPWrong] = useState(false);
 
   // deals with the data from the form and sends an email
-  const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
 
   //Sets the amount of guesses
@@ -89,19 +88,6 @@ const Home = () => {
   const copy = function () {
     navigator.clipboard.writeText(link);
   };
-
-  //when user sends a email, the textgets sent to the backend and sends it through a smtp server
-  // const handleSend = async () => {
-  //   setSent(true);
-  //   try {
-  //     await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
-  //       text,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //     console.log("react error");
-  //   }
-  // };
 
   //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
@@ -163,7 +149,7 @@ const Home = () => {
             <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
           </div>
           <h2 className=""> GAME LOST</h2>
-
+          <h2>CORRECT CHAMP WAS {correctChampion}</h2>
           <p className="how-to2">
             If you want to start another game, just click out of this popup. The
             game picks a random champion everytime, no need to wait for
@@ -550,7 +536,6 @@ const Home = () => {
                 alt="Help Icon"
                 onClick={() => {
                   setButtonPopup(true);
-                  setSent(false);
                   setText("");
                 }}
                 id="help"
