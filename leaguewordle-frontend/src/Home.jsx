@@ -85,10 +85,6 @@ const Home = () => {
 
   const link = "https://leaguewordle.herokuapp.com/";
 
-  const copy = function () {
-    navigator.clipboard.writeText(link);
-  };
-
   //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
   for (let i = 0; i < champions.length; i++) {
