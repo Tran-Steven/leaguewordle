@@ -22,7 +22,7 @@ https://leaguewordle.herokuapp.com/
 </p>
 
 
-**_Built with: ReactJS, NodeJS, Express_**
+**_Built with: React, Node.js_**
 
 
 <h2></h2>
@@ -87,21 +87,39 @@ Hints are displayed under the input bar only if the player's guess is wrong. It 
 ## The Four Attributes Used
 
 
-#### Blue Essence Amount
+#### Blue Essence Amount 
 
-> If the guessed Champion's Blue Essence amount is equal to the target Champion's Blue Essence amount, it will be shown as correct. If the guess is wrong, a hint will be shown to the player if the Blue Essence value is lower or higher.
+<img src="https://static.wikia.nocookie.net/leagueoflegends/images/2/24/Hextech_Crafting_Blue_Essence.png/revision/latest?cb=20181204125617" width="20%" height="20%"/>
+
+If the guessed Champion's Blue Essence amount is equal to the correct Champion's Blue Essence amount, it will be shown as correct. If the guess is wrong, a hint will be shown to the player if the Blue Essence value is lower or higher.
+
+Blue Essence values are between [ 450 BE, 1350 BE, 3150 BE, 4800 BE and 6300 BE ] 
+
+Please note that new Champions initial increased Blue Essence cost (7800 BE) will not be included but rather defaulted to the normal price of 6300 BE.
+
 
 #### Riot Point Amount
 
-> If the guessed Champion's RP amount is equal to the correct Champion's RP amount, it will be shown as correct. If it is wrong, it will give a hint to the player if the RP value is lower or higher.
+<img src="https://static.wikia.nocookie.net/leagueoflegends/images/0/00/RP_icon.png/revision/latest/smart/width/250/height/250?cb=20191120141937" width="8%" height="8%"/>
+
+If the guessed Champion's RP amount is equal to the correct Champion's RP amount, it will be shown as correct. If it is wrong, it will give a hint to the player if the RP value is lower or higher.
+
+Riot Point values are between [ 260 RP, 585 RP, 790 RP, 880 RP and 975 RP ] 
+
 
 #### Release Year
 
-> If the guessed Champion's release year is equal to the correct Champion's release year, it will be shown as correct. If it is wrong, it will give a hint to the player if the release year is lower or higher.
+If the guessed Champion's release year is equal to the correct Champion's release year, it will be shown as correct. If it is wrong, it will give a hint to the player if the release year is lower or higher.
+
+The current range is between the years [ 2009 - 2022 ]
 
 #### Classes
 
-> If the guessed Champion's class is equal to the correct Champion's class, it will be shown as correct. If not, an incorrect icon will appear.
+If the guessed Champion's class is equal to the correct Champion's class, it will be shown as correct. If not, an incorrect icon will appear.
+
+The current list of classes are:
+
+[  Artillery, Assassin, Catcher, Diver, Skirmisher, Battlemage, Burst, Enchanter, Warden, Juggernaut, Marksman, Specialist and Vanguard ] 
 
 <h2></h2>
 
@@ -110,6 +128,6 @@ Hints are displayed under the input bar only if the player's guess is wrong. It 
 
 [^1]:
 
-     [@Darren-Tham](https://github.com/Darren-Tham) Thanks to Darren for restructuring the JSON file and helping me out at the start of this project!
+     [@Darren-Tham](https://github.com/Darren-Tham) Huge thanks to Darren for restructuring the JSON file and helping me out at the start of this project!
      
      
