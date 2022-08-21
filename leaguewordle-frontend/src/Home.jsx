@@ -130,12 +130,17 @@ const Home = () => {
             <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
           </div>
           <h2 className="">GAME WON</h2>
+          <h3>{correctChampion} WAS CORRECT!</h3>
           <p className="">
             Hey! Thanks for playing, this was made for fun over the summer to
-            learn and pickup a new language. It was built using HTML,
-            JavaScript, Reactjs, and Express!
+            learn and pickup a new language. It was built using React and
+            Node.js!{" "}
           </p>
-          <h2 className="how-to-h">PLAY AGAIN</h2>
+          <p>
+            This game will still recieve changes as I pick up new skills and get
+            new ideas.
+          </p>
+          <h2 className="how-to-h">HOW TO PLAY AGAIN</h2>
           <p className="how-to2">
             If you want to start another game then just click out of this popup.
             The game picks a random champion everytime, no need to wait for
@@ -183,7 +188,7 @@ const Home = () => {
                   onSubmit={handleSubmit(() => {
                     let userInput = val;
                     userInput = userInput.toUpperCase().replace(/" "/g, "");
-
+                    setWon(true);
                     setIconName(userInput.replace(/[^A-Z]/g, ""));
                     setuserGuess(userInput);
                     let correctChampObj = champions[jIndex];
@@ -450,53 +455,29 @@ const Home = () => {
                     )}
 
                     {isBEWrong && (
-                      <Wrong text="Blue Essence" alt="wrong img" img={wrong} />
+                      <Wrong text="BE" alt="wrong img" img={wrong} />
                     )}
                     {isBERight && (
-                      <Wrong
-                        text="Blue Essence"
-                        alt="correct img"
-                        img={correct}
-                      />
+                      <Wrong text="BE" alt="correct img" img={correct} />
                     )}
                     {isBELower && (
-                      <Wrong
-                        text="Blue Essence"
-                        alt="Down Arrow image"
-                        img={down}
-                      />
+                      <Wrong text="BE" alt="Down Arrow image" img={down} />
                     )}
                     {isBEHigher && (
-                      <Wrong
-                        text="Blue Essence"
-                        alt="Up Arrow image"
-                        img={higher}
-                      />
+                      <Wrong text="BE" alt="Up Arrow image" img={higher} />
                     )}
 
                     {isRPWrong && (
-                      <Wrong text="Riot Points" alt="wrong img" img={wrong} />
+                      <Wrong text="RP" alt="wrong img" img={wrong} />
                     )}
                     {isRPRight && (
-                      <Wrong
-                        text="Riot Points"
-                        alt="correct img"
-                        img={correct}
-                      />
+                      <Wrong text="RP" alt="correct img" img={correct} />
                     )}
                     {isRPLower && (
-                      <Wrong
-                        text="Riot Points"
-                        alt="Down Arrow image"
-                        img={down}
-                      />
+                      <Wrong text="RP" alt="Down Arrow image" img={down} />
                     )}
                     {isRPHigher && (
-                      <Wrong
-                        text="Riot Points"
-                        alt="Up Arrow image"
-                        img={higher}
-                      />
+                      <Wrong text="RP" alt="Up Arrow image" img={higher} />
                     )}
                   </div>
                 </form>

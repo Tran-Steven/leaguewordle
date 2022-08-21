@@ -4,6 +4,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  h3 {
+    color: #8a8a86;
+  }
   wrong {
     -webkit-filter: invert(100%);
     filter: invert(100%);
@@ -14,8 +17,7 @@
     background-color: #3d3c3a;
     color: white;
   }
-
-  .bot__footer {
+  .main {
     background-color: #3d3c3a;
   }
 
@@ -118,6 +120,7 @@ body {
   text-align: center;
   align-items: center;
   display: flex;
+  background-color: #3d3c3a;
 }
 .game-target {
   position: relative;
