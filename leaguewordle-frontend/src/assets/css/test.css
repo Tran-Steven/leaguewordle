@@ -143,7 +143,7 @@ body {
   min-width: 50vw;
 }
 .counter {
-  font-size: clamp(2rem, 4vw, 6rem);
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 .lol__game-container {
@@ -165,10 +165,12 @@ body {
   position: flex;
   display: flex;
   width: auto;
-  height: auto%;
 }
-
+footer {
+  margin-top: 6rem;
+}
 .bot__ {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +221,7 @@ body {
 input[type="text"] {
   max-width: 1200px;
   height: 30%;
-  width: 100%;
+  width: 80%;
   padding-top: 1rem;
   background-size: cover;
 }
@@ -230,7 +232,6 @@ input[type="submit"] {
 }
 .lol_game-container-div_inlinetogether {
   display: flex;
-
   height: auto;
   width: 100%;
 }

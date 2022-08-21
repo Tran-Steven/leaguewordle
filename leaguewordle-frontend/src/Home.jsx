@@ -12,6 +12,7 @@ import Header from "./components/Header/Header.jsx";
 import Popup from "./components/Popup/Popup.jsx";
 import PopupGameStatus from "./components/PopupGameStatus";
 import { Wrong } from "./components/Wrong.js";
+import { ChampionPopup } from "./components/ChampionPopup/ChampionPopup.jsx";
 // import { help } from "./actions";
 
 //imported images
@@ -36,6 +37,8 @@ const Home = () => {
   //The trigger for the contact & help popup
   const [buttonPopup, setButtonPopup] = useState(true);
 
+  const [loadChamp, setLoadChamp] = useState(false);
+  const [iconName, setIconName] = useState(0);
   //Class useStates for conditionals
   const [isRight, setIsRight] = useState(false);
   const [isWrong, setIsWrong] = useState(false);
@@ -72,7 +75,6 @@ const Home = () => {
 
   // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
   const [isDisabled, setDisabled] = useState(true);
-
   //Hooks that state if user won or lost the game
   const [isWon, setWon] = useState(false);
   const [isLost, setLost] = useState(false);
@@ -166,6 +168,13 @@ const Home = () => {
         </PopupGameStatus>
         <div className="lol__game">
           <div className="lol__game-container">
+            {loadChamp && (
+              <ChampionPopup
+                text={iconName}
+                alt="Wrong Champion img"
+                img={iconName}
+              />
+            )}
             <p className="counter">Tries Available: {counter}</p>
             <div className="form-containerChampion">
               <div className="formcontentmove">
@@ -174,9 +183,8 @@ const Home = () => {
                   onSubmit={handleSubmit(() => {
                     let userInput = val;
                     userInput = userInput.toUpperCase().replace(/" "/g, "");
-                    // console.log("User's input: " + userInput);
-                    // console.log("Correct champion: " + correctChampion);
 
+                    setIconName(userInput.replace(/[^A-Z]/g, ""));
                     setuserGuess(userInput);
                     let correctChampObj = champions[jIndex];
                     let wrongChamp = champions[iIndex];
@@ -199,16 +207,18 @@ const Home = () => {
                       );
                       setIsWrong(false);
                       setIsRight(true);
+                      setLoadChamp(false);
                     } else {
                       //initalizing variables to contain the Classes value
                       wrongCC = wrongChamp.Classes.valueOf().toString();
                       correctCC = correctChampObj.Classes.valueOf().toString();
-
                       //checks if classes match
                       if (counter === 1) {
                         setLost(true);
                         setCounter(5);
+                        setLoadChamp(false);
                       } else {
+                        setLoadChamp(true);
                         if (wrongCC === correctCC) {
                           setIsWrong(false);
                           setIsRight(true);
@@ -495,6 +505,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+
       <footer>
         <div className="bot__footer">
           <div className="bot__footer-container">
