@@ -26,6 +26,7 @@ import github from "./assets/images/svg/github.svg";
 import linkedin from "./assets/images/svg/linkedin.svg";
 import help from "./assets/images/svg/help.svg";
 import mail from "./assets/images/svg/mail.svg";
+import { useLayoutEffect } from "react";
 
 const Home = () => {
   //handles input and submit from the wordle textbox
@@ -72,7 +73,7 @@ const Home = () => {
   const [championMatch, setChampionMatch] = useState([]);
   const [correctChampion, setcorrectChampion] = useState();
   const [userGuess, setuserGuess] = useState("");
-
+  const [prevcorrectChampion, setprevcorrectChampion] = useState();
   const cardChange = (e) => {
     setVal(e);
   };
@@ -120,6 +121,10 @@ const Home = () => {
     return rand;
   };
 
+  useEffect(() => {
+    console.log(val);
+  }, [val]);
+
   return (
     <div className="main">
       <header>
@@ -142,7 +147,7 @@ const Home = () => {
             This game will still recieve changes as I pick up new skills and get
             new ideas.
           </p>
-          <h2 className="how-to-h">HOW TO PLAY AGAIN</h2>
+          <h2 className="how-to-h">PLAY AGAIN</h2>
           <p className="how-to2">
             If you want to start another game then just click out of this popup.
             The game picks a random champion everytime, no need to wait for
@@ -154,7 +159,7 @@ const Home = () => {
             <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
           </div>
           <h2 className=""> GAME LOST</h2>
-          <h3>CORRECT CHAMP WAS {correctChampion}!</h3>
+          <h3>THE CORRECT CHAMPION WAS {correctChampion}!</h3>
           <p className="how-to2">
             If you want to start another game, just click out of this popup. The
             game picks a random champion everytime, no need to wait for
@@ -203,14 +208,9 @@ const Home = () => {
                     let wrongNum;
                     setNumber(number + 1);
                     if (userInput === correctChampion) {
+                      setprevcorrectChampion(correctChampion);
                       setWon(true);
                       setCounter(5);
-                      setcorrectChampion(
-                        champions[randNumGen()].Champion.valueOf()
-                          .toString()
-                          .toUpperCase()
-                          .replace(/" "/g, "")
-                      );
                       setIsWrong(false);
                       setIsRight(true);
                       setLoadChamp(false);
@@ -220,8 +220,11 @@ const Home = () => {
                       correctCC = correctChampObj.Classes.valueOf().toString();
                       //checks if classes match
                       if (counter === 1) {
+                        setprevcorrectChampion(correctChampion);
                         setLost(true);
                         setCounter(5);
+                        setIsWrong(false);
+                        setIsRight(true);
                         setLoadChamp(false);
                       } else {
                         setLoadChamp(true);
@@ -390,6 +393,14 @@ const Home = () => {
                             } else {
                               setDisabled(true);
                             }
+                          }
+                          if (prevcorrectChampion === correctChampion) {
+                            setcorrectChampion(
+                              champions[randNumGen()].Champion.valueOf()
+                                .toString()
+                                .toUpperCase()
+                                .replace(/" "/g, "")
+                            );
                           }
                           if (!correctChampion) {
                             setcorrectChampion(

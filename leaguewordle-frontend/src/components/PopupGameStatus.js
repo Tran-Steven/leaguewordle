@@ -7,7 +7,9 @@ function PopupGameStatus(props) {
         <button
           shape="circle"
           className="close-btn"
-          onClick={() => props.setTrigger(false)}
+          onClick={() => {
+            props.setTrigger(false);
+          }}
         >
           x
         </button>
