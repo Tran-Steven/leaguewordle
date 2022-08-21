@@ -123,6 +123,7 @@ body {
   text-align: center;
   align-items: center;
   display: flex;
+  background-color: #f8f8f7;
 }
 .game-target {
   position: relative;

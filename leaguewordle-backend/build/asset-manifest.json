@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b12c527a.css",
+    "main.css": "/static/css/main.8403610e.css",
     "main.js": "/static/js/main.90974adb.js",
     "static/media/image2vector.svg": "/static/media/image2vector.be6e06e3a48fcef321cdea7514fb65ac.svg",
     "static/media/league-of-wordle.png": "/static/media/league-of-wordle.142fa861bb7231ae20d2.png",
@@ -175,11 +175,11 @@
     "static/media/wrong.svg": "/static/media/wrong.8c1e5a785b4a9194d5190c9c32664496.svg",
     "static/media/checkmark.svg": "/static/media/checkmark.1aebe15a3368b4133006b92739ac286e.svg",
     "index.html": "/index.html",
-    "main.b12c527a.css.map": "/static/css/main.b12c527a.css.map",
+    "main.8403610e.css.map": "/static/css/main.8403610e.css.map",
     "main.90974adb.js.map": "/static/js/main.90974adb.js.map"
   },
   "entrypoints": [
-    "static/css/main.b12c527a.css",
+    "static/css/main.8403610e.css",
     "static/js/main.90974adb.js"
   ]
 }
