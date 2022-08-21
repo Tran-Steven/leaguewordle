@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "antd";
 import { useForm } from "react-hook-form";
 // import { useSelector, useDispatch } from "react-redux";
@@ -73,6 +73,10 @@ const Home = () => {
   const [correctChampion, setcorrectChampion] = useState();
   const [userGuess, setuserGuess] = useState("");
 
+  const cardChange = (e) => {
+    setVal(e);
+  };
+
   // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
   const [isDisabled, setDisabled] = useState(true);
   //Hooks that state if user won or lost the game
@@ -95,7 +99,6 @@ const Home = () => {
 
   //only allows user input to be letters, spaces, or apostrophes or periods
   const isLetters = (str) => /^[A-Za-z'&." "]*$/.test(str);
-
   //checks if user input matches any champion within the arraylist
   const searchChampions = (text) => {
     if (!text) {
@@ -108,7 +111,6 @@ const Home = () => {
       setChampionMatch(matches);
     }
   };
-
   //creates a random num, used to pick a random correctChampion
   const randNumGen = function (min = 0, max = 160) {
     let diff = max - min;
@@ -134,7 +136,7 @@ const Home = () => {
           <p className="">
             Hey! Thanks for playing, this was made for fun over the summer to
             learn and pickup a new language. It was built using React and
-            Node.js!{" "}
+            Node.js!
           </p>
           <p>
             This game will still recieve changes as I pick up new skills and get
@@ -152,7 +154,7 @@ const Home = () => {
             <img className="lol-logo" src={lollogo} alt="LoLxWordle Icon" />
           </div>
           <h2 className=""> GAME LOST</h2>
-          <h2>CORRECT CHAMP WAS {correctChampion}</h2>
+          <h3>CORRECT CHAMP WAS {correctChampion}!</h3>
           <p className="how-to2">
             If you want to start another game, just click out of this popup. The
             game picks a random champion everytime, no need to wait for
@@ -188,7 +190,6 @@ const Home = () => {
                   onSubmit={handleSubmit(() => {
                     let userInput = val;
                     userInput = userInput.toUpperCase().replace(/" "/g, "");
-                    setWon(true);
                     setIconName(userInput.replace(/[^A-Z]/g, ""));
                     setuserGuess(userInput);
                     let correctChampObj = champions[jIndex];
@@ -411,7 +412,14 @@ const Home = () => {
                           key={index}
                           style={{ marginTop: "5px" }}
                         >
-                          <Card className="card1" style={{ width: "50%" }}>
+                          <Card
+                            hoverable
+                            className="card1"
+                            style={{ width: "50%" }}
+                            onClick={() => {
+                              setVal(item.Champion);
+                            }}
+                          >
                             {item.Champion}
                           </Card>
                         </div>
