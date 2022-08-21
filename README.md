@@ -133,6 +133,7 @@ By creating an [image/file parser](https://github.com/Tran-Steven/python-imagepa
 
 This kept a consistent and easily accessible image name which could be called and changed upon player guess submission.
 
+<h2></h2>
 
 ### Acknowledgements
 
