@@ -95,7 +95,7 @@ If the guessed Champion's Blue Essence amount is equal to the correct Champion's
 
 Blue Essence values are between [ 450 BE, 1350 BE, 3150 BE, 4800 BE and 6300 BE ] 
 
-Please note that new Champions initial increased Blue Essence cost (7800 BE) will not be included but rather defaulted to the normal price of 6300 BE.
+Please note that new Champion's initial increased Blue Essence cost (7800 BE) will not be included but rather defaulted to the normal price of 6300 BE.
 
 
 #### Riot Point Amount
@@ -122,6 +122,16 @@ The current list of classes are:
 [  Artillery, Assassin, Catcher, Diver, Skirmisher, Battlemage, Burst, Enchanter, Warden, Juggernaut, Marksman, Specialist and Vanguard ] 
 
 <h2></h2>
+
+## Champion Images
+Using Riot's [Data Dragon tarball](https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html), which included the Champion icons and loading images, the player guessed champion icon is displayed if the guess is wrong.
+
+The image file names were structured in Riot's tarball as "Ahri_0, Ahri_1, Ahri_2" ... "Alistar_0, Alistar_1..." which was not ideal. This is due to the need of only the base skin (as of right now) and the need to simplify the file name to make it easier to conditionally render based on player guess submissions.
+
+
+By creating an [image/file parser](https://github.com/Tran-Steven/python-imageparser) in Python, the non-base images were removed (files that did contain _0 in its file name) and images were renamed to be all uppercase and removed the "_0" from the end of the file name.
+
+This kept a consistent and easily accessible image name which could be called and changed upon player guess submission.
 
 
 ### Acknowledgements
