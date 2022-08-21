@@ -4,6 +4,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .lol__game {
+    background-color: #3d3c3a;
+  }
   h3 {
     color: #8a8a86;
   }
@@ -120,7 +123,6 @@ body {
   text-align: center;
   align-items: center;
   display: flex;
-  background-color: #3d3c3a;
 }
 .game-target {
   position: relative;
