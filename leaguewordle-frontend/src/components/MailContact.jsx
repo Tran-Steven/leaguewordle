@@ -4,12 +4,11 @@ import axios from "axios";
 import logo from "../assets/images/image2vector.svg";
 function MailContact(props) {
   const [sent, setSent] = useState(false);
-  let [text, setText] = useState("");
-  const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
 
   const handleSend = async () => {
     setSent(true);
-    text = "email: " + email + "body: " + text;
+
     try {
       await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
         text,
@@ -28,7 +27,6 @@ function MailContact(props) {
           onClick={() => {
             setSent(false);
             setText("");
-            setEmail("");
             props.setTrigger(false);
           }}
         >
@@ -49,15 +47,12 @@ function MailContact(props) {
               target="_top"
               method="post"
               encType="text/plain"
-              onSubmit={handleSend}
+              onSubmit={() => {
+                handleSend();
+              }}
             >
               <div className="contactInfo">
                 <h2>CONTACT FORM</h2>
-                <input
-                  type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
                 <textarea
                   autoComplete="off"
                   className="input100"
