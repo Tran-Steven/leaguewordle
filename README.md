@@ -129,7 +129,7 @@ Using Riot's [Data Dragon tarball](https://riot-api-libraries.readthedocs.io/en/
 The image file names were structured in Riot's tarball as "Ahri_0, Ahri_1, Ahri_2" ... "Alistar_0, Alistar_1..." which was not ideal. This is due to the need of only the base skin (as of right now) and the need to simplify the file name to make it easier to conditionally render based on player guess submissions.
 
 
-By creating an [image/file parser](https://github.com/Tran-Steven/python-imageparser) in Python, the non-base images were removed (files that did contain _0 in its file name) and images were renamed to be all uppercase and removed the "_0" from the end of the file name.
+By creating an [image/file parser](https://github.com/Tran-Steven/python-imageparser) in Python, the non-base images were removed (files that did not contain "_0" in its file name) and images were renamed to be all uppercase and removed the "_0" from the end of the file name.
 
 This kept a consistent and easily accessible image name which could be called and changed upon player guess submission.
 
