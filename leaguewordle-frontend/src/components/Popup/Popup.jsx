@@ -25,6 +25,7 @@ function Popup(props) {
           className="close-btn"
           onClick={() => {
             setSent(false);
+            setText("");
             props.setTrigger(false);
           }}
         >

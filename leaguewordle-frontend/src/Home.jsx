@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Card } from "antd";
 import { useForm } from "react-hook-form";
 // import { useSelector, useDispatch } from "react-redux";
@@ -11,8 +11,10 @@ import "./assets/css/test.css";
 import Header from "./components/Header/Header.jsx";
 import Popup from "./components/Popup/Popup.jsx";
 import PopupGameStatus from "./components/PopupGameStatus";
+import MailContact from "./components/MailContact.jsx";
 import { Wrong } from "./components/Wrong.js";
 import { ChampionPopup } from "./components/ChampionPopup/ChampionPopup.jsx";
+
 // import { help } from "./actions";
 
 //imported images
@@ -26,7 +28,6 @@ import github from "./assets/images/svg/github.svg";
 import linkedin from "./assets/images/svg/linkedin.svg";
 import help from "./assets/images/svg/help.svg";
 import mail from "./assets/images/svg/mail.svg";
-import { useLayoutEffect } from "react";
 
 const Home = () => {
   //handles input and submit from the wordle textbox
@@ -37,6 +38,7 @@ const Home = () => {
 
   //The trigger for the contact & help popup
   const [buttonPopup, setButtonPopup] = useState(true);
+  const [contact, setContact] = useState(false);
 
   const [loadChamp, setLoadChamp] = useState(false);
   const [iconName, setIconName] = useState(0);
@@ -62,9 +64,6 @@ const Home = () => {
   const [isRPRight, setIsRPRight] = useState(false);
   const [isRPWrong, setIsRPWrong] = useState(false);
 
-  // deals with the data from the form and sends an email
-  const [text, setText] = useState("");
-
   //Sets the amount of guesses
   const [counter, setCounter] = useState(5);
 
@@ -72,11 +71,7 @@ const Home = () => {
   const champions1 = champions;
   const [championMatch, setChampionMatch] = useState([]);
   const [correctChampion, setcorrectChampion] = useState();
-  const [userGuess, setuserGuess] = useState("");
   const [prevcorrectChampion, setprevcorrectChampion] = useState();
-  const cardChange = (e) => {
-    setVal(e);
-  };
 
   // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
   const [isDisabled, setDisabled] = useState(true);
@@ -90,7 +85,7 @@ const Home = () => {
 
   const [number, setNumber] = useState(0);
 
-  const link = "https://leaguewordle.herokuapp.com/";
+  //  const link = "https://leaguewordle.herokuapp.com/";
 
   //goes through the champions json and takes the Champion Name and puts it in a string array
   let championList = [];
@@ -121,15 +116,12 @@ const Home = () => {
     return rand;
   };
 
-  useEffect(() => {
-    console.log(val);
-  }, [val]);
-
   return (
     <div className="main">
       <header>
         <Header />
       </header>
+      <MailContact trigger={contact} setTrigger={setContact} />
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup} />
       <main className="gameSection">
         <PopupGameStatus trigger={isWon} setTrigger={setWon}>
@@ -196,7 +188,6 @@ const Home = () => {
                     let userInput = val;
                     userInput = userInput.toUpperCase().replace(/" "/g, "");
                     setIconName(userInput.replace(/[^A-Z]/g, ""));
-                    setuserGuess(userInput);
                     let correctChampObj = champions[jIndex];
                     let wrongChamp = champions[iIndex];
 
@@ -588,6 +579,9 @@ const Home = () => {
                 className="bot_footer_container_image"
                 src={mail}
                 alt="Mail Icon"
+                onClick={() => {
+                  setContact(true);
+                }}
               />
               <img
                 className="bot_footer_container_image"
@@ -595,7 +589,6 @@ const Home = () => {
                 alt="Help Icon"
                 onClick={() => {
                   setButtonPopup(true);
-                  setText("");
                 }}
                 id="help"
               />

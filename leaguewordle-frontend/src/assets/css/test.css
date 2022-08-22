@@ -4,6 +4,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .gameSection {
+    background-color: #3d3c3a;
+  }
   .lol__game {
     background-color: #3d3c3a;
   }
@@ -123,7 +126,6 @@ body {
   text-align: center;
   align-items: center;
   display: flex;
-  background-color: #f8f8f7;
 }
 .game-target {
   position: relative;
