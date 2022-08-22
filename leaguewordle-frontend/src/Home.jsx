@@ -428,6 +428,58 @@ const Home = () => {
                             className="card1"
                             style={{ width: "50%" }}
                             onClick={() => {
+                              const j = champions.findIndex(
+                                (champion) =>
+                                  champion.Champion.toUpperCase().replace(
+                                    /" "/g,
+                                    ""
+                                  ) === correctChampion
+                              );
+
+                              const i = champions.findIndex(
+                                (champion) =>
+                                  champion.Champion.toUpperCase().replace(
+                                    /" "/g,
+                                    ""
+                                  ) ===
+                                  item.Champion.valueOf()
+                                    .toUpperCase()
+                                    .replace(/" "/g, "")
+                              );
+                              setiIndex(i);
+                              setjIndex(j);
+                              searchChampions(item.Champion);
+
+                              if (
+                                championList.some(
+                                  (x) =>
+                                    x ===
+                                    item.Champion.toUpperCase().replace(
+                                      /" "/g,
+                                      ""
+                                    )
+                                ) === true
+                              ) {
+                                setDisabled(false);
+                              } else {
+                                setDisabled(true);
+                              }
+                              if (prevcorrectChampion === correctChampion) {
+                                setcorrectChampion(
+                                  champions[randNumGen()].Champion.valueOf()
+                                    .toString()
+                                    .toUpperCase()
+                                    .replace(/" "/g, "")
+                                );
+                              }
+                              if (!correctChampion) {
+                                setcorrectChampion(
+                                  champions[randNumGen()].Champion.valueOf()
+                                    .toString()
+                                    .toUpperCase()
+                                    .replace(/" "/g, "")
+                                );
+                              }
                               setVal(item.Champion);
                             }}
                           >
