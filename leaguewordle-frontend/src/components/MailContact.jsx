@@ -4,15 +4,15 @@ import axios from "axios";
 import logo from "../assets/images/image2vector.svg";
 function MailContact(props) {
   const [sent, setSent] = useState(false);
-  const [text, setText] = useState("");
+  let [text, setText] = useState("");
   const [email, setEmail] = useState("");
 
   const handleSend = async () => {
     setSent(true);
-    let textbody = "email: " + email + "body: " + text;
+    text = "email: " + email + "body: " + text;
     try {
       await axios.post("https://leaguewordle.herokuapp.com/send_mail", {
-        textbody,
+        text,
       });
     } catch (error) {
       console.log(error);
