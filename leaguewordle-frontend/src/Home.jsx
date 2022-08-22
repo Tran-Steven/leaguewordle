@@ -576,6 +576,7 @@ const Home = () => {
                 />
               </a>
               <img
+                hoverable
                 className="bot_footer_container_image"
                 src={mail}
                 alt="Mail Icon"
@@ -584,6 +585,7 @@ const Home = () => {
                 }}
               />
               <img
+                hoverable
                 className="bot_footer_container_image"
                 src={help}
                 alt="Help Icon"
