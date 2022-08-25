@@ -11,8 +11,6 @@ const ChampionPopup = (props) => {
           <img
             src={require(`../../assets/images/icons/${props.img}.jpg`)}
             alt={props.alt}
-            width="5%"
-            height="5%"
           />
         </div>
         <h2 className="propText">{props.text}</h2>

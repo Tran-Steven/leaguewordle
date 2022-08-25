@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Home.tsx";
 //importing assets
-import "./assets/css/index.css";
+import "./index.css";
 import titleImage from "./assets/images/league-of-wordle.png";
 let root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
