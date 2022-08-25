@@ -1,10 +1,9 @@
 import React from "react";
-import "../assets/images/wrong.png";
-import "../assets/css/Wrong.css";
-
-const Wrong = (props) => {
+import "../../assets/images/wrong.png";
+import "./ChampionHint.css";
+const ChampionHint = (props) => {
   return (
-    //base is 512x512
+    //Image base is 512x512c
     <div className="wrong">
       <div className="containerWrong">
         <div className="textWrong">
@@ -22,5 +21,4 @@ const Wrong = (props) => {
     </div>
   );
 };
-
-export { Wrong };
+export { ChampionHint };

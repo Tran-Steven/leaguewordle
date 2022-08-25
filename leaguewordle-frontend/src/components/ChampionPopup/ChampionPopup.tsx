@@ -20,5 +20,4 @@ const ChampionPopup = (props) => {
     </div>
   );
 };
-
 export { ChampionPopup };
