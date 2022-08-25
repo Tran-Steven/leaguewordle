@@ -11,10 +11,11 @@ import { ChampionPopup } from "../ChampionPopup/ChampionPopup";
 import Random from "../../utils/Random";
 import isLetters from "../../utils/isLetters";
 //imported images
-import wrong from "./assets/images/svg/wrong.svg";
-import down from "./assets/images/svg/down.svg";
-import higher from "./assets/images/svg/higher.svg";
-import correct from "./assets/images/checkmark.svg";
+
+import wrong from "../../assets/images/svg/wrong.svg";
+import down from "../../assets/images/svg/down.svg";
+import higher from "../../assets/images/svg/higher.svg";
+import correct from "../../assets/images/checkmark.svg";
 
 const Game = () => {
   //handles input and submit from the wordle textbox
@@ -165,30 +166,57 @@ const Game = () => {
                       let correctChampNum = Number(
                         correctChamp["Release Year"]
                       );
+                        
+                      const newList = [...list];
 
-                      isSameClass
-                        ? (setList[0] = correct)
-                        : (setList[0] = wrong);
-
-                      wrongChampNum === correctChampNum
-                        ? (setList[1] = correct)
+                      newList[0] = isSameClass
+                        ? correct
+                        : wrong;
+                      
+                      newList[1] = wrongChampNum === correctChampNum
+                        ? correct
                         : wrongChampNum < correctChampNum
-                        ? (setList[1] = higher)
-                        : (setList[1] = down);
-
-                      wrongChamp["Blue Essence"] ===
-                      correctChamp["Blue Essence"]
-                        ? (setList[2] = correct)
-                        : wrongChamp["Blue Essence"] <
-                          correctChamp["Blue Essence"]
-                        ? (setList[2] = higher)
-                        : (setList[2] = down);
-
-                      wrongChamp["RP"] === correctChamp["RP"]
-                        ? (setList[3] = correct)
+                        ? higher
+                        : down;
+                        
+                      newList[2] = wrongChamp["Blue Essence"] === correctChamp["Blue Essence"]
+                        ? correct
+                        : wrongChamp["Blue Essence"] === correctChamp["Blue Essence"]
+                        ? higher
+                        : down;
+                        
+                      newList[3] = wrongChamp["RP"] === correctChamp["RP"]
+                        ? correct
                         : wrongChamp["RP"] < correctChamp["RP"]
-                        ? (setList[3] = higher)
-                        : (setList[3] = down);
+                        ? higher
+                        : down;
+                      
+                      setList(newList)
+
+                      // isSameClass
+                      //   ? (setList[0] = correct)
+                      //   : (setList[0] = wrong);
+
+                      // wrongChampNum === correctChampNum
+                      //   ? (setList[1] = correct)
+                      //   : wrongChampNum < correctChampNum
+                      //   ? (setList[1] = higher)
+                      //   : (setList[1] = down);
+
+                      // wrongChamp["Blue Essence"] ===
+                      // correctChamp["Blue Essence"]
+                      //   ? (setList[2] = correct)
+                      //   : wrongChamp["Blue Essence"] <
+                      //     correctChamp["Blue Essence"]
+                      //   ? (setList[2] = higher)
+                      //   : (setList[2] = down);
+
+                      // wrongChamp["RP"] === correctChamp["RP"]
+                      //   ? (setList[3] = correct)
+                      //   : wrongChamp["RP"] < correctChamp["RP"]
+                      //   ? (setList[3] = higher)
+                      //   : (setList[3] = down);
+                        
                       setCounter(counter - 1);
                     }
                   }
