@@ -1,25 +1,23 @@
-.wrong {
-  display: flex;
-  float: left;
-  width: 25%;
+.hint {
+  display: inline-block;
   font-size: 1em;
-  height: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
 }
-.containerWrong {
+.containerHint {
   flex-direction: column;
-  height: auto;
   display: flex;
+  justify-content: center;
 }
-.imageWrong {
-  width: 100%;
-  height: 100%;
+.imageHint {
+  width: 50%;
+  height: 50%;
 }
-.textWrong {
-  height: 100%;
+.textHint {
+  height: auto;
 }
 
-.wrongImg {
+.wrongHint {
   height: 50%;
   width: 50%;
 }

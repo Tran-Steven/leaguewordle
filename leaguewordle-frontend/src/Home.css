@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USew8.ttf)
+    format("truetype");
+}
 .lato {
   font-family: "Lato", sans-serif;
 }
-
 @media (prefers-color-scheme: dark) {
   .gameSection {
     background-color: #3d3c3a;
@@ -17,7 +23,6 @@
     -webkit-filter: invert(100%);
     filter: invert(100%);
   }
-
   html,
   body {
     background-color: #3d3c3a;
@@ -26,7 +31,6 @@
   .main {
     background-color: #3d3c3a;
   }
-
   .imageWrong {
     filter: invert(1);
   }
@@ -45,14 +49,12 @@
     background-color: #80807d;
   }
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }
-
 html,
 body {
   height: 100%;
@@ -60,6 +62,9 @@ body {
   background-color: #f8f8f7;
 }
 .main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #f8f8f7;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: landscape) {
@@ -69,14 +74,12 @@ body {
     padding-bottom: 100%;
   }
 }
-
 .section__padding {
   padding: 4rem 6rem;
 }
 .section__margin {
   padding: 4rem 6rem;
 }
-
 @media screen and (max-width: 700px) {
   .section__margin {
     padding: 4rem;
@@ -85,7 +88,6 @@ body {
     padding: 4rem;
   }
 }
-
 @media screen and (max-width: 550px) {
   input[type="submit"] {
     font-size: 11px;
@@ -97,25 +99,21 @@ body {
     padding: 4rem 2rem;
   }
 }
-
 @media screen and (max-height: 550px) {
   .lol__game {
     height: 80vh;
   }
 }
-
 @media screen and (max-height: 750px) {
   .lol__game {
     height: 60vh;
   }
 }
-
 @media screen and (max-height: 1100px) {
   .lol__game {
     height: 55vh;
   }
 }
-
 @media screen and (max-height: 1400px) {
   .lol__game {
     height: 65vh;
@@ -126,80 +124,72 @@ body {
     height: 80vh;
   }
 }
-.lol__game {
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  display: flex;
+.test {
+  min-width: 50vw;
+  display: inline-block;
 }
-.game-target {
-  position: relative;
-  height: 3rem;
-  /* overflow-y: auto; */
-}
-.no-overflow {
-  overflow: hidden;
-  position: flex;
+.championIconContainer {
+  justify-content: center;
+  flex-grow: 1;
 }
 .comp {
-  width: 100%;
-  height: 50%;
-  position: relative;
-}
-.form-containerChampion {
-  display: flex;
+  white-space: nowrap;
+  box-sizing: border-box;
   flex-direction: row;
-  height: 100%;
-  justify-content: center;
+  max-width: 15.5vw;
 }
-.formcontentmove {
-  min-width: 50vw;
-}
+
 .counter {
   font-size: clamp(2rem, 2vw, 3rem);
-}
-
-.lol__game-container {
   text-align: center;
-  flex: 1;
-  display: inline;
-  flex-direction: column;
+}
+.gameSection {
   justify-content: center;
-  align-items: center;
-  height: 70%;
-}
-.formparam {
-  height: 100%;
-}
-.lol__game-container-div {
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  position: flex;
-  display: flex;
-  width: auto;
-}
-footer {
-  margin-top: 6rem;
+  flex-grow: 1;
 }
 
+.lol__game {
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+.formContainer {
+  display: inline-block;
+  margin-left: 20;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+}
+.unDisabledBorder {
+  border: 2px solid #040404;
+}
+.disabledBorder {
+  border: 2px solid #ef233c;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #ef233c;
+}
+
+input:focus {
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px #8a8a86;
+  outline: none;
+}
 input[type="text"] {
   max-width: 1200px;
-  height: 30%;
-  width: 80%;
+
+  width: 100%;
   padding-top: 1rem;
   background-size: cover;
 }
+
 input[type="submit"] {
   max-width: 800px;
-  height: 30%;
   width: 20%;
-  padding-top: 0.6rem;
-}
-.lol_game-container-div_inlinetogether {
-  display: flex;
-  height: auto;
-  width: 100%;
+  padding-top: 1rem;
 }
 
 input:disabled {
@@ -208,4 +198,14 @@ input:disabled {
   border-color: #dee2e6;
   border-style: solid;
   border-width: 2px;
+}
+.cardContainer {
+  z-index: 999;
+  overflow: hidden;
+}
+.cards {
+}
+
+footer {
+  margin-top: 3rem;
 }

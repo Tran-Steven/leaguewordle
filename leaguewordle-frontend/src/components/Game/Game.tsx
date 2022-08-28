@@ -7,6 +7,7 @@ import champions from "../../data/champions.json";
 
 import "antd/lib/card/style/css";
 import "../../Home.css";
+
 //components
 import { ChampionHint } from "../ChampionHint/ChampionHint.tsx";
 import { ChampionPopup } from "../ChampionPopup/ChampionPopup.tsx";
@@ -133,130 +134,129 @@ const Game = () => {
 
   return (
     <div className="lol__game">
-      <div className="lol__game-container">
-        {/* When user submit is wrong, display champion icon */}
-        {loadChamp && (
-          <ChampionPopup
-            text={iconName}
-            alt="Wrong Champion img"
-            img={iconName}
-          />
-        )}
-
-        {/* Counter for how many attempts/guesses user has */}
-        <p className="counter">Tries Available: {counter}</p>
-
-        <div className="form-containerChampion">
-          <div className="formcontentmove">
-            <form
-              //   className="formparam"
-              onSubmit={handleSubmit(() => {
-                let userInput = val.toUpperCase().replace(/" "/g, "");
-                let correctChamp = champions[jIndex];
-                let wrongChamp = champions[iIndex];
-                if (userInput === correctChampion) {
+      <div className="test">
+        <div className="championIconContainer">
+          {/* When user submit is wrong, display champion icon */}
+          {loadChamp && (
+            <ChampionPopup
+              text={iconName}
+              alt="Wrong Champion img"
+              img={iconName}
+            />
+          )}
+        </div>
+        <div>
+          {/* Counter for how many attempts/guesses user has */}
+          <p className="counter">Tries Available: {counter}</p>
+        </div>
+        <div className="formContainer">
+          <form
+            onSubmit={handleSubmit(() => {
+              let userInput = val.toUpperCase().replace(/" "/g, "");
+              let correctChamp = champions[jIndex];
+              let wrongChamp = champions[iIndex];
+              if (userInput === correctChampion) {
+                resetGame();
+                setWon(true);
+              } else {
+                if (counter === 1) {
                   resetGame();
-                  setWon(true);
+                  setLost(true);
                 } else {
-                  if (counter === 1) {
-                    resetGame();
-                    setLost(true);
-                  } else {
-                    setIconName(userInput.replace(/[^A-Z]/g, ""));
-                    setLoadChamp(true);
-                    let isSameClass =
-                      wrongChamp["Classes"] === correctChamp["Classes"];
-                    let wrongChampNum = Number(wrongChamp["Release year"]);
-                    let correctChampNum = Number(correctChamp["Release Year"]);
+                  setIconName(userInput.replace(/[^A-Z]/g, ""));
+                  setLoadChamp(true);
+                  let isSameClass =
+                    wrongChamp["Classes"] === correctChamp["Classes"];
+                  let wrongChampNum = Number(wrongChamp["Release year"]);
+                  let correctChampNum = Number(correctChamp["Release Year"]);
 
-                    const newList = [...list];
+                  const newList = [...list];
 
-                    newList[0] = isSameClass ? correct : wrong;
+                  newList[0] = isSameClass ? correct : wrong;
 
-                    newList[1] =
-                      wrongChampNum === correctChampNum
-                        ? correct
-                        : wrongChampNum < correctChampNum
-                        ? higher
-                        : down;
+                  newList[1] =
+                    wrongChampNum === correctChampNum
+                      ? correct
+                      : wrongChampNum < correctChampNum
+                      ? higher
+                      : down;
 
-                    newList[2] =
-                      wrongChamp["Blue Essence"] ===
-                      correctChamp["Blue Essence"]
-                        ? correct
-                        : wrongChamp["Blue Essence"] ===
-                          correctChamp["Blue Essence"]
-                        ? higher
-                        : down;
+                  newList[2] =
+                    wrongChamp["Blue Essence"] === correctChamp["Blue Essence"]
+                      ? correct
+                      : wrongChamp["Blue Essence"] ===
+                        correctChamp["Blue Essence"]
+                      ? higher
+                      : down;
 
-                    newList[3] =
-                      wrongChamp["RP"] === correctChamp["RP"]
-                        ? correct
-                        : wrongChamp["RP"] < correctChamp["RP"]
-                        ? higher
-                        : down;
+                  newList[3] =
+                    wrongChamp["RP"] === correctChamp["RP"]
+                      ? correct
+                      : wrongChamp["RP"] < correctChamp["RP"]
+                      ? higher
+                      : down;
 
-                    setList(newList);
-                    setGameOnGoing(true);
-                    setCounter(counter - 1);
-                  }
+                  setList(newList);
+                  setGameOnGoing(true);
+                  setCounter(counter - 1);
                 }
-                setVal("");
-                searchChampions("Reset Search");
-                setDisabled(true);
-              })}
-            >
-              <div className="lol__game-container-div">
-                <div className="lol_game-container-div_inlinetogether">
-                  <input
-                    {...register("guess")}
-                    autoComplete="off"
-                    placeholder="Enter Champion"
-                    type="text"
-                    value={val}
-                    onChange={({ target: { value: e } }) => {
-                      if (isLetters(e)) {
-                        checkValidInput(e);
-                      }
-                    }}
-                  />
-                  <input type="submit" disabled={isDisabled} />
-                </div>
-              </div>
-              <div className="game-target">
-                {/* Compares the user input to the list of champions to make a dropdown card autocomplete */}
-                {championMatch &&
-                  championMatch.map((item, index) => (
-                    <div
-                      className="no-overflow"
-                      key={index}
-                      style={{ marginTop: "5px" }}
+              }
+              setVal("");
+              searchChampions("Reset Search");
+              setDisabled(true);
+            })}
+          >
+            <div className="inputContainer">
+              <input
+                {...register("guess")}
+                autoComplete="off"
+                placeholder="Enter Champion"
+                type="text"
+                value={val}
+                // if the button is disabled, then make input area have a red border, if
+                // the button is enabled, have a regular black border
+                className={`${
+                  isDisabled ? `disabledBorder` : `unDisabledBorder`
+                }`}
+                onChange={({ target: { value: e } }) => {
+                  if (isLetters(e)) {
+                    checkValidInput(e);
+                  }
+                }}
+              />
+              <input type="submit" disabled={isDisabled} />
+            </div>
+            <div className="cardContainer">
+              {/* Compares the user input to the list of champions to make a dropdown card autocomplete */}
+              {championMatch &&
+                championMatch.map((item, index) => (
+                  <div
+                    className="cards"
+                    key={index}
+                    style={{ marginTop: "5px" }}
+                  >
+                    <Card
+                      hoverable
+                      style={{ width: "50%" }}
+                      onClick={() => {
+                        checkValidInput(item.Champion);
+                      }}
                     >
-                      <Card
-                        hoverable
-                        className="card1"
-                        style={{ width: "50%" }}
-                        onClick={() => {
-                          checkValidInput(item.Champion);
-                        }}
-                      >
-                        {item.Champion}
-                      </Card>
-                    </div>
-                  ))}
+                      {item.Champion}
+                    </Card>
+                  </div>
+                ))}
+            </div>
+            {/* The hints that show after a wrong submit */}
+            {gameOnGoing && (
+              <div className="comp">
+                <ChampionHint text="Class" alt="Class Hint" img={list[0]} />
+                <ChampionHint text="Year" alt="Year Hint" img={list[1]} />
+                <ChampionHint text="BE" alt="BE Hint" img={list[2]} />
+                <ChampionHint text="RP" alt="RP Hint" img={list[3]} />
               </div>
-
-              {/* The hints that show after a wrong submit */}
-              {gameOnGoing && (
-                <div className="comp">
-                  <ChampionHint text="Class" alt="Class Hint" img={list[0]} />
-                  <ChampionHint text="Year" alt="Year Hint" img={list[1]} />
-                  <ChampionHint text="BE" alt="BE Hint" img={list[2]} />
-                  <ChampionHint text="RP" alt="RP Hint" img={list[3]} />
-                </div>
-              )}
-            </form>
-          </div>
+            )}
+          </form>
         </div>
       </div>
     </div>
