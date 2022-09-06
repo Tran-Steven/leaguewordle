@@ -1,25 +1,30 @@
+.hint img {
+  width: min(50vw, 6em);
+}
+
 .hint {
+  flex: 1;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1rem;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .containerHint {
+  align-items: center;
   flex-direction: column;
   display: flex;
   justify-content: center;
 }
 .imageHint {
-  width: 50%;
-  height: 50%;
+  gap: 1%;
 }
 .textHint {
+  text-align: center;
   height: auto;
 }
 
 .wrongHint {
-  height: 50%;
-  width: 50%;
+  align-content: center;
 }
 .propHead {
   margin-bottom: 0%;

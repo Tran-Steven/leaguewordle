@@ -135,7 +135,7 @@ body {
 .comp {
   white-space: nowrap;
   box-sizing: border-box;
-  flex-direction: row;
+  display: flex;
 }
 
 .counter {
@@ -158,6 +158,7 @@ body {
   margin-left: 20;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 .inputContainer {
@@ -199,12 +200,12 @@ input:disabled {
   border-width: 2px;
 }
 .cardContainer {
-  z-index: 999;
+  z-index: 9999;
+  position: absolute;
   overflow: hidden;
 }
 .cards {
 }
 
 footer {
-  margin-top: 3rem;
 }

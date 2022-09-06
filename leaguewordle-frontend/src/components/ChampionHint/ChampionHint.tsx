@@ -10,12 +10,7 @@ const ChampionHint = (props) => {
           <h2 className="propHead">{props.text}</h2>
         </div>
         <div className="imageHint">
-          <img
-            src={props.img}
-            alt={props.alt}
-            margin-top="1%"
-            className="wrongHint"
-          />
+          <img src={props.img} alt={props.alt} className="wrongHint" />
         </div>
       </div>
     </div>
