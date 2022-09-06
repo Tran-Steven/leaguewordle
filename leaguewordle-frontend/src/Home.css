@@ -14,7 +14,6 @@
     background-color: #3d3c3a;
   }
   .lol__game {
-    margin: 5rem;
     background-color: #3d3c3a;
   }
   h3 {
@@ -149,6 +148,7 @@ body {
 }
 
 .lol__game {
+  margin: 5vh;
   height: 100%;
   flex-direction: row;
   justify-content: center;
@@ -156,7 +156,6 @@ body {
 }
 .formContainer {
   display: inline-block;
-  margin-left: 20;
   flex-direction: column;
   width: 100%;
   position: relative;
@@ -204,6 +203,7 @@ input:disabled {
   z-index: 9999;
   position: absolute;
   overflow: hidden;
+  inset-inline: 0;
 }
 .cards {
 }
