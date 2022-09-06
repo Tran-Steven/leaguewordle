@@ -136,7 +136,6 @@ body {
   white-space: nowrap;
   box-sizing: border-box;
   flex-direction: row;
-  max-width: 15.5vw;
 }
 
 .counter {
