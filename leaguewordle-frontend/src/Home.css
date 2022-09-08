@@ -125,7 +125,7 @@ body {
     height: 80vh;
   }
 }
-.test {
+.lolgamecontainer {
   min-width: 50vw;
   display: inline-block;
 }
@@ -133,15 +133,27 @@ body {
   justify-content: center;
   flex-grow: 1;
 }
-.comp {
-  white-space: nowrap;
-  box-sizing: border-box;
-  display: flex;
+.gameStatus {
+  font-size: clamp(4rem, 4vw, 5rem);
+  text-align: center;
 }
-
+.gameStatusBorder {
+  border-style: groove;
+  background-color: #fbfbfb;
+  border-radius: 3%;
+}
+.propText {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 3rem);
+}
 .counter {
   font-size: clamp(2rem, 2vw, 3rem);
   text-align: center;
+}
+.scoreCounter {
+  font-size: clamp(2rem, 2vw, 3rem);
+  text-align: center;
+  margin-top: -1em;
 }
 .gameSection {
   justify-content: center;
@@ -205,8 +217,8 @@ input:disabled {
   position: absolute;
   inset-inline: 0;
 }
-.cards {
-}
-
-footer {
+.comp {
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
 }

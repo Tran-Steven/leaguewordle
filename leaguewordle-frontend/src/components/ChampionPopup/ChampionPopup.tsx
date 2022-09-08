@@ -3,10 +3,6 @@ import "./ChampionPopup.css";
 const ChampionPopup = (props) => {
   return (
     <div className="containerChampion">
-      <div className="textChampion">
-        <h2 className="propText">Wrong Guess</h2>
-      </div>
-
       <img
         className="imageChampion"
         src={require(`../../assets/images/icons/${props.img}.jpg`)}

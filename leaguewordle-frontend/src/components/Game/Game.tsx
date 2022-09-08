@@ -31,6 +31,7 @@ const Game = () => {
 
   //Counter for amount of user guesses available
   const [counter, setCounter] = useState(5);
+  const [score, setScore] = useState(0);
 
   //List of champions for auto complete
   const champions1 = champions;
@@ -62,6 +63,8 @@ const Game = () => {
     searchChampions(e);
     checkMatch(e);
     noAnswerDupe();
+    setWon(false);
+    setLost(false);
   };
 
   // checks if the correct champion(answer) is defined or the same as the previous champion
@@ -134,20 +137,49 @@ const Game = () => {
 
   return (
     <div className="lol__game">
-      <div className="test">
+      <div className="lolgamecontainer">
         <div className="championIconContainer">
           {/* When user submit is wrong, display champion icon */}
           {loadChamp && (
-            <ChampionPopup
-              text={iconName}
-              alt="Wrong Champion img"
-              img={iconName}
-            />
+            <div className="textChampion">
+              <h2 className="propText">WRONG GUESS</h2>
+              <ChampionPopup
+                text={iconName}
+                alt="Wrong Champion img"
+                img={iconName}
+              />
+            </div>
           )}
         </div>
         <div>
+          {isWon ? (
+            <div>
+              <h1 className="gameStatus">GAME WON</h1>
+              <h1 className="propText">CORRECT CHAMPION</h1>
+              <ChampionPopup
+                text={correctChampion}
+                alt="Wrong Champion img"
+                img={correctChampion}
+              />
+            </div>
+          ) : isLost ? (
+            <div>
+              <h1 className="gameStatus">GAME LOST </h1>
+              <div className="gameStatusBorder">
+                <h1 className="propText">CORRECT CHAMPION</h1>
+                <ChampionPopup
+                  text={correctChampion}
+                  alt="Wrong Champion img"
+                  img={correctChampion}
+                />
+              </div>
+            </div>
+          ) : (
+            <p></p>
+          )}
           {/* Counter for how many attempts/guesses user has */}
           <p className="counter">Tries Available: {counter}</p>
+          <p className="scoreCounter">Score: {score}</p>
         </div>
 
         <form
@@ -157,12 +189,16 @@ const Game = () => {
             let correctChamp = champions[jIndex];
             let wrongChamp = champions[iIndex];
             if (userInput === correctChampion) {
-              resetGame();
               setWon(true);
+              setLost(false);
+              setScore(score + 1);
+              resetGame();
             } else {
               if (counter === 1) {
-                resetGame();
+                setWon(false);
                 setLost(true);
+                setScore(score - 1);
+                resetGame();
               } else {
                 setIconName(userInput.replace(/[^A-Z]/g, ""));
                 setLoadChamp(true);
