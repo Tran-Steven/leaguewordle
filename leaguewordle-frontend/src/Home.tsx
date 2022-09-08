@@ -15,7 +15,6 @@ const Home = () => {
       <main className="gameSection">
         <Game />
       </main>
-
       <footer>
         <Footer />
       </footer>

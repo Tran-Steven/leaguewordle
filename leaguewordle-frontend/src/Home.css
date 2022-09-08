@@ -9,46 +9,6 @@
 .lato {
   font-family: "Lato", sans-serif;
 }
-@media (prefers-color-scheme: dark) {
-  .gameSection {
-    background-color: #3d3c3a;
-  }
-  .lol__game {
-    background-color: #3d3c3a;
-  }
-  h3 {
-    color: #8a8a86;
-  }
-  wrong {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-  }
-  html,
-  body {
-    background-color: #3d3c3a;
-    color: white;
-  }
-  .main {
-    background-color: #3d3c3a;
-  }
-  .imageWrong {
-    filter: invert(1);
-  }
-  .bot__footer-container__image {
-    filter: invert(1);
-  }
-  input[type="submit"] {
-    color: #040404;
-    background-color: #8a8a86;
-  }
-  input[type="text"] {
-    color: white;
-    background-color: #222222;
-  }
-  .card1 {
-    background-color: #80807d;
-  }
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -147,10 +107,12 @@ body {
   font-size: clamp(1rem, 2vw, 3rem);
 }
 .counter {
+  font-family: Lato;
   font-size: clamp(2rem, 2vw, 3rem);
   text-align: center;
 }
 .scoreCounter {
+  font-family: Lato;
   font-size: clamp(2rem, 2vw, 3rem);
   text-align: center;
   margin-top: -1em;
@@ -193,7 +155,6 @@ input:focus {
 }
 input[type="text"] {
   max-width: 1200px;
-
   width: 100%;
   padding-top: 1rem;
   background-size: cover;
@@ -203,6 +164,7 @@ input[type="submit"] {
   max-width: 800px;
   width: 20%;
   padding-top: 1rem;
+  cursor: pointer;
 }
 
 input:disabled {
@@ -211,6 +173,7 @@ input:disabled {
   border-color: #dee2e6;
   border-style: solid;
   border-width: 2px;
+  cursor: pointer;
 }
 .cardContainer {
   z-index: 999;

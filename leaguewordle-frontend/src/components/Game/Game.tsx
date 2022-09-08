@@ -37,6 +37,7 @@ const Game = () => {
   const champions1 = champions;
   const [championMatch, setChampionMatch] = useState<any[]>([]);
   const [correctChampion, setcorrectChampion] = useState("");
+  const [correctChampionStatus, setcorrectChampionStatus] = useState("");
   const [prevcorrectChampion, setprevcorrectChampion] = useState("");
 
   // Disables the submit unless the user puts in a valid submit(must match a string within the champion list)
@@ -63,8 +64,6 @@ const Game = () => {
     searchChampions(e);
     checkMatch(e);
     noAnswerDupe();
-    setWon(false);
-    setLost(false);
   };
 
   // checks if the correct champion(answer) is defined or the same as the previous champion
@@ -157,9 +156,9 @@ const Game = () => {
               <h1 className="gameStatus">GAME WON</h1>
               <h1 className="propText">CORRECT CHAMPION</h1>
               <ChampionPopup
-                text={correctChampion}
+                text={correctChampionStatus}
                 alt="Wrong Champion img"
-                img={correctChampion}
+                img={correctChampionStatus}
               />
             </div>
           ) : isLost ? (
@@ -168,9 +167,9 @@ const Game = () => {
               <div className="gameStatusBorder">
                 <h1 className="propText">CORRECT CHAMPION</h1>
                 <ChampionPopup
-                  text={correctChampion}
+                  text={correctChampionStatus}
                   alt="Wrong Champion img"
-                  img={correctChampion}
+                  img={correctChampionStatus}
                 />
               </div>
             </div>
@@ -185,6 +184,8 @@ const Game = () => {
         <form
           className="formContainer"
           onSubmit={handleSubmit(() => {
+            setWon(false);
+            setLost(false);
             let userInput = val.toUpperCase().replace(/" "/g, "");
             let correctChamp = champions[jIndex];
             let wrongChamp = champions[iIndex];
@@ -192,12 +193,16 @@ const Game = () => {
               setWon(true);
               setLost(false);
               setScore(score + 1);
+              setcorrectChampionStatus(correctChampion.replace(/[^A-Z]/g, ""));
               resetGame();
             } else {
               if (counter === 1) {
                 setWon(false);
                 setLost(true);
                 setScore(score - 1);
+                setcorrectChampionStatus(
+                  correctChampion.replace(/[^A-Z]/g, "")
+                );
                 resetGame();
               } else {
                 setIconName(userInput.replace(/[^A-Z]/g, ""));

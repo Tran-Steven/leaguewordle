@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-var path = require("path");
+let path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
@@ -20,7 +20,7 @@ app.get("/*", (req, res) => {
 
 //when user submits an email, it takes the text and sends it to backend
 app.post("/send_mail", cors(), async (req, res) => {
-  let { text } = req.body;
+  let { text, email } = req.body;
 
   //auth for nodemailer
   const transport = nodemailer.createTransport({
@@ -37,8 +37,9 @@ app.post("/send_mail", cors(), async (req, res) => {
   await transport.sendMail({
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_TO,
-    subject: "LeagueWordle Bug/Issue",
+    subject: `${email}`,
     html: `
+    <h1>${email}</h1>
 <b>${text}</b>
 
     `,

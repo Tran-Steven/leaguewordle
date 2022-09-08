@@ -1,3 +1,68 @@
+@media (prefers-color-scheme: dark) {
+  .gameSection {
+    background-color: #3d3c3a;
+  }
+  .lol__game {
+    background-color: #3d3c3a;
+  }
+  h3 {
+    color: #8a8a86;
+  }
+  html,
+  body {
+    background-color: #3d3c3a;
+    color: #b8babf;
+  }
+  .main {
+    background-color: #3d3c3a;
+  }
+  .imageHint {
+    filter: invert(1);
+  }
+  .bot__footer-container__image {
+    filter: invert(1);
+  }
+  .propHead {
+    color: white;
+  }
+  .gameStatus {
+    color: #e0e1e3;
+    font-weight: 550;
+  }
+  .propText {
+    color: #e0e1e3;
+    font-family: Lato;
+    font-weight: 500;
+  }
+  .gameStatusBorder {
+    background-color: #3a3b3d;
+    border-color: #4a4946;
+  }
+  input[type="submit"] {
+    color: #000;
+    font-weight: 500;
+    background-color: #d2d4d7;
+    max-width: 800px;
+    width: 20%;
+    padding-top: 1rem;
+    cursor: pointer;
+  }
+  input:disabled {
+    color: #898989;
+    background-color: #bfc0c0;
+    border-color: #aeafb0;
+    font-weight: 300;
+    border-style: solid;
+    border-width: 2px;
+  }
+  input[type="text"] {
+    color: white;
+    background-color: #222222;
+  }
+  .card1 {
+    background-color: #80807d;
+  }
+}
 .image-container {
   height: 160px;
   width: 420px;

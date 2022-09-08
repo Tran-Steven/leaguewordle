@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+
+import MailContact from "../MailContact/MailContact.tsx";
+
 import github from "../../assets/images/svg/github.svg";
 import linkedin from "../../assets/images/svg/linkedin.svg";
+import mail from "../../assets/images/svg/mail.svg";
 function Footer() {
+  const [contact, setContact] = useState(false);
   return (
     <div className="bot__footer">
+      <MailContact trigger={contact} setTrigger={setContact} />
       <div className="bot__footer-container">
         <div className="bot__footer-container__image">
           <a
@@ -29,6 +35,14 @@ function Footer() {
               alt="Linkedin Icon"
             />
           </a>
+          <img
+            className="bot_footer_container_image"
+            src={mail}
+            alt="Mail Icon"
+            onClick={() => {
+              setContact(true);
+            }}
+          />
         </div>
       </div>
     </div>
