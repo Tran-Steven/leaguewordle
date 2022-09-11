@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Footer.css";
-
 import MailContact from "../MailContact/MailContact.tsx";
-
 import github from "../../assets/images/svg/github.svg";
 import linkedin from "../../assets/images/svg/linkedin.svg";
 import mail from "../../assets/images/svg/mail.svg";

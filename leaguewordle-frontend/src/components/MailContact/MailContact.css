@@ -1,0 +1,74 @@
+.lato {
+  font-family: "Lato", sans-serif;
+}
+.panel {
+  background-color: #ffffff;
+  height: 100%;
+}
+.panel-container {
+  flex-grow: 1;
+  text-align: center;
+  min-height: 100vh;
+  flex-flow: column;
+  overflow: hidden;
+}
+.seperate1 {
+  margin-bottom: 10%;
+}
+
+.seperate2 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.panel-container .contact-main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+.input-contact {
+  resize: none;
+  max-width: 1200px;
+  width: 80%;
+  background-size: cover;
+}
+.panel-container .close-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1em;
+}
+.close-button {
+  display: block;
+  font-family: Lato;
+  border: 0;
+  background-color: #ffffff;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-family: lato;
+  font-size: clamp(2em, 2vw, 3em);
+}
+
+h1 {
+  font-size: clamp(2.5em, 2.5vw, 3.5em);
+}
+.send-button {
+  font-family: lato;
+}
+
+.textarea {
+  max-width: 1200px;
+  height: 100%;
+}
+
+.panel-container .contact-footer {
+  height: 100%;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+.contact-footer-container-image img {
+  width: min(50vw, 15em);
+}
