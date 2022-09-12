@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import logo from "../../assets/images/svg/logo.svg";
 import SlidingPanel from "react-sliding-side-panel";
-
 import "react-sliding-side-panel/lib/index.css";
 import "./MailContact.css";
-import github from "../../assets/images/svg/github.svg";
-import linkedin from "../../assets/images/svg/linkedin.svg";
 function MailContact(props) {
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
@@ -61,6 +57,7 @@ function MailContact(props) {
                         id="email"
                         placeholder="Email"
                         className="input-contact"
+                        autoComplete="off"
                         onChange={(t) => setEmail(t.target.value)}
                         value={email}
                       />
@@ -72,6 +69,7 @@ function MailContact(props) {
                         autoComplete="off"
                         value={text}
                         onChange={(e) => setText(e.target.value)}
+                        rows="5"
                       />
                       <div>
                         <button
@@ -88,32 +86,6 @@ function MailContact(props) {
               ) : (
                 <h2>Email Sent Successfully!</h2>
               )}
-            </div>
-          </div>
-          <div className="contact-footer">
-            <div className="contact-footer-container-image">
-              <a
-                href="https://github.com/Tran-Steven/leaguewordle"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="contact_footer_container_image"
-                  src={github}
-                  alt="Github Icon"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/steven-tran-26735b206/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="container_footer_container_image"
-                  src={linkedin}
-                  alt="Linkedin Icon"
-                />
-              </a>
             </div>
           </div>
         </div>

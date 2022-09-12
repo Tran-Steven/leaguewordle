@@ -66,15 +66,44 @@ h1 {
   height: 100%;
 }
 
-.panel-container .contact-footer {
-  height: 100%;
-  flex-grow: 1;
-  white-space: nowrap;
-}
-.contact-footer-container-image img {
-  width: min(50vw, 15em);
-}
 .contact-main {
   margin-left: 20%;
   margin-right: 20%;
 }
+
+/* Media Queries to deal with mobile/tablet */
+@media screen and (min-width: 1300px) {
+  .panel {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .panel {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-height: 500px) {
+  .panel {
+    font-size: 1.35em;
+  }
+}
+@media screen and (min-height: 800px) {
+  .panel {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-height: 1100px) {
+  .panel {
+    font-size: 2.4em;
+  }
+}
+
+@media screen and (min-height: 1300px) {
+  .panel {
+    font-size: 2.7em;
+  }
+}
+/* End media queries for mobile/tablets */
