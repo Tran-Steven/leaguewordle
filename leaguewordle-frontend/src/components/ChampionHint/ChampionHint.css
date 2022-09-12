@@ -1,7 +1,3 @@
-.hint img {
-  width: min(50vw, 6em);
-}
-
 .hint {
   flex: 1;
   display: inline-block;
@@ -29,3 +25,41 @@
 .propHead {
   margin-bottom: 0%;
 }
+
+/* Media queries for img & text */
+@media screen and (min-width: 1300px) {
+  .hint img {
+    width: min(50vw, 6em);
+  }
+  .propHead {
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hint img {
+    width: min(50vw, 4em);
+  }
+  .propHead {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .hint img {
+    width: min(3em);
+  }
+  .propHead {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .hint img {
+    width: min(3em);
+  }
+  .propHead {
+    font-size: 1.3em;
+  }
+}
+/* END Media queries for img & text */
