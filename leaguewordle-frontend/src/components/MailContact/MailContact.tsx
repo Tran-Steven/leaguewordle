@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import logo from "../../assets/images/svg/logo.svg";
 import SlidingPanel from "react-sliding-side-panel";
+
 import "react-sliding-side-panel/lib/index.css";
 import "./MailContact.css";
 import github from "../../assets/images/svg/github.svg";
@@ -26,9 +27,9 @@ function MailContact(props) {
   return props.trigger ? (
     <div>
       <SlidingPanel
-        type={`left`}
+        type={`top`}
         isOpen={props.trigger}
-        size={30}
+        size={100}
         className="panel"
       >
         <div className="panel-container">
