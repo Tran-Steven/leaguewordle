@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import SlidingPanel from "react-sliding-side-panel";
 import "react-sliding-side-panel/lib/index.css";
 import "./MailContact.css";
+import "../../utils/slideIn/slideIn.css";
 function MailContact(props) {
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
+  const [slide, setSlide] = useState(0);
+  const ref = useRef();
   const handleSend = async () => {
     setSent(true);
     try {
@@ -28,7 +31,11 @@ function MailContact(props) {
         size={100}
         className="panel"
       >
-        <div className="panel-container">
+        <div
+          className="panel-container"
+          onAnimationEnd={() => setSlide(0)}
+          slide={slide}
+        >
           <div className="close-container">
             <button
               className="close-button"
@@ -38,7 +45,7 @@ function MailContact(props) {
             </button>
           </div>
           <div className="contact-main">
-            <h1>CONTACT</h1>
+            <h1 className="color-change-main">CONTACT</h1>
             <div>
               {!sent ? (
                 <form
@@ -50,8 +57,8 @@ function MailContact(props) {
                   }}
                 >
                   <div>
-                    <div className="seperate1">
-                      <h2>EMAIL</h2>
+                    <div className="seperate">
+                      <h2 className="color-change">EMAIL</h2>
                       <input
                         type="email"
                         id="email"
@@ -62,8 +69,8 @@ function MailContact(props) {
                         value={email}
                       />
                     </div>
-                    <div className="seperate2">
-                      <h2>MESSAGE</h2>
+                    <div className="seperate" style={{ marginTop: `10%` }}>
+                      <h2 className="color-change">MESSAGE</h2>
                       <textarea
                         className="input-contact textarea"
                         autoComplete="off"
