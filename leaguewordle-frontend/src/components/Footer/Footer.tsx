@@ -4,11 +4,14 @@ import MailContact from "../MailContact/MailContact.tsx";
 import github from "../../assets/images/svg/github.svg";
 import linkedin from "../../assets/images/svg/linkedin.svg";
 import mail from "../../assets/images/svg/mail.svg";
+
 function Footer() {
   const [contact, setContact] = useState(false);
   return (
     <div className="bot__footer">
-      <MailContact trigger={contact} setTrigger={setContact} />
+      <div id="mail-contact">
+        <MailContact trigger={contact} setTrigger={setContact} />
+      </div>
       <div className="bot__footer-container">
         <div className="bot__footer-container__image">
           <a

@@ -11,11 +11,10 @@ import "../../Home.css";
 //components
 import { ChampionHint } from "../ChampionHint/ChampionHint.tsx";
 import { ChampionPopup } from "../ChampionPopup/ChampionPopup.tsx";
-import Random from "../../utils/Random.tsx";
-import isLetters from "../../utils/isLetters.tsx";
+import Random from "../../utils/Random/Random.tsx";
+import isLetters from "../../utils/isLetters/isLetters.tsx";
 
 //imported images
-
 import wrong from "../../assets/images/svg/wrong.svg";
 import down from "../../assets/images/svg/down.svg";
 import higher from "../../assets/images/svg/higher.svg";
