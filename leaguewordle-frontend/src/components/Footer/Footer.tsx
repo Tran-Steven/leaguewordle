@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Footer.css";
-import MailContact from "../MailContact/MailContact.tsx";
+import { MailContact } from "../MailContact/MailContact.tsx";
 import github from "../../assets/images/svg/github.svg";
 import linkedin from "../../assets/images/svg/linkedin.svg";
 import mail from "../../assets/images/svg/mail.svg";
 
 function Footer() {
   const [contact, setContact] = useState(false);
+  const ref = useRef();
   return (
     <div className="bot__footer">
       <div id="mail-contact">
-        <MailContact trigger={contact} setTrigger={setContact} />
+        <MailContact trigger={contact} setTrigger={setContact} ref={ref} />
       </div>
       <div className="bot__footer-container">
         <div className="bot__footer-container__image">
@@ -42,6 +43,7 @@ function Footer() {
             alt="Mail Icon"
             onClick={() => {
               setContact(true);
+              ref.current.setState();
             }}
           />
         </div>

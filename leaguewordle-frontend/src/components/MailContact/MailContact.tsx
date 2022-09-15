@@ -1,15 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 import axios from "axios";
 import SlidingPanel from "react-sliding-side-panel";
 import "react-sliding-side-panel/lib/index.css";
 import "./MailContact.css";
-import "../../utils/slideIn/slideIn.css";
-function MailContact(props) {
+
+export const MailContact = forwardRef(function (props, ref) {
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
-  const [slide, setSlide] = useState(0);
-  const ref = useRef();
+  const [slide, setSlide] = useState(false);
+
   const handleSend = async () => {
     setSent(true);
     try {
@@ -23,6 +23,16 @@ function MailContact(props) {
     }
   };
 
+  function turnOnAnimation() {
+    return function () {
+      setSlide(!slide);
+    };
+  }
+
+  useImperativeHandle(ref, () => ({
+    setState: () => turnOnAnimation()(),
+  }));
+
   return props.trigger ? (
     <div>
       <SlidingPanel
@@ -33,7 +43,7 @@ function MailContact(props) {
       >
         <div
           className="panel-container"
-          onAnimationEnd={() => setSlide(0)}
+          onAnimationEnd={() => setSlide(false)}
           slide={slide}
         >
           <div className="close-container">
@@ -101,5 +111,4 @@ function MailContact(props) {
   ) : (
     ""
   );
-}
-export default MailContact;
+});
