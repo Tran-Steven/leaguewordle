@@ -4,7 +4,6 @@ import "./Home.css";
 import Header from "./components/Header/Header.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import Game from "./components/Game/Game.tsx";
-
 const Home = () => {
   return (
     <div className="main">
@@ -15,6 +14,7 @@ const Home = () => {
       <main className="gameSection">
         <Game />
       </main>
+
       <footer>
         <Footer />
       </footer>

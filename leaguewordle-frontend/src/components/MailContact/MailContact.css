@@ -1,6 +1,31 @@
 .lato {
   font-family: "Lato", sans-serif;
 }
+
+.panel-container[data-slide="1"] {
+  animation: move-up 0.8s 1;
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.panel-container[data-slide="0"] {
+  animation: move-down 0.8s 1;
+}
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 .panel {
   background-color: #ffffff;
   height: 100%;
@@ -127,25 +152,4 @@ h1 {
     color: #000;
     background-color: #d2d4d7;
   }
-}
-
-@keyframes move-up {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: 200px;
-  }
-  50% {
-    top: 100px;
-  }
-  75% {
-    top: 200px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-.panel-container[slide="1"] {
-  animation: move-up 1800ms 1;
 }
