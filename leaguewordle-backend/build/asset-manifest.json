@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e9513d5.css",
-    "main.js": "/static/js/main.7750a563.js",
+    "main.css": "/static/css/main.ef718062.css",
+    "main.js": "/static/js/main.cdecf418.js",
     "static/media/image2vector.svg": "/static/media/image2vector.be6e06e3a48fcef321cdea7514fb65ac.svg",
     "static/media/league-of-wordle.png": "/static/media/league-of-wordle.142fa861bb7231ae20d2.png",
     "static/media/NEEKO.jpg": "/static/media/NEEKO.447621310ca830a4cdf8.jpg",
@@ -170,16 +170,15 @@
     "static/media/down.svg": "/static/media/down.f63717205522e331582154482b884eed.svg",
     "static/media/higher.svg": "/static/media/higher.a70bb4365ae5a7a9bdf68a21c5045da3.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.469cd2a86f51160531bb2369d32296bb.svg",
-    "static/media/help.svg": "/static/media/help.bca30099ebc9efb03bf9b62f7e96767d.svg",
     "static/media/mail.svg": "/static/media/mail.be79768437dfa06e201234084369310d.svg",
     "static/media/wrong.svg": "/static/media/wrong.8c1e5a785b4a9194d5190c9c32664496.svg",
     "static/media/checkmark.svg": "/static/media/checkmark.1aebe15a3368b4133006b92739ac286e.svg",
     "index.html": "/index.html",
-    "main.1e9513d5.css.map": "/static/css/main.1e9513d5.css.map",
-    "main.7750a563.js.map": "/static/js/main.7750a563.js.map"
+    "main.ef718062.css.map": "/static/css/main.ef718062.css.map",
+    "main.cdecf418.js.map": "/static/js/main.cdecf418.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e9513d5.css",
-    "static/js/main.7750a563.js"
+    "static/css/main.ef718062.css",
+    "static/js/main.cdecf418.js"
   ]
 }
