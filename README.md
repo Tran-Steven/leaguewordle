@@ -17,12 +17,12 @@ The word bank contains all of the current League of Legends champions and gives 
   <br>
   <br>
 You can play the game here:
-https://leaguewordle.herokuapp.com/
+https://leaguewordle.fly.dev/
 <h2></h2>
 </p>
 
 
-**_Built with: React, Node.js_**
+**_Built with: React, Node**
 
 
 <h2></h2>
@@ -124,14 +124,8 @@ The current list of classes are:
 <h2></h2>
 
 ## Champion Images
-Using Riot's [Data Dragon tarball](https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html), which included the Champion icons and loading images, the player guessed champion icon is displayed if the guess is wrong.
+Using Riot's [Data Dragon tarball](https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html), which included the Champion icons and loading images, the player guessed champion icon is displayed if the guess is wrong, and if the game is over or won, it shows the correct champion icon.
 
-The image file names were structured in Riot's tarball as "Ahri_0, Ahri_1, Ahri_2" ... "Alistar_0, Alistar_1..." which was not ideal. This is due to the need of only the base skin (as of right now) and the need to simplify the file name to make it easier to conditionally render based on player guess submissions.
-
-
-By creating an [image/file parser](https://github.com/Tran-Steven/python-imageparser) in Python, the non-base images were removed (files that did not contain "_0" in its file name) and images were renamed to be all uppercase and removed the "_0" from the end of the file name.
-
-This kept a consistent and easily accessible image name which could be called and changed upon player guess submission.
 
 <h2></h2>
 
