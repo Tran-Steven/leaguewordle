@@ -2,9 +2,10 @@
   font-family: "Lato", sans-serif;
 }
 
-.panel-container[data-slide="1"] {
+.panel-container[data-slide="4"] {
   animation: move-up 0.8s 1;
 }
+
 @keyframes move-up {
   0% {
     transform: translateY(100%);
@@ -14,7 +15,7 @@
   }
 }
 
-.panel-container[data-slide="0"] {
+.panel-container[data-slide="5"] {
   animation: move-down 0.8s 1;
 }
 @keyframes move-down {

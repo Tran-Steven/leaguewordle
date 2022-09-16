@@ -35,81 +35,79 @@ const MailContact = forwardRef(
     }));
 
     return props.trigger ? (
-      <div>
-        <SlidingPanel
-          type={`top`}
-          isOpen={props.trigger}
-          size={100}
-          className="panel"
-        >
-          <div className="panel-container" data-slide={slide}>
-            <div className="close-container">
-              <button
-                className="close-button"
-                onClick={() => {
-                  setSlide(0);
-                  setTimeout(function () {
-                    props.setTrigger(false);
-                  }, 750);
-                }}
-              >
-                X
-              </button>
-            </div>
-            <div className="contact-main">
-              <h1 className="color-change-main">CONTACT</h1>
-              <div>
-                {!sent ? (
-                  <form
-                    target="_top"
-                    method="post"
-                    encType="text/plain"
-                    onSubmit={() => {
-                      handleSend();
-                    }}
-                  >
-                    <div>
-                      <div className="seperate">
-                        <h2 className="color-change">EMAIL</h2>
-                        <input
-                          type="email"
-                          id="email"
-                          placeholder="Email"
-                          className="input-contact"
-                          autoComplete="off"
-                          onChange={(t) => setEmail(t.target.value)}
-                          value={email}
-                        />
-                      </div>
-                      <div className="seperate" style={{ marginTop: `10%` }}>
-                        <h2 className="color-change">MESSAGE</h2>
-                        <textarea
-                          className="input-contact textarea"
-                          autoComplete="off"
-                          value={text}
-                          onChange={(e) => setText(e.target.value)}
-                          rows="5"
-                        />
-                        <div>
-                          <button
-                            className="send-button"
-                            type="submit"
-                            value="Send"
-                          >
-                            Send
-                          </button>
-                        </div>
+      <SlidingPanel
+        type={`top`}
+        isOpen={props.trigger}
+        size={100}
+        className="panel"
+      >
+        <div className="panel-container" data-slide={slide}>
+          <div className="close-container">
+            <button
+              className="close-button"
+              onClick={() => {
+                setSlide(0);
+                setTimeout(function () {
+                  props.setTrigger(false);
+                }, 0);
+              }}
+            >
+              X
+            </button>
+          </div>
+          <div className="contact-main">
+            <h1 className="color-change-main">CONTACT</h1>
+            <div>
+              {!sent ? (
+                <form
+                  target="_top"
+                  method="post"
+                  encType="text/plain"
+                  onSubmit={() => {
+                    handleSend();
+                  }}
+                >
+                  <div>
+                    <div className="seperate">
+                      <h2 className="color-change">EMAIL</h2>
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        className="input-contact"
+                        autoComplete="off"
+                        onChange={(t) => setEmail(t.target.value)}
+                        value={email}
+                      />
+                    </div>
+                    <div className="seperate" style={{ marginTop: `10%` }}>
+                      <h2 className="color-change">MESSAGE</h2>
+                      <textarea
+                        className="input-contact textarea"
+                        autoComplete="off"
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                        rows="5"
+                      />
+                      <div>
+                        <button
+                          className="send-button"
+                          type="submit"
+                          value="Send"
+                        >
+                          Send
+                        </button>
                       </div>
                     </div>
-                  </form>
-                ) : (
-                  <h2>Email Sent Successfully!</h2>
-                )}
-              </div>
+                  </div>
+                </form>
+              ) : (
+                <h2>Email Sent Successfully!</h2>
+              )}
             </div>
           </div>
-        </SlidingPanel>
-      </div>
+        </div>
+      </SlidingPanel>
     ) : (
       ""
     );

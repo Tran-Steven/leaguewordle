@@ -74,7 +74,9 @@
   text-align: center;
   min-height: 80vh;
 }
-
+body {
+  background-color: #3a3b3d !important;
+}
 .footerImages {
   width: 18%;
   height: auto;
