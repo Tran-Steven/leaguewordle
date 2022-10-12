@@ -265,7 +265,7 @@ const Game = () => {
                 }
               }}
             />
-            <input type="submit" disabled={isDisabled} />
+            <input type="submit" disabled={isDisabled} value="Submit" />
           </div>
           <div className="cardContainer">
             {/* Compares the user input to the list of champions to make a dropdown card autocomplete */}

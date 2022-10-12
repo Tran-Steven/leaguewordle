@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef718062.css",
-    "main.js": "/static/js/main.cdecf418.js",
+    "main.css": "/static/css/main.6fb9688b.css",
+    "main.js": "/static/js/main.1651c58d.js",
     "static/media/image2vector.svg": "/static/media/image2vector.be6e06e3a48fcef321cdea7514fb65ac.svg",
     "static/media/league-of-wordle.png": "/static/media/league-of-wordle.142fa861bb7231ae20d2.png",
     "static/media/NEEKO.jpg": "/static/media/NEEKO.447621310ca830a4cdf8.jpg",
@@ -174,11 +174,11 @@
     "static/media/wrong.svg": "/static/media/wrong.8c1e5a785b4a9194d5190c9c32664496.svg",
     "static/media/checkmark.svg": "/static/media/checkmark.1aebe15a3368b4133006b92739ac286e.svg",
     "index.html": "/index.html",
-    "main.ef718062.css.map": "/static/css/main.ef718062.css.map",
-    "main.cdecf418.js.map": "/static/js/main.cdecf418.js.map"
+    "main.6fb9688b.css.map": "/static/css/main.6fb9688b.css.map",
+    "main.1651c58d.js.map": "/static/js/main.1651c58d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef718062.css",
-    "static/js/main.cdecf418.js"
+    "static/css/main.6fb9688b.css",
+    "static/js/main.1651c58d.js"
   ]
 }

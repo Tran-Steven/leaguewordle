@@ -1,4 +1,7 @@
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #3a3b3d !important;
+  }
   .gameSection {
     background-color: #3d3c3a;
   }
@@ -73,9 +76,6 @@
   align-items: center;
   text-align: center;
   min-height: 80vh;
-}
-body {
-  background-color: #3a3b3d !important;
 }
 .footerImages {
   width: 18%;
