@@ -208,7 +208,7 @@ const Game = () => {
                 setLoadChamp(true);
                 let isSameClass =
                   wrongChamp["Classes"] === correctChamp["Classes"];
-                let wrongChampNum = Number(wrongChamp["Release year"]);
+                let wrongChampNum = Number(wrongChamp["Release Year"]);
                 let correctChampNum = Number(correctChamp["Release Year"]);
 
                 const newList = [...list];
@@ -221,6 +221,9 @@ const Game = () => {
                     : wrongChampNum < correctChampNum
                     ? higher
                     : down;
+
+                console.log(wrongChampNum);
+                console.log(correctChampNum);
 
                 newList[2] =
                   wrongChamp["Blue Essence"] === correctChamp["Blue Essence"]
