@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Card } from "antd";
 import { useForm } from "react-hook-form";
 
-//json file containing all league of legends champions (the word bank)
+// JSON file containing all league of legends champions (the word bank)
 import champions from "../../data/champions.json";
 
 import "antd/lib/card/style/css";
 import "../../Home.css";
 
-//components
+// Components
 import { ChampionHint } from "../ChampionHint/ChampionHint.tsx";
 import { ChampionPopup } from "../ChampionPopup/ChampionPopup.tsx";
 import Random from "../../utils/Random/Random.tsx";
